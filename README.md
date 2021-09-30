@@ -1,6 +1,6 @@
 # 🟡🔵🔴 Artesanias Regionales 🟡🔵🔴
 
-* Una breve descripción de la oferta de productos y/o servicios ofrecidos por su sitio. También agregar una breve descripción del público al que apunta el sitio. *
+ _Una breve descripción de la oferta de productos y/o servicios ofrecidos por su sitio. También agregar una breve descripción del público al que apunta el sitio._
 
 Productos 100% Colombianos, de las diferentes regiones al rededor del país, para todas aquellas personas que buscan contagiarse del cariño y la calidez de todos nuestros habitantes!.
 
@@ -12,7 +12,7 @@ Se maneja los valores en peso colombiano y dolar ??? o se muestran ambos al tiem
 
 #### Regiones:
 
-* Escribir 3 artesanías por región *
+_Escribir 3 artesanías por región_
 
 Cristian
 Región Andina:
@@ -29,17 +29,17 @@ Región Insular:
 
 ### INTEGRANTES
 
-* Se debe realizar una pequeña descripción de cada uno *
+_Se debe realizar una pequeña descripción de cada uno_
 
-- ** Leonardo Pintor: ** Administrador de empresas.
+- **Leonardo Pintor:** Administrador de empresas.
 
-- ** Daniel Cabrera Ojeda: ** Ingeniero electrónico egresado de la Universidad Nacional de Colombia y estudiante de desarrollo full stack en Protalento y Digital House, procedente de San Lorenzo, Nariño. Amante al café y las buenas charlas. Me gusta bailar, escuchar música, viajar, ver series y desde hace un tiempo practico entrenamiento funcional.     
+- **Daniel Cabrera Ojeda:** Ingeniero electrónico egresado de la Universidad Nacional de Colombia y estudiante de desarrollo full stack en Protalento y Digital House, procedente de San Lorenzo, Nariño. Amante al café y las buenas charlas. Me gusta bailar, escuchar música, viajar, ver series y desde hace un tiempo practico entrenamiento funcional.     
 
-- ** Cristian Rojas:** Estudiante en Desarrollo de Software.
+- **Cristian Rojas:** Estudiante en Desarrollo de Software.
 
 ### PROYECTOS SIMILARES
 
-* indicar brevemente por qué fueron elegidos. *
+_indicar brevemente por qué fueron elegidos._
 
 1. Velez.com
 
