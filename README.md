@@ -31,7 +31,7 @@ Región Insular:
 
 _Se debe realizar una pequeña descripción de cada uno_
 
-- **Leonardo Pintor:** Administrador de empresas.
+- **Leonardo Pintor:** Profesional en Administrador de empresas, con experiencia certificada en la incorporación de las tecnologías de la información y la comunicación a la gestión empresarial, estudiante de desarrollo full web full stack en Digital House, Bogotano, me gusta el ciclomontañismo y la tecnologia.
 
 - **Daniel Cabrera Ojeda:** Ingeniero electrónico egresado de la Universidad Nacional de Colombia y estudiante de desarrollo full stack en Protalento y Digital House, procedente de San Lorenzo, Nariño. Amante al café y las buenas charlas. Me gusta bailar, escuchar música, viajar, ver series y desde hace un tiempo practico entrenamiento funcional.     
 
@@ -51,7 +51,8 @@ _indicar brevemente por qué fueron elegidos._
 4. MadeInColombia: 
     URL: http://madeincolombia.com.co/
 
-5.
+5. Artesanias de Colombia
+    URL: https://www.artesaniasdecolombiatienda.com.co/
 
 6.
 
