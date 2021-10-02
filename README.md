@@ -60,6 +60,7 @@ _Se debe realizar una pequeña descripción de cada uno_
 _indicar brevemente por qué fueron elegidos._
 
 1. Velez.com
+    Me gusto el diseño de la pagina en cuanto a la barra de navegación y la forma como se muestran los diferentes productos del e comerce
 
 2. Indidesign.com
 
@@ -71,6 +72,7 @@ _indicar brevemente por qué fueron elegidos._
 
 5. Artesanias de Colombia
     URL: https://www.artesaniasdecolombiatienda.com.co/
+    Es una web similar a la idea planteada, tiene los productos divididos en regiones y da una buena idea a la hora de mostrar un catalogo.
 
 6.
 
