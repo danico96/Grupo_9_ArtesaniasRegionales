@@ -20,6 +20,16 @@ Región Pacífica:
 
 Leonardo
 Región Caribe:
+
+Sombrero Vueltiao
+Es una prenda de vestir típica de las sabanas del Caribe colombiano, específicamente de los departamentos de Córdoba y Sucre,1​ y una de las principales piezas de artesanía de Colombia. Tiene su origen en la cultura indígena zenú, asentada en la región del río Sinú.
+
+Mochila arhuaca
+La mochila arhuaca o tutu iku en ika es una prenda de la indumentaria de la etnia arhuaca y una de las artesanías más importantes de Colombia.​​Es un tejido de lana de oveja, algodón, fique o lana industrial, elaborado por las gwati desde niñas.
+
+Las Hamacas de San Jacinto
+Es una estructura que históricamente pertenece a la cultura Arawak o Arahuaca presente en los departamentos de Sucre, Bolívar, La Guajira y Magdalena en la Sierra Nevada de Santa Marta; y de cuya lengua nativa se deriva la palabra “hamaca”. En San Jacinto, el telar es elaborado por los hombres.
+
 Región Amazónica:
 
 Daniel
