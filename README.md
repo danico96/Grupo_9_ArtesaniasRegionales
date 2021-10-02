@@ -18,7 +18,6 @@ Cristian
 Región Andina:
 Región Pacífica:
 
-Leonardo
 Región Caribe:
 
 Sombrero Vueltiao
@@ -31,6 +30,15 @@ Las Hamacas de San Jacinto
 Es una estructura que históricamente pertenece a la cultura Arawak o Arahuaca presente en los departamentos de Sucre, Bolívar, La Guajira y Magdalena en la Sierra Nevada de Santa Marta; y de cuya lengua nativa se deriva la palabra “hamaca”. En San Jacinto, el telar es elaborado por los hombres.
 
 Región Amazónica:
+
+Cestería
+Los cestos o canastos son una de las muestras claras de amor por la naturaleza, que los ancestros de la región de la amazonia, han dejado como legado para sus gentes, quienes producen estos artículos para el sustento económico de sus pueblos
+
+Tejidos
+La producción textil se hace presente en la región con muestras artísticas que, dejan ver los más hermosos y coloridos bolsos, mochilas hamacas, brazaletes, manillas, gargantillas, collares, sonajeros y adornos de diferentes tipos, alusivos a imágenes, colores y formas que, denota las raíces y la cultura de su raza.
+
+Tallado en madera
+El talento de los amazónicos se ve reflejado en creaciones artísticas plasmadas en madera, en donde la técnica del tallado le convierte en obras artesanales únicas en el mundo.
 
 Daniel
 Región de la Orinoquía:
