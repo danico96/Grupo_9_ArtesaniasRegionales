@@ -12,57 +12,57 @@ El público al cual va dirigido este sitio es, principalmente a personas colombi
 
 #### **Tallas en madera**
 
-**Sillas, bandejas, animales**
+- **Sillas, bandejas, animales**
 
-Excelentes figuras talladas 100% en madera, sillas grandes y pequeñas, animales exóticos, bandejas de todas las formas y colores, todas con un acabado espectacular, ideal para llevarte un lindo recuerdo luego de viajar por esta hermosa region, donde la cultura, la naturaleza y la fantasía predomina en todo el territorio.
+    Excelentes figuras talladas 100% en madera, sillas grandes y pequeñas, animales exóticos, bandejas de todas las formas y colores, todas con un acabado espectacular, ideal para llevarte un lindo recuerdo luego de viajar por esta hermosa region, donde la cultura, la naturaleza y la fantasía predomina en todo el territorio.
 
 #### **Instrumentos musicales**
 
-**Maracas**
+- **Maracas**
 
-El tradicional instrumento de oscilación, pero con un estilo único, distinguible entre millones de maracas, con toda la cultura de la región plasmada en sus miles de variables de diseños, sin duda un recuerdo que querrás conservar de esta hermosa región.
+    El tradicional instrumento de oscilación, pero con un estilo único, distinguible entre millones de maracas, con toda la cultura de la región plasmada en sus miles de variables de diseños, sin duda un recuerdo que querrás conservar de esta hermosa región.
 
-**Arpas**
+- **Arpas**
 
-Bonito, melodioso y lleno de historia, el arpa, un instrumento de cuerda pulsada, que con sus melodías atrapa a cualquier persona que escuche atentamente el vibrar de sus cuerdas.
+    Bonito, melodioso y lleno de historia, el arpa, un instrumento de cuerda pulsada, que con sus melodías atrapa a cualquier persona que escuche atentamente el vibrar de sus cuerdas.
 
-**Bandolas**
+- **Bandolas**
 
-Única, instrumento de 16 cuerdas, con sonido armonioso, fabricados en su totalidad en esta región, sin duda un recuerdo valioso que no puede faltar en tu coleccion de artesanías, sobre todo si eres amantes a los instrumentos de cuerda.
+    Única, instrumento de 16 cuerdas, con sonido armonioso, fabricados en su totalidad en esta región, sin duda un recuerdo valioso que no puede faltar en tu coleccion de artesanías, sobre todo si eres amantes a los instrumentos de cuerda.
 
 #### **Tejeduría**
 
-**Sillas en bejucos**
+- **Sillas en bejucos**
 
-Hermosas sillas tejidas a mano, con multiples diseños tanto de tejido como en su madera, sin duda son muy estéticas, pero lo mas importante es su comodidad, perfectas para descansar, para reposar e incluso, si estas cómodo, para dormir sin ningun problema.
+    Hermosas sillas tejidas a mano, con multiples diseños tanto de tejido como en su madera, sin duda son muy estéticas, pero lo mas importante es su comodidad, perfectas para descansar, para reposar e incluso, si estas cómodo, para dormir sin ningun problema.
 
-**Mimbre**
+- **Mimbre**
 
-Es una fibra natural que se obtiene de un arbusto de la familia de los sauces y que se teje para crear muebles, cestos y diferentes utilidades con todo el estilo Andino, es originario de Asia, pero muy bien adoptado por nuestra hermosa región Andina, adornando muy bien jardines, ciudades y pueblos al rededor de todo el territorio.
+    Es una fibra natural que se obtiene de un arbusto de la familia de los sauces y que se teje para crear muebles, cestos y diferentes utilidades con todo el estilo Andino, es originario de Asia, pero muy bien adoptado por nuestra hermosa región Andina, adornando muy bien jardines, ciudades y pueblos al rededor de todo el territorio.
 
-**Macramé**
+- **Macramé**
 
-Tejidos sorprendentes con nudos decorativos, sin duda una técnica que requiere años de entrenamiento y perfeccionamiento, es sin duda una de las artesanías mas emblemáticas de la región, y no es para menos!.
+    Tejidos sorprendentes con nudos decorativos, sin duda una técnica que requiere años de entrenamiento y perfeccionamiento, es sin duda una de las artesanías mas emblemáticas de la región, y no es para menos!.
 
 #### **Otras artesanías regionales**
 
-**Chinchorro** 
+- **Chinchorro** 
 
-Red tejida a mano, con multiples estilos, usada para la pesca, son completamente artesanales y muy prácticas a la hora de ir de pesca, aqui, o a donde sea que vayas!.
+    Red tejida a mano, con multiples estilos, usada para la pesca, son completamente artesanales y muy prácticas a la hora de ir de pesca, aqui, o a donde sea que vayas!.
 
-**Mochilas** 
+- **Mochilas** 
 
-Sí, mochilas, pero no cualesquier mochilas, son hechas con tejidos especiales, llenas de cultura, llenas de técnicas para darles un toque único, un toque magico que tanto caracteriza a esta región.
+    Sí, mochilas, pero no cualesquier mochilas, son hechas con tejidos especiales, llenas de cultura, llenas de técnicas para darles un toque único, un toque magico que tanto caracteriza a esta región.
 
 ### Región Pacífica:
 
-**Canoas**
+- **Canoas**
 
-Increibles canoas, para pasear en donde desees, desde ríos hasta mares, hecha 100% con materiales artesanales, con acabados únicos.
+    Increibles canoas, para pasear en donde desees, desde ríos hasta mares, hecha 100% con materiales artesanales, con acabados únicos.
 
-**Utensilios**
+- **Utensilios**
 
-Platos, cucharones, vasijas. Estos y muchos mas son onjetos que por tradición son elaborados en esta hermosa región, totalmente artesanales, de todos los tamaños y estilos, para disfrutar las comidas con todo el sabor Pacífico.
+    Platos, cucharones, vasijas. Estos y muchos mas son onjetos que por tradición son elaborados en esta hermosa región, totalmente artesanales, de todos los tamaños y estilos, para disfrutar las comidas con todo el sabor Pacífico.
 
 #### **
 
