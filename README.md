@@ -64,8 +64,6 @@ El público al cual va dirigido este sitio es, principalmente a personas colombi
 
     Platos, cucharones, vasijas. Estos y muchos mas son onjetos que por tradición son elaborados en esta hermosa región, totalmente artesanales, de todos los tamaños y estilos, para disfrutar las comidas con todo el sabor Pacífico.
 
-#### **
-
 ### Región Caribe:
 
 #### **Sombrero Vueltiao**  
