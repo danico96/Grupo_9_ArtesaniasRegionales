@@ -12,7 +12,8 @@ app.use(express.static(publicPath));
 app.get('/', function(req, res) {
     res.sendFile(homePath);
 })
-app.get('/', function(req, res) {
+app.get('/productCart', function(req, res) {
     res.sendFile(CartPath);
 })
+
 app.listen(port, () => console.log(`Server is running in port ${port}`));

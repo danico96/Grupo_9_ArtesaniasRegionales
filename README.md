@@ -145,3 +145,7 @@ Técnico profesional en desarrollo de sistemas de información, actualmente estu
     Página similar a la idea planteada, con buena experiencia de usuario, aunque diferente público destino.
     * URL: https://www.colombiaecommerce.com/tienda/
 
+### TABLERO DE TRABAJO
+
+https://danico96.atlassian.net/jira/software/projects/PIG9/boards/1
+
