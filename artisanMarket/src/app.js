@@ -9,11 +9,10 @@ const CartPath = path.resolve(__dirname, './views/productCart.html');
 
 app.use(express.static(publicPath));
 
-app.get('/', function(req, resp) {
-    resp.sendFile(homePath);
+app.get('/', function(req, res) {
+    res.sendFile(homePath);
 })
-app.get('/', function(req, resp) {
-    resp.sendFile(CartPath);
+app.get('/', function(req, res) {
+    res.sendFile(CartPath);
 })
-
 app.listen(port, () => console.log(`Server is running in port ${port}`));
