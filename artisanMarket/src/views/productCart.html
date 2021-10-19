@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,21 +10,57 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
+
 <body>
     <header>
         <div class="top-header">
             <img class="logo" src="/images/logo.png" width="360" alt="Logo de Artisan Market">
             <h1>Artisan Market Colombia</h1>
-            <div class="searchbar">
-                <input type="search" placeholder="Buscar productos">
-                <button><i class="fas fa-search"></i></button>
-            </div>
         </div>
         <nav>
             <ul>
                 <li><a href="/register">Registro</a></li>
                 <li><a href="/login">Ingreso </a></li>
                 <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
+    <main>
+        <section class="productcar">
+            <h3>Carrito de compras <i class="fas fa-shopping-cart"></i></h3>
+            <div class="products">
+                <article>
+                    <div class="canasto">Canasto Tejido En Iraca</div>
+                    <img src="/images/canasto-iraca.jpg" width="360" alt="Canasto-iraca" class="product_img">
+                    <h4 class="description">Canasto tejido elaborado por manos artesanas con Iraca en el departamento de
+                        Nariño</h4>
+                    <p class="price">$45.000</p>
+                </article>
+                <article>
+                    <div class="canasto-iraca">Canasto Tejido En Iraca</div>
+                    <img src="/images/canasto-iraca.jpg" width="360" alt="Canasto-iraca" class="product_img">
+                    <h4 class="description">Canasto tejido elaborado por manos artesanas con Iraca en el departamento de
+                        Nariño</h4>
+                    <p class="price">$45.000</p>
+            </div>
+            </article>
+            <p>Envío</p>
+            <h3>Total</h3>
+        </section>
+        <form action="/" method="get">
+            <p>
+                <button type="submit" name="/">Comprar</button>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <section>
+            <p>© 2021 Artisan Market</p>
+            <p><i class="fab fa-linkedin"></i> <i class="fab fa-twitter"></i> <i class="fab fa-facebook-f"></i>  <i class="fab fa-instagram"></i></p>
+        </section>
+    </footer>
 </body>
 </html>
