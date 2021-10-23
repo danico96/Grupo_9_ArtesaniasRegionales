@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
 /* header */
 
@@ -137,6 +138,7 @@ form p button {
     margin-bottom: 8px;
 }
 
+
 /* footer */
 
 footer {
@@ -149,6 +151,7 @@ footer section {
     justify-content: space-around;
     flex-wrap: nowrap;
 }
+
 
 /* viewport */
 
