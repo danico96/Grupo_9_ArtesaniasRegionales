@@ -94,10 +94,6 @@ header .browse-navbar {
     display: none;
 }
 
-header .browse-navbar ul li {
-    margin: 10px 2px;
-}
-
 
 /* main */
 
@@ -211,8 +207,24 @@ footer section {
 /* viewport */
 
 @media (min-width: 481px) {
-    .logo {
-        width: 40%;
+    header .top-header .box-logo {
+        width: 30%;
+        margin: 0;
+    }
+    header .top-header .box-logo .logo {
+        width: 80%;
+    }
+    header .top-header .searchbar input {
+        display: block;
+        border-radius: 5px;
+        border: 1px solid black;
+        padding: 3px;
+    }
+    header .top-header .searchbar button {
+        position: relative;
+        bottom: 24px;
+        left: 77px;
+        padding: 1px;
     }
     .products article {
         width: 65%;
@@ -223,8 +235,28 @@ footer section {
 }
 
 @media (min-width: 768px) {
-    .logo {
-        width: 30%;
+    header .top-header {
+        padding: 0 20px;
+    }
+    header .top-header .box-logo {
+        width: 20%;
+    }
+    header .top-header .main-navbar ul li a p {
+        display: block;
+    }
+    header .browse-navbar {
+        display: block;
+    }
+    header .browse-navbar ul {
+        justify-content: center;
+    }
+    header .browse-navbar ul li {
+        margin: 10px 45px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    header .burger-menu {
+        display: none;
     }
     .products article {
         width: 50%;
