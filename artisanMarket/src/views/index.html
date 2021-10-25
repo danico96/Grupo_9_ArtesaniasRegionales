@@ -14,18 +14,42 @@
 <body>
     <header>
         <div class="top-header">
-            <img class="logo" src="/images/logo.png" width="360" alt="Logo de Artisan Market">
-            <h1>Artisan Market Colombia</h1>
+            <div class="box-logo">
+                <img class="logo" src="/images/logo.png" width="360" alt="Logo de Artisan Market">
+                <h1 class="title">Artisan Market Colombia</h1>
+            </div>
             <div class="searchbar">
                 <input type="search" placeholder="Buscar productos">
                 <button><i class="fas fa-search"></i></button>
             </div>
+            <nav class="main-navbar">
+                <ul>
+                    <li>
+                        <a href="/register">
+                            <p> Registro </p><i class="far fa-id-card"></i></a>
+                    </li>
+                    <li>
+                        <a href="/login">
+                            <p> Ingreso </p><i class="fas fa-user"></i> </a>
+                    </li>
+                    <li>
+                        <a href="/productCart">
+                            <p> Carrito </p><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
+        <nav class="browse-navbar">
             <ul>
-                <li><a href="/register">Registro</a></li>
-                <li><a href="/login">Ingreso </a></li>
-                <li><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Regiones</a></li>
+                <li><a href="#">Productos destacados</a></li>
+                <li><a href="#">Contáctenos</a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
     <section class="masvendido">
         <h3>Lo más vendido</h3>
@@ -33,15 +57,15 @@
             <article>
                 <div class="canasto">Canasto Tejido En Iraca</div>
                 <img src="/images/canasto-iraca.jpg" width="360" alt="Canasto-iraca" class="product_img">
-                <h4 class="description">Canasto tejido elaborado por manos artesanas con Iraca en el departamento de
-                    Nariño</h4>
+                <h4 class="description">Canasto tejido elaborado por manos artesanas con Iraca en el departamento de Nariño
+                </h4>
                 <p class="price">$45.000</p>
             </article>
             <article>
                 <div class="hamaca-san-jacinto">Hamaca san jacinto</div>
                 <img src="/images/Hamaca san jacinto.jpeg" width="360" alt="hamaca-sanjacinto" class="product_img">
-                <h4 class="description">Hamaca cuadro acordonada amarillo/azul/verde || Asociación de Artesanos de San
-                    Jacinto</h4>
+                <h4 class="description">Hamaca cuadro acordonada amarillo/azul/verde || Asociación de Artesanos de San Jacinto
+                </h4>
                 <p class="price">$477.000</p>
         </div>
         </article>
@@ -50,7 +74,8 @@
         <section>
             <p>© 2021 Artisan Market</p>
             <p><i class="fab fa-linkedin"></i></p>
-            <p></i> <i class="fab fa-twitter"></i></p>
+            <p>
+                </i> <i class="fab fa-twitter"></i></p>
             <p><i class="fab fa-facebook-f"></i></p>
             <p><i class="fab fa-instagram"></i></p>
         </section>

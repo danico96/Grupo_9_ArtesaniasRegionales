@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -13,10 +14,6 @@ body {
 
 /* header */
 
-.logo {
-    width: 60%;
-}
-
 header {
     background-color: whitesmoke;
     width: 100vw;
@@ -25,26 +22,84 @@ header {
     text-align: center;
 }
 
-.top-header h1 {
-    font-size: 1.5em;
+header .top-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.searchbar input {
+header .top-header .box-logo {
+    width: 50%;
+    margin-right: auto;
+}
+
+header .top-header .box-logo .logo {
     width: 70%;
-    padding: 5px;
 }
 
-header nav {
-    margin: 5px;
+header .top-header .box-logo .title {
+    font-family: 'Zen Old Mincho', serif;
+    font-size: 18px;
+    margin: 0;
 }
 
-header nav ul {
+header .top-header .searchbar input {
+    display: none;
+}
+
+header .top-header .searchbar button i {
+    font-size: 15px;
+    padding: 1px;
+}
+
+header .top-header .main-navbar ul,
+.browse-navbar ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
-header nav ul li a {
-    text-decoration: none;
+.top-header .main-navbar ul li {
+    margin: 0 5px;
 }
+
+.top-header .main-navbar ul li a i {
+    font-size: 20px;
+    color: black;
+}
+
+.top-header .main-navbar ul li a,
+.browse-navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header .burger-menu i {
+    border: 1px solid black;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+header .top-header .main-navbar ul li a p {
+    display: none;
+}
+
+header .browse-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+
+header .browse-navbar ul li {
+    margin: 10px 2px;
+}
+
+
+/* main */
 
 main {
     padding: 15px;
@@ -148,7 +203,7 @@ footer {
 
 footer section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 
