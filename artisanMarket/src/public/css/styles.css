@@ -415,10 +415,12 @@ footer section {
     main .mainproduct .box-price,
     .box-quantity {
         width: 35%;
+        height: fit-content;
     }
     main .mainproduct .shop,
     .add {
-        width: 30%;
+        width: 35%;
+        height: 30px;
     }
 }
 
