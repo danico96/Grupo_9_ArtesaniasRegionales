@@ -11,7 +11,6 @@ body {
     font-size: 14px
 }
 
-
 /* header */
 
 header {
@@ -52,8 +51,7 @@ header .top-header .searchbar button i {
     padding: 1px;
 }
 
-header .top-header .main-navbar ul,
-.browse-navbar ul {
+header .top-header .main-navbar ul, .browse-navbar ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -69,8 +67,7 @@ header .top-header .main-navbar ul,
     color: black;
 }
 
-.top-header .main-navbar ul li a,
-.browse-navbar ul li a {
+.top-header .main-navbar ul li a, .browse-navbar ul li a {
     text-decoration: none;
     color: black;
 }
@@ -94,14 +91,11 @@ header .browse-navbar {
     display: none;
 }
 
-
 /* main */
-
 
 /* index */
 
-main .masvendido h3,
-main .regions h3 {
+main .masvendido h3, main .regions h3 {
     margin-top: 10px;
     font-size: 30px;
     padding: 10px;
@@ -214,27 +208,16 @@ main .regions .insular {
     align-items: center;
 }
 
-main .regions .andina h4,
-.caribe h4,
-.pacifica h4,
-.orinoquia h4,
-.amazonica h4,
-.insular h4 {
+main .regions .andina h4, .caribe h4, .pacifica h4, .orinoquia h4, .amazonica h4, .insular h4 {
     color: rgb(255, 217, 0);
     font-size: 22px;
     font-weight: 600;
 }
 
-main .regions .andina .description-region,
-.caribe .description-region,
-.pacifica .description-region,
-.orinoquia .description-region,
-.amazonica .description-region,
-.insular .description-region {
+main .regions .andina .description-region, .caribe .description-region, .pacifica .description-region, .orinoquia .description-region, .amazonica .description-region, .insular .description-region {
     color: white;
     width: 90%;
 }
-
 
 /* productCart*/
 
@@ -281,7 +264,6 @@ form p button {
     margin-bottom: 8px;
 }
 
-
 /* footer */
 
 footer {
@@ -296,7 +278,6 @@ footer section {
     justify-content: space-between;
     flex-wrap: nowrap;
 }
-
 
 /* viewport */
 
@@ -325,22 +306,15 @@ footer section {
         width: 45vw;
         margin: 10px auto;
     }
-    main .masvendido,
-    main .regions {
+    main .masvendido, main .regions {
         display: flex;
         flex-wrap: wrap;
     }
-    main .masvendido h3,
-    main .regions h3 {
+    main .masvendido h3, main .regions h3 {
         display: inline-block;
         width: 100%;
     }
-    main .regions .andina,
-    main .regions .caribe,
-    main .regions .pacifica,
-    main .regions .orinoquia,
-    main .regions .amazonica,
-    main .regions .insular {
+    main .regions .andina, main .regions .caribe, main .regions .pacifica, main .regions .orinoquia, main .regions .amazonica, main .regions .insular {
         width: 50%;
     }
     form p button {
@@ -376,29 +350,14 @@ footer section {
     main .masvendido .products {
         width: 30%;
     }
-    main .regions .andina,
-    main .regions .caribe,
-    main .regions .pacifica,
-    main .regions .orinoquia,
-    main .regions .amazonica,
-    main .regions .insular {
+    main .regions .andina, main .regions .caribe, main .regions .pacifica, main .regions .orinoquia, main .regions .amazonica, main .regions .insular {
         width: 33.33%;
         height: 250px;
     }
-    main .regions .andina h4,
-    main .regions .caribe h4,
-    main .regions .pacifica h4,
-    main .regions .orinoquia h4,
-    main .regions .amazonica h4,
-    main .regions .insular h4 {
+    main .regions .andina h4, main .regions .caribe h4, main .regions .pacifica h4, main .regions .orinoquia h4, main .regions .amazonica h4, main .regions .insular h4 {
         font-size: 26px;
     }
-    main .regions .andina .description-region,
-    main .regions .caribe .description-region,
-    main .regions .pacifica .description-region,
-    main .regions .orinoquia .description-region,
-    main .regions .amazonica .description-region,
-    main .regions .insular .description-region {
+    main .regions .andina .description-region, main .regions .caribe .description-region, main .regions .pacifica .description-region, main .regions .orinoquia .description-region, main .regions .amazonica .description-region, main .regions .insular .description-region {
         font-size: 16px;
     }
     form p button {
