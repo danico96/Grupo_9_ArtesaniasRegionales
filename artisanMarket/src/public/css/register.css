@@ -65,6 +65,8 @@ header ul li a {
 
 .form form {
     padding: 30px;
+    width: 30vw;
+    align-items: center;
 }
 
 .form a {
@@ -72,8 +74,12 @@ header ul li a {
     font-weight: 300;
 }
 
-form .fila {
+.fila, .fila2 {
     display: flex;
-    justify-items: space-between;
+    justify-content: space-between;
     align-items: center;
+}
+
+.fila3 {
+    justify-content: center;
 }
