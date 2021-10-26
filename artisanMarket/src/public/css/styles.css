@@ -97,40 +97,106 @@ header .browse-navbar {
 
 /* main */
 
-main {
-    padding: 15px;
-    margin: auto;
+
+/* index */
+
+main .regions h3,
+.masvendido h3 {
     margin-top: 10px;
-    text-align: center;
+    font-size: 30px;
+    padding: 10px;
 }
 
-.productcar {
-    background: whitesmoke;
+main .regions .andina {
+    background-image: url("/images/andina.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .caribe {
+    background-image: url("/images/caribe.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .pacifica {
+    background-image: url("/images/pacifica.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .orinoquia {
+    background-image: url("/images/orinoquia.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .amazonica {
+    background-image: url("/images/amazonica.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .insular {
+    background-image: url("/images/insular.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .andina h4,
+.caribe h4,
+.pacifica h4,
+.orinoquia h4,
+.amazonica h4,
+.insular h4 {
+    color: rgb(255, 217, 0);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+main .regions .andina .description-region,
+.caribe .description-region,
+.pacifica .description-region,
+.orinoquia .description-region,
+.amazonica .description-region,
+.insular .description-region {
+    color: white;
+    width: 90%;
 }
 
 .products {
     width: 80%;
     margin: auto;
-}
-
-main section {
-    padding: 5px;
-    margin: auto;
-    margin-bottom: 5px;
-}
-
-.masvendido h3 {
-    margin: auto;
-    margin-top: 10px;
-    font-size: 20px;
-    padding: 10px;
-}
-
-.productcar h3 {
-    margin: auto;
-    margin-top: 10px;
-    font-size: 20px;
-    padding: 10px;
 }
 
 .products article {
@@ -165,6 +231,20 @@ main section {
 .description {
     display: block;
     margin: 10px;
+}
+
+
+/* productCart*/
+
+.productcar {
+    background: whitesmoke;
+}
+
+.productcar h3 {
+    margin: auto;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .cantidad {
