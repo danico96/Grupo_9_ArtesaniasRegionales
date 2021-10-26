@@ -107,16 +107,10 @@ main .regions h3 {
     padding: 10px;
 }
 
-<<<<<<< HEAD
-.products article {
-    width: 90%;
-    background-color: gainsboro;
-=======
 main .masvendido .products {
     width: 80vw;
     margin: auto;
     background: wheat;
->>>>>>> 91922e955c968b7e95b2f6286d99080cdcec1fba
     box-shadow: 5px 9px 5px -4px rgba(56, 55, 56, 1);
     border-radius: 5px;
     overflow: hidden;
