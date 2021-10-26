@@ -14,19 +14,130 @@
 <body>
     <header>
         <div class="top-header">
-            <img class="logo" src="/images/logo.png" width="360" alt="Logo de Artisan Market">
-            <h1>Artisan Market Colombia</h1>
+            <div class="box-logo">
+                <img class="logo" src="/images/logo.png" width="360" alt="Logo de Artisan Market">
+                <h1 class="title">Artisan Market Colombia</h1>
+            </div>
             <div class="searchbar">
                 <input type="search" placeholder="Buscar productos">
                 <button><i class="fas fa-search"></i></button>
             </div>
+            <nav class="main-navbar">
+                <ul>
+                    <li>
+                        <a href="/register">
+                            <i class="far fa-id-card"></i>
+                            <p> Registro </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/login">
+                            <i class="fas fa-user"></i>
+                            <p> Ingreso </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/productCart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <p> Carrito </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
+        <nav class="browse-navbar">
             <ul>
-                <li><a href="/register">Registro</a></li>
-                <li><a href="/login">Ingreso </a></li>
-                <li><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Regiones</a></li>
+                <li><a href="#">Productos destacados</a></li>
+                <li><a href="#">Contáctenos</a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
+
+    <main>
+        <section class="masvendido">
+            <h3> Lo más vendido </h3>
+            <article class="products">
+                <h4> Canasto Tejido En Iraca </h4>
+                <img src="/images/canasto-iraca.jpg" alt="Canasto-iraca" class="product_img">
+                <p class="description"> Canasto tejido elaborado por manos artesanas con Iraca en el departamento de Nariño </p>
+                <p class="price">$45.000 </p>
+            </article>
+            <article class="products">
+                <h4> Hamaca San Jacinto </h4>
+                <img src="/images/Hamaca san jacinto.jpeg" alt="Hamaca" class="product_img">
+                <p class="description"> Hamaca cuadro acordonada amarillo/azul/verde || Asociación de Artesanos de San Jacinto </p>
+                <p class="price"> $477.000 </p>
+            </article>
+            <article class="products">
+                <h4> Willys Pitalito Grande Rojo </h4>
+                <img src="/images/willy.jpg" alt="Willy" class="product_img">
+                <p class="description"> Willys elaborado en Arcilla por manos artesanas en el departamento del Huila. </p>
+                <p class="price"> $88.000 </p>
+            </article>
+            <article class="products">
+                <h4> Banco Pensador Colibrí </h4>
+                <img src="/images/colibri.jpg" alt="Colibri" class="product_img">
+                <p class="description"> Banco Pensador elaborado por manos artesanas con Madera Chonta en el departamento del Putumayo. </p>
+                <p class="price"> $419.000 </p>
+            </article>
+            <article class="products">
+                <h4> Mascara Calada Madera Chaquira </h4>
+                <img src="/images/mascara.jpg" alt="mascara" class="product_img">
+                <p class="description"> Mascara elaborada por manos artesanas con Madera y Chaquiras en el departamento del Putumayo. </p>
+                <p class="price"> $628.000 </p>
+            </article>
+            <article class="products">
+                <h4> Talla Armadillo Sikuani </h4>
+                <img src="/images/armadillo.jpg" alt="armadillo" class="product_img">
+                <p class="description"> Armadillo elaborado en Madera de Balso por manos artesanas en el departamendo de Vichada. </p>
+                <p class="price"> $209.000 </p>
+            </article>
+        </section>
+
+        <section class="regions">
+            <h3>Regiones</h3>
+            <article class="andina">
+                <h4>Región Andina</h4>
+                <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quae dolor est perspiciatis ratione.</p>
+            </article>
+            <article class="caribe">
+                <h4>Región Caribe</h4>
+                <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quae dolor est perspiciatis ratione.</p>
+            </article>
+            <article class="pacifica">
+                <h4>Región Pacífica</h4>
+                <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quae dolor est perspiciatis ratione.</p>
+            </article>
+            <article class="orinoquia">
+                <h4>Región de la Orinoquía</h4>
+                <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quae dolor est perspiciatis ratione.</p>
+            </article>
+            <article class="amazonica">
+                <h4>Región de la Amazonía</h4>
+                <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quae dolor est perspiciatis ratione.</p>
+            </article>
+            <article class="insular">
+                <h4>Región Insular</h4>
+                <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quae dolor est perspiciatis ratione.</p>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+        <section>
+            <p>© 2021 Artisan Market</p>
+            <p><i class="fab fa-linkedin"></i></p>
+            <p>
+                </i> <i class="fab fa-twitter"></i></p>
+            <p><i class="fab fa-facebook-f"></i></p>
+            <p><i class="fab fa-instagram"></i></p>
+        </section>
+    </footer>
 </body>
 
 </html>

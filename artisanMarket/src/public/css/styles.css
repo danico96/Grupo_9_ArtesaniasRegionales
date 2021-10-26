@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&display=swap');
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
 /* header */
-
-.logo {
-    width: 60%;
-}
 
 header {
     background-color: whitesmoke;
@@ -24,63 +22,118 @@ header {
     text-align: center;
 }
 
-.top-header h1 {
-    font-size: 1.5em;
+header .top-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.searchbar input {
+header .top-header .box-logo {
+    width: 50%;
+    margin-right: auto;
+}
+
+header .top-header .box-logo .logo {
     width: 70%;
 }
 
-/* 
-header nav {
+header .top-header .box-logo .title {
+    font-family: 'Zen Old Mincho', serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+header .top-header .searchbar input {
     display: none;
-} */
-
-main {
-    background-color: whitesmoke;
-    padding: 15px;
-    margin: auto;
-    margin-top: 10px;
-    text-align: center;
 }
 
-.products {
-    width: 100%;
+header .top-header .searchbar button i {
+    font-size: 15px;
+    padding: 1px;
+}
+
+header .top-header .main-navbar ul,
+.browse-navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
 }
-main section {
-    padding: 5px;
-    margin: auto;
-    margin-bottom: 5px;
+
+.top-header .main-navbar ul li {
+    margin: 0 5px;
 }
-main section h3 {
-    margin: auto;
-    margin-top: 10px;
+
+.top-header .main-navbar ul li a i {
     font-size: 20px;
+    color: black;
+}
+
+.top-header .main-navbar ul li a,
+.browse-navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header .burger-menu i {
+    border: 1px solid black;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+header .top-header .main-navbar ul li a p {
+    display: none;
+}
+
+header .browse-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+
+
+/* main */
+
+
+/* index */
+
+main .masvendido h3,
+main .regions h3 {
+    margin-top: 10px;
+    font-size: 30px;
     padding: 10px;
 }
 
+<<<<<<< HEAD
 .products article {
     width: 90%;
     background-color: gainsboro;
+=======
+main .masvendido .products {
+    width: 80vw;
+    margin: auto;
+    background: wheat;
+>>>>>>> 91922e955c968b7e95b2f6286d99080cdcec1fba
     box-shadow: 5px 9px 5px -4px rgba(56, 55, 56, 1);
-    border-radius: 3px;
+    border-radius: 5px;
     overflow: hidden;
     padding: 15px;
-    margin: auto;
     margin-bottom: 15px;
 }
 
-.products article div {
-    text-align: right;
+main .products h4 {
+    text-align: center;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin: 4px 0;
 }
 
-.products article img {
-    max-width: 90%;
-    margin: left;
+main .products .product_img {
+    max-width: 100%;
+    border: 3px solid rgb(247, 213, 151);
 }
 
 .price {
@@ -91,7 +144,132 @@ main section h3 {
 }
 
 .description {
-    display: none;
+    display: block;
+    margin: 10px;
+}
+
+main .regions .andina {
+    background-image: url("/images/andina.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .caribe {
+    background-image: url("/images/caribe.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .pacifica {
+    background-image: url("/images/pacifica.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .orinoquia {
+    background-image: url("/images/orinoquia.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .amazonica {
+    background-image: url("/images/amazonica.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .insular {
+    background-image: url("/images/insular.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .regions .andina h4,
+.caribe h4,
+.pacifica h4,
+.orinoquia h4,
+.amazonica h4,
+.insular h4 {
+    color: rgb(255, 217, 0);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+main .regions .andina .description-region,
+.caribe .description-region,
+.pacifica .description-region,
+.orinoquia .description-region,
+.amazonica .description-region,
+.insular .description-region {
+    color: white;
+    width: 90%;
+}
+
+
+/* productCart*/
+
+.carrito {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.productcar {
+    margin: 10px;
+    width: 95%;
+}
+
+.productcar article {
+    display: block;
+    background: whitesmoke;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    justify-content: center;
+}
+
+.cantidad {
+    margin: 10px;
+}
+
+.eliminar {
+    margin: 5px;
+}
+
+.eliminar:hover {
+    color: red;
+    cursor: pointer;
 }
 
 form p button {
@@ -103,14 +281,127 @@ form p button {
     margin-bottom: 8px;
 }
 
+
 /* footer */
 
 footer {
+    width: 90%;
     padding: 10px;
     text-align: center;
 }
 
 footer section {
     display: flex;
-    justify-content: space-around;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+/* viewport */
+
+@media (min-width: 481px) {
+    header .top-header .box-logo {
+        width: 30%;
+        margin: 0;
+    }
+    header .top-header .box-logo .logo {
+        width: 80%;
+    }
+    header .top-header .searchbar input {
+        display: block;
+        border-radius: 5px;
+        border: 1px solid black;
+        padding: 3px;
+    }
+    header .top-header .searchbar button {
+        position: relative;
+        bottom: 24px;
+        left: 77px;
+        padding: 1px;
+    }
+    /*index */
+    main .masvendido .products {
+        width: 45vw;
+        margin: 10px auto;
+    }
+    main .masvendido,
+    main .regions {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main .masvendido h3,
+    main .regions h3 {
+        display: inline-block;
+        width: 100%;
+    }
+    main .regions .andina,
+    main .regions .caribe,
+    main .regions .pacifica,
+    main .regions .orinoquia,
+    main .regions .amazonica,
+    main .regions .insular {
+        width: 50%;
+    }
+    form p button {
+        width: 40%;
+    }
+}
+
+@media (min-width: 768px) {
+    header .top-header {
+        padding: 0 20px;
+    }
+    header .top-header .box-logo {
+        width: 20%;
+    }
+    header .top-header .main-navbar ul li a p {
+        display: block;
+    }
+    header .browse-navbar {
+        display: block;
+    }
+    header .browse-navbar ul {
+        justify-content: center;
+    }
+    header .browse-navbar ul li {
+        margin: 10px 45px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    header .burger-menu {
+        display: none;
+    }
+    /* index */
+    main .masvendido .products {
+        width: 30%;
+    }
+    main .regions .andina,
+    main .regions .caribe,
+    main .regions .pacifica,
+    main .regions .orinoquia,
+    main .regions .amazonica,
+    main .regions .insular {
+        width: 33.33%;
+        height: 250px;
+    }
+    main .regions .andina h4,
+    main .regions .caribe h4,
+    main .regions .pacifica h4,
+    main .regions .orinoquia h4,
+    main .regions .amazonica h4,
+    main .regions .insular h4 {
+        font-size: 26px;
+    }
+    main .regions .andina .description-region,
+    main .regions .caribe .description-region,
+    main .regions .pacifica .description-region,
+    main .regions .orinoquia .description-region,
+    main .regions .amazonica .description-region,
+    main .regions .insular .description-region {
+        font-size: 16px;
+    }
+    form p button {
+        width: 30%;
+    }
 }
