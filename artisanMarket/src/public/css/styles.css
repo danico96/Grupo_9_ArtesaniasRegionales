@@ -100,11 +100,46 @@ header .browse-navbar {
 
 /* index */
 
-main .regions h3,
-.masvendido h3 {
+main .masvendido h3,
+main .regions h3 {
     margin-top: 10px;
     font-size: 30px;
     padding: 10px;
+}
+
+main .masvendido .products {
+    width: 80vw;
+    margin: auto;
+    background: wheat;
+    box-shadow: 5px 9px 5px -4px rgba(56, 55, 56, 1);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+main .products h4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 4px 0;
+}
+
+main .products .product_img {
+    max-width: 100%;
+    border: 3px solid rgb(247, 213, 151);
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: yellow;
+    display: inline;
+}
+
+.description {
+    display: block;
+    margin: 10px;
 }
 
 main .regions .andina {
@@ -192,45 +227,6 @@ main .regions .andina .description-region,
 .insular .description-region {
     color: white;
     width: 90%;
-}
-
-.products {
-    width: 80%;
-    margin: auto;
-}
-
-.products article {
-    background: wheat;
-    width: 90%;
-    box-shadow: 5px 9px 5px -4px rgba(56, 55, 56, 1);
-    border-radius: 5px;
-    overflow: hidden;
-    padding: 15px;
-    margin: auto;
-    margin-bottom: 15px;
-}
-
-.products article div {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.products article img {
-    max-width: 90%;
-    margin: left;
-}
-
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    background-color: yellow;
-    display: inline;
-}
-
-.description {
-    display: block;
-    margin: 10px;
 }
 
 
