@@ -306,6 +306,23 @@ footer section {
         left: 77px;
         padding: 1px;
     }
+    /*index */
+    main .regions {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main .regions h3 {
+        display: inline-block;
+        width: 100%;
+    }
+    main .regions .andina,
+    main .regions .caribe,
+    main .regions .pacifica,
+    main .regions .orinoquia,
+    main .regions .amazonica,
+    main .regions .insular {
+        width: 50%;
+    }
     .products article {
         width: 65%;
     }
@@ -337,6 +354,32 @@ footer section {
     }
     header .burger-menu {
         display: none;
+    }
+    /* index */
+    main .regions .andina,
+    main .regions .caribe,
+    main .regions .pacifica,
+    main .regions .orinoquia,
+    main .regions .amazonica,
+    main .regions .insular {
+        width: 33.33%;
+        height: 250px;
+    }
+    main .regions .andina h4,
+    main .regions .caribe h4,
+    main .regions .pacifica h4,
+    main .regions .orinoquia h4,
+    main .regions .amazonica h4,
+    main .regions .insular h4 {
+        font-size: 26px;
+    }
+    main .regions .andina .description-region,
+    main .regions .caribe .description-region,
+    main .regions .pacifica .description-region,
+    main .regions .orinoquia .description-region,
+    main .regions .amazonica .description-region,
+    main .regions .insular .description-region {
+        font-size: 16px;
     }
     .products article {
         width: 50%;
