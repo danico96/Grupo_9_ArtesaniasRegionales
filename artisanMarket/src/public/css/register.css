@@ -50,23 +50,21 @@ header ul li a {
     margin: 0;
 }
 
-.left-side{
+.left-side {
     align-items: center;
 }
 
 .rigth-side {
-    width: 50vh;
     display: flex;
+    width: 50vw;
     justify-content: center;
     align-items: center;
     background-color: rgb(233, 233, 233);
     border-radius: 10px;
 }
 
-.form {
+.form form {
     padding: 30px;
-    text-align: center;
-    font-weight: 200;
 }
 
 .form a {
@@ -74,3 +72,8 @@ header ul li a {
     font-weight: 300;
 }
 
+form .fila {
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+}
