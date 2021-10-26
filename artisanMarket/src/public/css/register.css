@@ -63,10 +63,10 @@ header ul li a {
     border-radius: 10px;
 }
 
-.form {
+.form form {
+    display: flex;
     padding: 30px;
     text-align: center;
-    font-weight: 200;
 }
 
 .form a {

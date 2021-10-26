@@ -63,7 +63,7 @@ main section h3 {
 
 .products article {
     width: 90%;
-    background-color: gainsboro);
+    background-color: gainsboro;
     box-shadow: 5px 9px 5px -4px rgba(56, 55, 56, 1);
     border-radius: 3px;
     overflow: hidden;
