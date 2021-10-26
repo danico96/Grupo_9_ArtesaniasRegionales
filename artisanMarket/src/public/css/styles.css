@@ -276,6 +276,65 @@ form p button {
 }
 
 
+/* PorductDetail */
+
+main .mainproduct {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+main .mainproduct .title-product {
+    font-size: 20px;
+    color: rgb(238, 164, 26);
+}
+
+main .mainproduct .main-img {
+    width: 80%;
+}
+
+main .mainproduct .box-price h4,
+.box-quantity h4,
+.description h4,
+.characteristic h4 {
+    color: rgb(238, 164, 26);
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+
+main .mainproduct .characteristic {
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
+main .mainproduct .box-price p,
+.box-quantity p,
+.description p,
+.characteristic p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+main .mainproduct #quantity {
+    padding: 2px;
+    margin: 3px;
+}
+
+main .mainproduct .shop,
+.add {
+    padding: 5px;
+    margin: 5px;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid #148f77;
+    background: #1abc9c;
+    color: white;
+    font-weight: 400;
+}
+
+
 /* footer */
 
 footer {
@@ -339,6 +398,27 @@ footer section {
     }
     form p button {
         width: 40%;
+    }
+    /* productDetail*/
+    main .mainproduct {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    main .mainproduct .title-product {
+        display: block;
+        width: 100%;
+    }
+    main .mainproduct .main-img {
+        width: 65%;
+    }
+    main .mainproduct .box-price,
+    .box-quantity {
+        width: 35%;
+    }
+    main .mainproduct .shop,
+    .add {
+        width: 30%;
     }
 }
 
