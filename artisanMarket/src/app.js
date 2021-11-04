@@ -1,10 +1,14 @@
 const express = require('express');
-const path = require('path');
-
 const app = express();
+const path = require('path');
+const rutas = require('./routes/index.routes');
 
-app.use(express.static(path.join(__dirname, './public')));
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views')
 
-app.use('/', require('./routes'));
+app.use(express.static(path.resolve(__dirname, './public')));
+//app.use(express.static(path.join(__dirname, './public')));
+
+app.use('/', rutas);
 
 module.exports = app;
