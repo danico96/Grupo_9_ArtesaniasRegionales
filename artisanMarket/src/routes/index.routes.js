@@ -14,5 +14,7 @@ router.get('/productDetail', controller.productDetail); /* GET product detail pa
 
 router.get('/register', controller.register); /* GET register page. */
 
+router.get('/productEdit', controller.productEdit); /* GET product edit page. */
+
 // Acá exportamos el resultado
 module.exports = router;

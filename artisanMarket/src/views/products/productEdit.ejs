@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Head -->
+<%- include ('../partials/head') %>
+
+    <body>
+        <!-- Header -->
+        <%- include ('../partials/header') %>
+            <main class="productEdit">
+                <form action="/" method="get">
+                    <h1>Edición de Productos</h1>
+                    <p>
+                        <input type="number" name="id" placeholder="ID del producto" required>
+                    </p>
+                    <p>
+                        <input type="text" name="productName" placeholder="Nombre del producto" required>
+                    </p>
+                    <h3>Descripción</h3>
+                    <p>
+                        <textarea type="text" name="description" value=description required></textarea>
+                    </p>
+                    <p>
+                    <h3>Foto de producto</h3>
+                    </p>
+                    <p>
+                        <input type="file" name="img" accept=".jpg,.png" required>
+                    </p>
+                    <h3>Región</h3>
+                    </p>
+                    <p>
+                        <label for="Andina">Andina</label>
+                        <input type="radio" name="region" value="Andina" required>
+                    </p>
+                    <p>
+                        <label for="Caribe">Caribe</label>
+                        <input type="radio" name="region" value="Caribe" required>
+                    </p>
+                    <p>
+                        <label for="Pacifica">Pacífica</label>
+                        <input type="radio" name="region" value="Pacifica" required>
+                    </p>
+                    <p>
+                        <label for="Orinoquia">Orinoquía</label>
+                        <input type="radio" name="region" value="Orinoquia" required>
+                    </p>
+                    <p>
+                        <label for="Amazonia">Amazonía</label>
+                        <input type="radio" name="region" value="Amazonia" required>
+                    </p>
+                    <p>
+                        <label for="Insular">Insular</label>
+                        <input type="radio" name="region" value="Insular" required>
+                    </p>
+                    <p>
+                        <input type="text" name="color" placeholder="Color" required>
+                    </p>
+                    <p>
+                        <input type="text" name="price" placeholder="Precio" required>
+                    </p>
+                    <p>
+                        <button type="reset">Modificar</button>
+                    </p>
+                    <p>
+                        <button type="submit" name="/">Enviar</button>
+                    </p>
+                </form>
+            </main>
+
+            <!-- Footer -->
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

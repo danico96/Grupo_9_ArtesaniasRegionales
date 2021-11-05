@@ -15,6 +15,9 @@ const controller = {
     },
     productDetail: (req, res) => {
         res.render('./products/productDetail');
+    },
+    productEdit: (req, res) => {
+        res.render('./products/productEdit');
     }
 }
 

@@ -11,7 +11,6 @@ body {
     font-size: 14px
 }
 
-
 /* header */
 
 header {
@@ -52,8 +51,7 @@ header .top-header .searchbar button i {
     padding: 1px;
 }
 
-header .top-header .main-navbar ul,
-.browse-navbar ul {
+header .top-header .main-navbar ul, .browse-navbar ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -69,8 +67,7 @@ header .top-header .main-navbar ul,
     color: black;
 }
 
-.top-header .main-navbar ul li a,
-.browse-navbar ul li a {
+.top-header .main-navbar ul li a, .browse-navbar ul li a {
     text-decoration: none;
     color: black;
 }
@@ -94,14 +91,15 @@ header .browse-navbar {
     display: none;
 }
 
-
 /* main */
-
 
 /* index */
 
-main .masvendido h3,
-main .regions h3 {
+img {
+    width: 100%;
+}
+
+main .masvendido h3, main .regions h3 {
     margin-top: 10px;
     font-size: 30px;
     padding: 10px;
@@ -208,27 +206,16 @@ main .regions .insular {
     align-items: center;
 }
 
-main .regions .andina h4,
-.caribe h4,
-.pacifica h4,
-.orinoquia h4,
-.amazonica h4,
-.insular h4 {
+main .regions .andina h4, .caribe h4, .pacifica h4, .orinoquia h4, .amazonica h4, .insular h4 {
     color: rgb(255, 217, 0);
     font-size: 22px;
     font-weight: 600;
 }
 
-main .regions .andina .description-region,
-.caribe .description-region,
-.pacifica .description-region,
-.orinoquia .description-region,
-.amazonica .description-region,
-.insular .description-region {
+main .regions .andina .description-region, .caribe .description-region, .pacifica .description-region, .orinoquia .description-region, .amazonica .description-region, .insular .description-region {
     color: white;
     width: 90%;
 }
-
 
 /* productCart*/
 
@@ -267,14 +254,14 @@ main .regions .andina .description-region,
 }
 
 form p button {
-    background: #1259c3;
+    border: 1px solid #148f77;
+    background: #1abc9c;
     color: white;
     width: 60%;
     border-radius: 2px;
     padding: 10px;
     margin-bottom: 8px;
 }
-
 
 /* PorductDetail */
 
@@ -293,10 +280,7 @@ main .mainproduct .main-img {
     width: 80%;
 }
 
-main .mainproduct .box-price h4,
-.box-quantity h4,
-.description h4,
-.characteristic h4 {
+main .mainproduct .box-price h4, .box-quantity h4, .description h4, .characteristic h4 {
     color: rgb(238, 164, 26);
     font-size: 18px;
     margin: 10px 0 5px 0;
@@ -309,10 +293,7 @@ main .mainproduct .characteristic {
     border-bottom: 1px solid gray;
 }
 
-main .mainproduct .box-price p,
-.box-quantity p,
-.description p,
-.characteristic p {
+main .mainproduct .box-price p, .box-quantity p, .description p, .characteristic p {
     font-size: 16px;
     font-weight: 300;
 }
@@ -322,8 +303,7 @@ main .mainproduct #quantity {
     margin: 3px;
 }
 
-main .mainproduct .shop,
-.add {
+main .mainproduct .shop, .add {
     padding: 5px;
     margin: 5px;
     width: 70%;
@@ -333,7 +313,6 @@ main .mainproduct .shop,
     color: white;
     font-weight: 400;
 }
-
 
 /* footer */
 
@@ -350,6 +329,41 @@ footer section {
     flex-wrap: nowrap;
 }
 
+/* Product Edit */
+
+.productEdit {
+    margin: auto;
+    width: 90vw;
+    text-align: center;
+    padding: 10px;
+}
+
+form p {
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+form p input {
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+form p textarea {
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 5px;
+}
 
 /* viewport */
 
@@ -378,22 +392,15 @@ footer section {
         width: 45vw;
         margin: 10px auto;
     }
-    main .masvendido,
-    main .regions {
+    main .masvendido, main .regions {
         display: flex;
         flex-wrap: wrap;
     }
-    main .masvendido h3,
-    main .regions h3 {
+    main .masvendido h3, main .regions h3 {
         display: inline-block;
         width: 100%;
     }
-    main .regions .andina,
-    main .regions .caribe,
-    main .regions .pacifica,
-    main .regions .orinoquia,
-    main .regions .amazonica,
-    main .regions .insular {
+    main .regions .andina, main .regions .caribe, main .regions .pacifica, main .regions .orinoquia, main .regions .amazonica, main .regions .insular {
         width: 50%;
     }
     form p button {
@@ -412,15 +419,17 @@ footer section {
     main .mainproduct .main-img {
         width: 65%;
     }
-    main .mainproduct .box-price,
-    .box-quantity {
+    main .mainproduct .box-price, .box-quantity {
         width: 35%;
         height: fit-content;
     }
-    main .mainproduct .shop,
-    .add {
+    main .mainproduct .shop, .add {
         width: 35%;
         height: 30px;
+    }
+    /* Product Edit */
+    .productEdit {
+        width: 65vw;
     }
 }
 
@@ -452,32 +461,21 @@ footer section {
     main .masvendido .products {
         width: 30%;
     }
-    main .regions .andina,
-    main .regions .caribe,
-    main .regions .pacifica,
-    main .regions .orinoquia,
-    main .regions .amazonica,
-    main .regions .insular {
+    main .regions .andina, main .regions .caribe, main .regions .pacifica, main .regions .orinoquia, main .regions .amazonica, main .regions .insular {
         width: 33.33%;
         height: 250px;
     }
-    main .regions .andina h4,
-    main .regions .caribe h4,
-    main .regions .pacifica h4,
-    main .regions .orinoquia h4,
-    main .regions .amazonica h4,
-    main .regions .insular h4 {
+    main .regions .andina h4, main .regions .caribe h4, main .regions .pacifica h4, main .regions .orinoquia h4, main .regions .amazonica h4, main .regions .insular h4 {
         font-size: 26px;
     }
-    main .regions .andina .description-region,
-    main .regions .caribe .description-region,
-    main .regions .pacifica .description-region,
-    main .regions .orinoquia .description-region,
-    main .regions .amazonica .description-region,
-    main .regions .insular .description-region {
+    main .regions .andina .description-region, main .regions .caribe .description-region, main .regions .pacifica .description-region, main .regions .orinoquia .description-region, main .regions .amazonica .description-region, main .regions .insular .description-region {
         font-size: 16px;
     }
     form p button {
         width: 30%;
+    }
+    /* Product Edit */
+    .productEdit {
+        width: 50vw;
     }
 }
