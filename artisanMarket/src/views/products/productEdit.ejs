@@ -8,6 +8,12 @@
         <%- include ('../partials/header') %>
             <main class="productEdit">
                 <form action="/" method="get">
+                    <p>
+                    <div class="searchbar">
+                        <input type="search" placeholder="ID a editar">
+                        <button>Buscar</button>
+                    </div>
+                    </p>
                     <h1>Edición de Productos</h1>
                     <p>
                         <input type="number" name="id" placeholder="ID del producto" required>
@@ -58,7 +64,7 @@
                         <input type="text" name="price" placeholder="Precio" required>
                     </p>
                     <p>
-                        <button type="reset">Modificar</button>
+                        <button type="reset">Borrar</button>
                     </p>
                     <p>
                         <button type="submit" name="/">Enviar</button>

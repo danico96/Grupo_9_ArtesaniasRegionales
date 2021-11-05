@@ -220,24 +220,29 @@ main .regions .andina .description-region, .caribe .description-region, .pacific
 /* productCart*/
 
 .carrito {
+    align-items: center;
     padding: 10px;
     margin: 10px;
     text-align: center;
 }
 
 .productcar {
+    display: block;
     margin: 10px;
     width: 95%;
+    text-align: center;
+    justify-content: center;
 }
 
 .productcar article {
-    display: block;
-    background: whitesmoke;
     width: 90%;
-    padding: 10px;
-    text-align: center;
-    margin: 20px;
-    justify-content: center;
+    margin: auto;
+    background: wheat;
+    box-shadow: 5px 9px 5px -4px rgba(56, 55, 56, 1);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
 .cantidad {
@@ -341,6 +346,8 @@ footer section {
 form p {
     margin: auto;
     margin-bottom: 2%;
+    text-align: center;
+    justify-content: center;
 }
 
 form p input {
@@ -405,6 +412,10 @@ form p textarea {
     }
     form p button {
         width: 40%;
+    }
+    /* productCar*/
+    .productcar {
+        width: 45%;
     }
     /* productDetail*/
     main .mainproduct {
@@ -472,6 +483,10 @@ form p textarea {
         font-size: 16px;
     }
     form p button {
+        width: 30%;
+    }
+    /* productCar*/
+    .productcar {
         width: 30%;
     }
     /* Product Edit */
