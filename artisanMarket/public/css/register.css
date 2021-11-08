@@ -1,4 +1,3 @@
-
 /*Main*/
 
 .formulario {
@@ -42,6 +41,7 @@
 .fila3 {
     justify-content: center;
 }
+
 /* viewport */
 
 @media (min-width: 481px) {
@@ -49,6 +49,7 @@
         justify-content: center;
     }
 }
+
 @media (min-width: 768px) {
     .formulario {
         justify-content: center;
