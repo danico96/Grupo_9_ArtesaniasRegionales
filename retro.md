@@ -22,4 +22,10 @@ https://miro.com/app/board/o9J_lqn06XU=/?invite_link_id=170055165223
 
 * El ambiente de trabajo del grupo ha sido bueno debido a que cada integrante puede aportar sus ideas, la división de tareas se hace de forma equitativa y el desempeño de cada integrante aporta valor al desempeño en conjunto del equipo, por lo que se han obtenido resultados que cumplen con la expectativa del spirnt.   
 
+## Sprint 2
+
+* Una vez se realizó la división de actividades, cada integrante se dedicó a trabajar por su cuenta sin que haya una comunciación con los demás, por lo que se planteó la idea de realizar al menos una reunión semanal para realizar una actualización del trabajo adelantado y hablar sobre posibles modificaciones con el fin de que el proyecto se vea integro. 
+
+* A pesar de lo anterior, se cumplió con la entrega del sprint por lo que se debe mantener este ritmo de trabajo y mantener el ambiento en el equipo. 
+
 
