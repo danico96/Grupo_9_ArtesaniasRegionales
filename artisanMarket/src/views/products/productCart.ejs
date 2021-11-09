@@ -9,10 +9,9 @@
         <%- include ('../partials/header') %>
 
             <main class="carrito">
+                <h3>Carrito de compras <i class="fas fa-shopping-cart"></i></h3>
                 <section class="productcar">
-                    <h3>Carrito de compras <i class="fas fa-shopping-cart"></i></h3>
-                    <div class="products">
-                        <article>
+                        <article class="products">
                             <div class="hamaca-san-jacinto">
                                 <h2>Hamaca San Jacinto</h2>
                             </div>
@@ -31,7 +30,7 @@
                             </select>
                             <p class="eliminar"><a href="#">Eliminar</a></p>
                         </article>
-                        <article>
+                        <article class="products">
                             <div class="WillysPitalito">
                                 <h2>Willys Pitalito Grande Rojo</h2>
                             </div>
@@ -49,7 +48,7 @@
                             </select>
                             <p class="eliminar"><a href="#">Eliminar</a></p>
                         </article>
-                        <article>
+                        <article class="products">
                             <div class="canasto-iraca">
                                 <h2>Canasto Tejido En Iraca</h2>
                             </div>
@@ -67,10 +66,9 @@
                             </select>
                             <p class="eliminar"><a href="#">Eliminar</a></p>
                         </article>
-                    </div>
-                    <h4>Envío: $30.000</h4>
-                    <h3>Total $</h3>
                 </section>
+                <h4>Envío: $30.000</h4>
+                <h3>Total $</h3>
                 <form action="/buy" method="get">
                     <p>
                         <button type="submit" name="/">Comprar</button>

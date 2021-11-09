@@ -257,15 +257,12 @@ main .regions .andina .description-region,
 }
 
 .productcar {
-    display: block;
-    margin: 10px;
-    width: 95%;
-    text-align: center;
-    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
 }
 
 .productcar article {
-    width: 90%;
+    width: 80%;
     margin: auto;
     background: wheat;
     box-shadow: 5px 9px 5px -4px rgba(56, 55, 56, 1);
@@ -453,7 +450,7 @@ form p textarea {
     main .mainproduct {
         display: flex;
         flex-wrap: wrap;
-        width: 90%;
+        width: 70%;
     }
     main .mainproduct .title-product {
         margin: auto;
@@ -540,6 +537,12 @@ form p textarea {
     /* productCar*/
     .productcar {
         width: 30%;
+    }
+    /* productDetail*/
+    main .mainproduct {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
     }
     /* Product Edit */
     .productEdit {
