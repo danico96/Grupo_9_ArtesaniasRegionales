@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controller/index.controller');
+const productController = require('../controller/productController');
 
 
 // Acá definimos las rutas
@@ -14,7 +15,9 @@ router.get('/productDetail', controller.productDetail); /* GET product detail pa
 
 router.get('/register', controller.register); /* GET register page. */
 
-router.get('/productEdit', controller.productEdit); /* GET product edit page. */
+router.get('/productEdit', productController.edit); /* GET product edit page. */
+
+router.get('/products', productController.index); /* GET products list. */
 
 // Acá exportamos el resultado
 module.exports = router;
