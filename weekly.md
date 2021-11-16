@@ -19,6 +19,16 @@ Entre los impedimentos para el desarrollo del trabajo se encontró, si bien los 
 
 Como solución, cada integrante del equipo se comprometió a ponerse al día con las tareas asignadas durante el fin de semana, para así realizar una actualización del tablero el día lunes y en lo posible, realizar una prueba de entrega de sprint.   
 
- 
+## Reunión del Sprint 4
 
+Se actualizó el tablero del proyecto con base en las actividades que ya se habían realizado que fueron:
+
+* Creación de los archivos JSON
+* Página creación y edición de productos
+* Actualización del tablero
+* 
+
+Seguimos teniendo problemas de comunicación, aunque no en igual medida. Falta terminar de comprender algunos conceptos de CRUD.
+
+Como solución estamos haciendo reuniones cada vez mas periódicas para suplir la falta de comunicación que aún evidenciamos como grupo, repasar los conceptos de CRUD para dar una solución lo mas acertada posible a los lineamientos de este sprint.
 
