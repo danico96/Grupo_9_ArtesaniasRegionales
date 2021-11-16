@@ -28,4 +28,12 @@ https://miro.com/app/board/o9J_lqn06XU=/?invite_link_id=170055165223
 
 * A pesar de lo anterior, se cumplió con la entrega del sprint por lo que se debe mantener este ritmo de trabajo y mantener el ambiento en el equipo. 
 
+## Sprint 3
+
+* Se realizó división de actividades pero el tema de la comunicación del equipo no se ha podido mejorar mucho, se avanzó con una reunión semanal pero no se realizo comunicación por el chat sobre el avance de las tareas, seguimos trabajando en la mejora de la comunicación.
+
+* Seguimos cumpliendo con la entrega del sprint y el buen ambiente dentro del equipo.
+
+
+
 
