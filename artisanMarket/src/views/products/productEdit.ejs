@@ -7,11 +7,10 @@
         <!-- Header -->
         <%- include ('../partials/header') %>
             <main class="productEdit">
+                <div>
+                    <h2>Agregar producto</h2>
+                </div>
                 <form action="/" method="POST">
-                    <h1>Agregar o Editar Productos</h1>
-                    <p>
-                        <input type="number" name="id" placeholder="ID del producto" required>
-                    </p>
                     <p>
                         <input type="text" name="productName" placeholder="Nombre del producto" required>
                     </p>
@@ -37,13 +36,10 @@
                         <input type="text" name="price" placeholder="Precio" required>
                     </p>
                     <p>
-                        <h3>Foto de producto</h3>
-                        </p>
-                        <p>
-                            <input type="file" name="img" accept=".jpg,.png" required>
-                        </p>
+                    <h3>Foto de producto</h3>
+                    </p>
                     <p>
-                        <button type="reset">Borrar</button>
+                        <input type="file" name="img" accept=".jpg,.png" required>
                     </p>
                     <p>
                         <button type="submit" name="/">Guardar</button>

@@ -8,19 +8,19 @@
         <%- include ('../partials/header') %>
 
             <!-- todos los productos -->
-            <div class="container products-wrapper">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="products-title">Todos los productos</h2>
+            <div class="allproducts">
+                <div>
+                    <div>
+                        <h2>Todos los productos</h2>
                     </div>
-                    <table class="col-12">
+                    <table>
                         <thead>
                             <td>id</td>
                             <td>Nombre</td>
                             <td>Precio</td>
-                            <td>Categoria</td>
+                            <td>Región</td>
                             <td>Acciones</td>
-                            <td><button class="btn btn-primary"> Crear nuevo</button></td>
+                            <td><button> Crear nuevo</button></td>
                         </thead>
                         <tbody>
                             <% products.forEach(product=> { %>
@@ -38,12 +38,13 @@
                                         <%= product.category %>
                                     </td>
                                     <td>
-                                        <a href="/products/<%= product.id %>" class="btn btn-info">Detalle</a>
-                                        <a href="/products/edit/<%= product.id %>" class="btn btn-success">Editar</a>
+                                        <a href="./productDetail/<%= product.id %>" class="info">Detalle</a>
+                                        <a href="./productEdit/<%= product.id %>" class="edit">Editar</a>
 
-                                        <form action="/products/<%= product.id %>?_method=DELETE" method="post"
-                                            class="d-inline">
-                                            <button class="btn btn-danger">Borrar</button>
+                                        <form action="./products/<%= product.id %>?_method=DELETE" method="post">
+                                            <p>
+                                                <button>Borrar</button>
+                                            </p>
                                         </form>
                                     </td>
                                 </tr>
