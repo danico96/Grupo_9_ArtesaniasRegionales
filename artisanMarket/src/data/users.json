@@ -1,10 +1,92 @@
-[{"id":1,"first_name":"Lissa","last_name":"Barkaway","email":"lbarkaway0@ycombinator.com","password":"iL8uGrtw7r","category":"user","image":"user_1.jpg"},
-{"id":2,"first_name":"Joellen","last_name":"Reddle","email":"jreddle1@ovh.net","password":"kILd3AariaPs","category":"user","image":"user_2.jpg"},
-{"id":3,"first_name":"Dillon","last_name":"Petchell","email":"dpetchell2@addtoany.com","password":"WC4kQn","category":"user","image":"user_3.jpg"},
-{"id":4,"first_name":"Sarene","last_name":"Flacknell","email":"sflacknell3@unc.edu","password":"nVz5UX","category":"user","image":"user_4.jpg"},
-{"id":5,"first_name":"Ema","last_name":"Blakeney","email":"eblakeney4@google.de","password":"VxFQwDVtiY","category":"user","image":"user_5.jpg"},
-{"id":6,"first_name":"Brit","last_name":"Allchin","email":"ballchin5@nba.com","password":"D8HxJ08UaM","category":"user","image":"user_6.jpg"},
-{"id":7,"first_name":"Tatum","last_name":"Hallibone","email":"thallibone6@webs.com","password":"V0dpUs","category":"user","image":"user_7.jpg"},
-{"id":8,"first_name":"Marieann","last_name":"Small","email":"msmall7@xrea.com","password":"OC3O6HxykREO","category":"user","image":"user_8.jpg"},
-{"id":9,"first_name":"Lovell","last_name":"Lampbrecht","email":"llampbrecht8@sciencedirect.com","password":"Mr6gGczCYrH","category":"user","image":"user_9.jpg"},
-{"id":10,"first_name":"Brandise","last_name":"Duddridge","email":"bduddridge9@elegantthemes.com","password":"BTWFou5V4Iph","category":"user","image":"user_10.jpg"}]
+[
+    {
+        "id": 1,
+        "first_name": "Lissa",
+        "last_name": "Barkaway",
+        "email": "lbarkaway0@ycombinator.com",
+        "password": "iL8uGrtw7r",
+        "category": "user",
+        "image": "user_1.jpg"
+    },
+    {
+        "id": 2,
+        "first_name": "Joellen",
+        "last_name": "Reddle",
+        "email": "jreddle1@ovh.net",
+        "password": "kILd3AariaPs",
+        "category": "user",
+        "image": "user_2.jpg"
+    },
+    {
+        "id": 3,
+        "first_name": "Dillon",
+        "last_name": "Petchell",
+        "email": "dpetchell2@addtoany.com",
+        "password": "WC4kQn",
+        "category": "user",
+        "image": "user_3.jpg"
+    },
+    {
+        "id": 4,
+        "first_name": "Sarene",
+        "last_name": "Flacknell",
+        "email": "sflacknell3@unc.edu",
+        "password": "nVz5UX",
+        "category": "user",
+        "image": "user_4.jpg"
+    },
+    {
+        "id": 5,
+        "first_name": "Ema",
+        "last_name": "Blakeney",
+        "email": "eblakeney4@google.de",
+        "password": "VxFQwDVtiY",
+        "category": "user",
+        "image": "user_5.jpg"
+    },
+    {
+        "id": 6,
+        "first_name": "Brit",
+        "last_name": "Allchin",
+        "email": "ballchin5@nba.com",
+        "password": "D8HxJ08UaM",
+        "category": "user",
+        "image": "user_6.jpg"
+    },
+    {
+        "id": 7,
+        "first_name": "Tatum",
+        "last_name": "Hallibone",
+        "email": "thallibone6@webs.com",
+        "password": "V0dpUs",
+        "category": "user",
+        "image": "user_7.jpg"
+    },
+    {
+        "id": 8,
+        "first_name": "Marieann",
+        "last_name": "Small",
+        "email": "msmall7@xrea.com",
+        "password": "OC3O6HxykREO",
+        "category": "user",
+        "image": "user_8.jpg"
+    },
+    {
+        "id": 9,
+        "first_name": "Lovell",
+        "last_name": "Lampbrecht",
+        "email": "llampbrecht8@sciencedirect.com",
+        "password": "Mr6gGczCYrH",
+        "category": "user",
+        "image": "user_9.jpg"
+    },
+    {
+        "id": 14,
+        "first_name": "Brandise",
+        "last_name": "Duddridge",
+        "email": "bduddridge9@elegantthemes.com",
+        "password": "BTWFou5V4Iph",
+        "category": "user",
+        "image": "user_10.jpg"
+    }
+]

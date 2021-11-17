@@ -1,10 +1,92 @@
-[{"id":1,"name":"Canasto Tejido En Iraca","description":"in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor","image":"/images/canasto-iraca.jpg","category":"Pacifica","colors":"dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque","price":108394},
-{"id":2,"name":"Hamaca San Jacinto","description":"curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin","image":"/images/Hamaca san jacinto.jpeg","category":"Andina","colors":"non quam nec dui luctus rutrum nulla tellus in sagittis dui vel","price":143897},
-{"id":3,"name":"Willys Pitalito Grande Rojo","description":"faucibus cursus urna ut tellus nulla ut erat id mauris vulputate","image":"/images/willy.jpg","category":"orinoquia","colors":"nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum","price":365652},
-{"id":4,"name":"Banco Pensador Colibrí","description":"ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at","image":"/images/colibri.jpg","category":"Pacifica","colors":"nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus","price":451647},
-{"id":5,"name":"Mascara Calada Madera Chaquira","description":"sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non","image":"/images/mascara.jpg","category":"Pacifica","colors":"lectus in quam fringilla rhoncus mauris enim leo rhoncus sed","price":468652},
-{"id":6,"name":"Talla Armadillo Sikuani","description":"id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio","image":"/images/armadillo.jpg","category":"orinoquia","colors":"praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum","price":377847},
-{"id":7,"name":"Canasto Tejido En Iraca","description":"blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse","image":"/images/canasto-iraca.jpg","category":"Pacifica","colors":"quam sapien varius ut blandit non interdum in ante vestibulum ante","price":170058},
-{"id":8,"name":"Hamaca San Jacinto","description":"a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel","image":"/images/Hamaca san jacinto.jpeg","category":"Pacifica","colors":"aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit","price":160518},
-{"id":9,"name":"Willys Pitalito Grande Rojo","description":"luctus nec molestie sed justo pellentesque viverra pede ac diam","image":"/images/willy.jpg","category":"Andina","colors":"quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus","price":428879},
-{"id":10,"name":"Banco Pensador Colibrí","description":"rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean","image":"/images/colibri.jpg","category":"Pacifica","colors":"lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem","price":175895}]
+[
+    {
+        "id": 1,
+        "name": "Canasto Tejido En Iraca",
+        "description": "in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor",
+        "image": "/images/canasto-iraca.jpg",
+        "category": "Pacifica",
+        "colors": "dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque",
+        "price": 108394
+    },
+    {
+        "id": 2,
+        "name": "Hamaca San Jacinto",
+        "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin",
+        "image": "/images/Hamaca san jacinto.jpeg",
+        "category": "Andina",
+        "colors": "non quam nec dui luctus rutrum nulla tellus in sagittis dui vel",
+        "price": 143897
+    },
+    {
+        "id": 3,
+        "name": "Willys Pitalito Grande Rojo",
+        "description": "faucibus cursus urna ut tellus nulla ut erat id mauris vulputate",
+        "image": "/images/willy.jpg",
+        "category": "orinoquia",
+        "colors": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum",
+        "price": 365652
+    },
+    {
+        "id": 4,
+        "name": "Banco Pensador Colibrí",
+        "description": "ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at",
+        "image": "/images/colibri.jpg",
+        "category": "Pacifica",
+        "colors": "nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus",
+        "price": 451647
+    },
+    {
+        "id": 5,
+        "name": "Mascara Calada Madera Chaquira",
+        "description": "sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non",
+        "image": "/images/mascara.jpg",
+        "category": "Pacifica",
+        "colors": "lectus in quam fringilla rhoncus mauris enim leo rhoncus sed",
+        "price": 468652
+    },
+    {
+        "id": 6,
+        "name": "Talla Armadillo Sikuani",
+        "description": "id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio",
+        "image": "/images/armadillo.jpg",
+        "category": "orinoquia",
+        "colors": "praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum",
+        "price": 377847
+    },
+    {
+        "id": 7,
+        "name": "Canasto Tejido En Iraca",
+        "description": "blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse",
+        "image": "/images/canasto-iraca.jpg",
+        "category": "Pacifica",
+        "colors": "quam sapien varius ut blandit non interdum in ante vestibulum ante",
+        "price": 170058
+    },
+    {
+        "id": 8,
+        "name": "Hamaca San Jacinto",
+        "description": "a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel",
+        "image": "/images/Hamaca san jacinto.jpeg",
+        "category": "Pacifica",
+        "colors": "aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit",
+        "price": 160518
+    },
+    {
+        "id": 9,
+        "name": "Willys Pitalito Grande Rojo",
+        "description": "luctus nec molestie sed justo pellentesque viverra pede ac diam",
+        "image": "/images/willy.jpg",
+        "category": "Andina",
+        "colors": "quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus",
+        "price": 428879
+    },
+    {
+        "id": 10,
+        "name": "Banco Pensador Colibrí",
+        "description": "rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean",
+        "image": "/images/colibri.jpg",
+        "category": "Pacifica",
+        "colors": "lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem",
+        "price": 175895
+    }
+]
