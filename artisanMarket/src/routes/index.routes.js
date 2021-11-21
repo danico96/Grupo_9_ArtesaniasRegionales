@@ -14,6 +14,7 @@ router.get('/productCart', controller.productCart); /* GET product cart page. */
 router.get('/productDetail', productController.detail); /* GET product detail page. */
 
 router.get('/register', controller.register); /* GET register page. */
+router.post('/registerUser', controller.store);
 
 router.get('/productEdit', productController.edit); /* GET product edit page. */
 

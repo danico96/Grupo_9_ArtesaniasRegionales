@@ -1,5 +1,9 @@
 /*Main*/
 
+body {
+    overflow-x: hidden;
+}
+
 .formulario {
     width: 90vw;
     height: 80vh;
@@ -30,6 +34,17 @@
 
 .form a {
     font-weight: 300;
+}
+
+.text-btn {
+    text-align: center;
+}
+
+
+.btn-login button{
+    padding: 5px 30px;
+    text-align: center;
+    width: 100%;
 }
 
 /* viewport */

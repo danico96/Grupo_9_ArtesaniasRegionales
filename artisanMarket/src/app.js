@@ -6,6 +6,11 @@ const rutas = require('./routes/index.routes');
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'views'));
 
+/*Middlewares*/
+
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
 app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.use('/', rutas);

@@ -81,12 +81,19 @@
         "image": "user_9.jpg"
     },
     {
-        "id": 14,
-        "first_name": "Brandise",
-        "last_name": "Duddridge",
-        "email": "bduddridge9@elegantthemes.com",
-        "password": "BTWFou5V4Iph",
-        "category": "user",
-        "image": "user_10.jpg"
+        "id": 10,
+        "first_name": "Cristian",
+        "last_name": "Rojas Betancur",
+        "email": "criztian5600@gmail.com",
+        "password": "12345",
+        "category": "user"
+    },
+    {
+        "id": 11,
+        "first_name": "Jazmin",
+        "last_name": "Rojas Betancur",
+        "email": "jazminvaleria234@gmail.com",
+        "password": "123456",
+        "category": "user"
     }
 ]
