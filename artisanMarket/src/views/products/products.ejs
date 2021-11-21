@@ -15,12 +15,22 @@
                     </div>
                     <table>
                         <thead>
-                            <td>id</td>
-                            <td>Nombre</td>
-                            <td>Precio</td>
-                            <td>Región</td>
-                            <td>Acciones</td>
-                            <td><button> Crear nuevo</button></td>
+                            <td>
+                                <h3>Id</h3>
+                            </td>
+                            <td>
+                                <h3>Nombre</h3>
+                            </td>
+                            <td>
+                                <h3>Precio</h3>
+                            </td>
+                            <td>
+                                <h3>Región</h3>
+                            </td>
+                            <td>
+                                <h3>Acciones</h3>
+                            </td>
+                            <td><a href='./productCreate'> Crear nuevo </a></td>
                         </thead>
                         <tbody>
                             <% products.forEach(product=> { %>
@@ -42,9 +52,9 @@
                                         <a href="./productEdit/<%= product.id %>" class="edit">Editar</a>
 
                                         <form action="./products/<%= product.id %>?_method=DELETE" method="post">
-                                            <p>
-                                                <button>Borrar</button>
-                                            </p>
+                                            <div>
+                                                <button>Eliminar</button>
+                                            </div>
                                         </form>
                                     </td>
                                 </tr>

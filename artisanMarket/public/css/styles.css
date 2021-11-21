@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -401,36 +402,43 @@ form p textarea {
         width: 30%;
         margin: 0;
     }
+
     header .top-header .box-logo .logo {
         width: 80%;
     }
+
     header .top-header .searchbar input {
         display: block;
         border-radius: 5px;
         border: 1px solid black;
         padding: 3px;
     }
+
     header .top-header .searchbar button {
         position: relative;
         bottom: 24px;
         left: 77px;
         padding: 1px;
     }
+
     /*index */
     main .masvendido .products {
         width: 45vw;
         margin: 10px auto;
     }
+
     main .masvendido,
     main .regions {
         display: flex;
         flex-wrap: wrap;
     }
+
     main .masvendido h3,
     main .regions h3 {
         display: inline-block;
         width: 100%;
     }
+
     main .regions .andina,
     main .regions .caribe,
     main .regions .pacifica,
@@ -439,39 +447,48 @@ form p textarea {
     main .regions .insular {
         width: 50%;
     }
+
     form p button {
         width: 40%;
     }
+
     /* productCar*/
     .productcar {
         width: 45%;
     }
+
     /* productDetail*/
     main .mainproduct {
         display: flex;
         flex-wrap: wrap;
         width: 70%;
     }
+
     main .mainproduct .title-product {
         margin: auto;
         width: 100%;
     }
+
     main .mainproduct .main-img {
         width: 60%;
     }
+
     main .mainproduct .grid-detail {
         display: grid;
         width: 40%;
         align-self: center;
     }
+
     main .mainproduct .grid-detail .box-quantity {
         padding-bottom: 10px;
         border-bottom: 1px solid gray;
     }
+
     main .mainproduct .grid-detail .add {
         width: 90%;
         margin: 10px auto;
     }
+
     /* Product Edit */
     .productEdit {
         width: 65vw;
@@ -482,30 +499,38 @@ form p textarea {
     header .top-header {
         padding: 0 20px;
     }
+
     header .top-header .box-logo {
         width: 20%;
     }
+
     header .top-header .main-navbar ul li a p {
         display: block;
     }
+
     header .browse-navbar {
         display: block;
     }
+
     header .browse-navbar ul {
         justify-content: center;
     }
+
     header .browse-navbar ul li {
         margin: 10px 45px;
         font-weight: 600;
         font-size: 16px;
     }
+
     header .burger-menu {
         display: none;
     }
+
     /* index */
     main .masvendido .products {
         width: 30%;
     }
+
     main .regions .andina,
     main .regions .caribe,
     main .regions .pacifica,
@@ -515,6 +540,7 @@ form p textarea {
         width: 33.33%;
         height: 250px;
     }
+
     main .regions .andina h4,
     main .regions .caribe h4,
     main .regions .pacifica h4,
@@ -523,6 +549,7 @@ form p textarea {
     main .regions .insular h4 {
         font-size: 26px;
     }
+
     main .regions .andina .description-region,
     main .regions .caribe .description-region,
     main .regions .pacifica .description-region,
@@ -531,37 +558,70 @@ form p textarea {
     main .regions .insular .description-region {
         font-size: 16px;
     }
+
     form p button {
         width: 30%;
     }
+
     /* productCar*/
     .productcar {
         width: 30%;
     }
+
     /* productDetail*/
     main .mainproduct {
         display: flex;
         flex-wrap: wrap;
         width: 60%;
     }
+
     /* Product Edit */
     .productEdit {
         width: 50vw;
     }
+
     /*ProductDetail */
     main .mainproduct {
         justify-content: space-between;
     }
+
     main .mainproduct .main-img {
         width: 50%;
     }
+
     main .mainproduct .grid-detail .add {
         padding: 10px;
     }
+
     main .mainproduct .description,
     .characteristic {
         margin: 0;
         width: 45%;
         border-bottom: 1px solid gray;
+    }
+
+    /*Products */
+    .allproducts {
+        margin: auto;
+        text-align: center;
+        padding: 2%;
+    }
+
+    .allproducts table {
+        margin: auto;
+        padding: 2%;
+    }
+
+    .nuevo {
+        padding: 1%;
+        border-radius: 5px;
+        border: 1px solid #148f77;
+        background: #1abc9c;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .allproducts tbody tr td {
+        padding: 2%;
     }
 }

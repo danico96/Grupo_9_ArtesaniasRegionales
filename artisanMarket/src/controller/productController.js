@@ -3,10 +3,11 @@ const fs = require('fs');
 
 let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), 'utf-8');
 let products = JSON.parse(jsonProducts);
+const modelproducts = require ('../model/modelProducts')
 
-module.exports = {
+const productController = {
     index: (req, res) => {
-        res.render('products/products', { products });
+        res.render('./products/products', { products });
     },
     detail (req, res) {
         let id = req.params.id;
@@ -17,7 +18,8 @@ module.exports = {
         res.render('/products/productDetail', { product: productoDetalle });
     },
     create: (req, res) => {
-        res.render('/products');
+        const create = modelproducts.createProduct;
+        res.render('./products/productCreate');
     },
     edit: function (req, res) {
         let productoEditar = products.find(product => {
@@ -36,4 +38,5 @@ module.exports = {
 
         res.redirect('/products');
     }
-}
+};
+module.exports = productController

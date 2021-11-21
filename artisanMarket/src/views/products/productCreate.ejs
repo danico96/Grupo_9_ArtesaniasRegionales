@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Head -->
+<%- include ('../partials/head') %>
+
+    <body>
+        <!-- Header -->
+        <%- include ('../partials/header') %>
+            <main class="productEdit">
+                <div>
+                    <h2>Agregar producto</h2>
+                </div>
+                <form action="/productCreate" method="POST">
+                    <p>
+                        <input type="text" name="productName" placeholder="Nombre del producto" required>
+                    </p>
+                    <h3>Descripción</h3>
+                    <p>
+                        <textarea type="text" name="description" value=description required></textarea>
+                    </p>
+                    <p>
+                        <label>Seleccione una región: </label>
+                        <select name="region">
+                            <option value="Andina">Andina</option>
+                            <option value="Caribe">Caribe</option>
+                            <option value="Pacifica">Pacífica</option>
+                            <option value="Orinoquia">Orinoquía</option>
+                            <option value="Amazonia">Amazonía</option>
+                            <option value="Insular">Insular</option>
+                        </select>
+                    </p>
+                    <p>
+                        <input type="text" name="color" placeholder="Color" required>
+                    </p>
+                    <p>
+                        <input type="text" name="price" placeholder="Precio" required>
+                    </p>
+                    <p>
+                    <h3>Foto de producto</h3>
+                    </p>
+                    <p>
+                        <input type="file" name="img" accept=".jpg,.png" required>
+                    </p>
+                    <p>
+                        <button type="submit" name="/">Guardar</button>
+                    </p>
+                </form>
+            </main>
+
+            <!-- Footer -->
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>
