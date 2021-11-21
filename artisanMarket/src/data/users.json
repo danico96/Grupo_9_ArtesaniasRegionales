@@ -95,5 +95,13 @@
         "email": "jazminvaleria234@gmail.com",
         "password": "123456",
         "category": "user"
+    },
+    {
+        "id": 12,
+        "first_name": "Tomas",
+        "last_name": "Lopez Correa",
+        "email": "Tomas@digital.com",
+        "password": "1234567",
+        "category": "user"
     }
 ]
