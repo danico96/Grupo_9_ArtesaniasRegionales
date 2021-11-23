@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const { users } = require('../controller')
+
+const { products } = require('../controller')
 
 //multer
 const multer = require("multer");
@@ -20,12 +21,16 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //Rutas
-router.get('/', users.home); /* GET home page. */
+router.get('/productCart', products.productCart); /* GET product cart page. */
 
-router.get('/login', users.login); /* GET login page. */
+router.get('/productDetail', products.detail); /* GET product detail page. */
 
-router.get('/register', users.register); /* GET register page. */
-router.post('/registerUser', users.store);
+router.get('/productCreate', products.create); /* GET product create page. */
+router.post('/productCreate', );
 
-// Acá exportamos el resultado
+router.get('/productEdit', products.edit); /* GET product edit page. */
+
+router.get('/products', products.index); /* GET products list. */
+
+//Acá exportamos el resultado
 module.exports = router;

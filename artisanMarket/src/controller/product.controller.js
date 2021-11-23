@@ -1,15 +1,17 @@
+const { productsmodel } = require('../data');
+
 const path = require('path');
 const fs = require('fs');
 
+
 let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), 'utf-8');
 let products = JSON.parse(jsonProducts);
-const modelproducts = require ('../model/modelProducts')
 
 const productController = {
     index: (req, res) => {
         res.render('./products/products', { products });
     },
-    detail (req, res) {
+    detail(req, res) {
         let id = req.params.id;
         let productoDetalle = products.find(product => {
             return product.id == id;
@@ -18,16 +20,16 @@ const productController = {
         res.render('/products/productDetail', { product: productoDetalle });
     },
     create: (req, res) => {
-        const create = modelproducts.createProduct;
+        const create = productsmodel.createProduct;
         res.render('./products/productCreate');
     },
-    edit: function (req, res) {
+    edit: function(req, res) {
         let productoEditar = products.find(product => {
             return product.id == req.params.id;
         })
         res.render('./products/productEdit', { product: productoEditar });
     },
-    delete (req, res) {
+    delete(req, res) {
 
         let productosRestantes = products.filter(product => {
             return product.id != req.params.id;
@@ -37,6 +39,9 @@ const productController = {
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
 
         res.redirect('/products');
+    },
+    productCart: (req, res) => {
+        res.render('./products/productCart');
     }
 };
 module.exports = productController

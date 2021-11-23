@@ -1,4 +1,5 @@
-const modelUsers = require('../data/modelUsers');
+const { usermodel } = require('../data');
+
 const usersDB = require('../data/users.json');
 
 const controller = {
@@ -11,9 +12,6 @@ const controller = {
     register: (req, res) => {
         res.render('./users/register');
     },
-    productCart: (req, res) => {
-        res.render('./products/productCart');
-    },
     store: (req, res) => {
         let newUser = {
             "id": usersDB.length + 1,
@@ -23,8 +21,8 @@ const controller = {
             "password": req.body.password,
             "category": req.body.category
         }
-        modelUsers.createUser(newUser)
-        
+        usermodel.createUser(newUser)
+
         res.redirect("/");
     }
 }
