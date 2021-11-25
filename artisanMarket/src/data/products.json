@@ -63,12 +63,10 @@
         "price": 170058
     },
     {
-        "id": 8,
+        "id": "8",
         "name": "Hamaca San Jacinto",
-        "description": "a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel",
-        "image": "Hamaca san jacinto.jpeg",
-        "category": "Pacifica",
-        "colors": "aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit",
-        "price": 160518
+        "description": "prueba",
+        "category": "Andina",
+        "price": "160518"
     }
 ]

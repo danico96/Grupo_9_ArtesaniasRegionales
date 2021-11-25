@@ -75,7 +75,7 @@ const controller = {
             "id": productId,
             "name": req.body.productName,
             "description": req.body.description,
-            "image": req.fle.img,
+            "image": req.file.img,
             "category": req.body.region,
             "colors": req.body.colors,
             "price": req.body.price
