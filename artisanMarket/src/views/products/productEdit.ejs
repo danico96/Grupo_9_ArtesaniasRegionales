@@ -4,19 +4,20 @@
 <%- include ('../partials/head') %>
 
     <body>
-        <!-- Header -->
+    <!-- Header -->
         <%- include ('../partials/header') %>
             <main class="productEdit">
                 <div>
-                    <h2>Agregar producto</h2>
+                    <h2>Editar producto</h2>
+                    <h2><%= product.name %> </h2>
                 </div>
                 <form action="/" method="POST">
                     <p>
-                        <input type="text" name="productName" placeholder="Nombre del producto" required>
+                        <input type="text" name="productName" placeholder="Nombre del producto" value='<%= product.name %>'  required>
                     </p>
                     <h3>Descripción</h3>
                     <p>
-                        <textarea type="text" name="description" value=description required></textarea>
+                        <textarea type="text" name="description" value='description'  required></textarea>
                     </p>
                     <p>
                         <label>Seleccione una región: </label>
@@ -30,16 +31,16 @@
                         </select>
                     </p>
                     <p>
-                        <input type="text" name="color" placeholder="Color" required>
+                        <input type="text" name="color" placeholder="Color" value='<%= product.colors %>'required>
                     </p>
                     <p>
-                        <input type="text" name="price" placeholder="Precio" required>
+                        <input type="text" name="price" placeholder="Precio" value='<%= product.price  %>' required>
                     </p>
                     <p>
                     <h3>Foto de producto</h3>
                     </p>
                     <p>
-                        <input type="file" name="img" accept=".jpg,.png" required>
+                        <input type="file" name="image" accept=".jpg,.png" required>
                     </p>
                     <p>
                         <button type="submit" name="/">Guardar</button>

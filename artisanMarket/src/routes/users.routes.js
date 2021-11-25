@@ -34,13 +34,10 @@ router.get('/products', users.indexProducts); /* GET products list. */
 router.get('/productDetail/:id', users.detailProduct); /* GET product detail page. */
 
 router.get('/productCreate', users.createProduct); /* GET product create page. */
-<<<<<<< HEAD
-router.post('/', upload.single('image'), users.storeProduct);
-=======
 router.post('/productCreate', upload.single(), users.storeProduct);
->>>>>>> 29a0f5c42c2a70eab91467db150f1325b7f6a204
 
-router.get('/productEdit', users.editProduct); /* GET product edit page. */
+router.get('/productEdit/:id', users.editProduct); /* GET product edit page. */
+router.put('/productEdit/:id', upload.single('image'), users.updateProduct);
 
 router.delete('/:id', users.deleteProduct); /* Delete one product*/ 
 

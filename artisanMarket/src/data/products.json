@@ -70,23 +70,5 @@
         "category": "Pacifica",
         "colors": "aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit",
         "price": 160518
-    },
-    {
-        "id": 9,
-        "name": "Willys Pitalito Grande Rojo",
-        "description": "luctus nec molestie sed justo pellentesque viverra pede ac diam",
-        "image": "willy.jpg",
-        "category": "Andina",
-        "colors": "quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus",
-        "price": 428879
-    },
-    {
-        "id": 10,
-        "name": "Banco Pensador Colibrí",
-        "description": "rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean",
-        "image": "colibri.jpg",
-        "category": "Pacifica",
-        "colors": "lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem",
-        "price": 175895
     }
 ]
