@@ -34,7 +34,7 @@ router.get('/products', users.indexProducts); /* GET products list. */
 router.get('/productDetail/:id', users.detailProduct); /* GET product detail page. */
 
 router.get('/productCreate', users.createProduct); /* GET product create page. */
-router.post('/productCreate', );
+router.post('/productCreate', upload.single(), users.storeProduct);
 
 router.get('/productEdit', users.editProduct); /* GET product edit page. */
 

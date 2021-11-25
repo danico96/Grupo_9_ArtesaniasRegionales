@@ -1,4 +1,5 @@
 const { usermodel, productsmodel } = require('../data');
+const productsDB = require('../data/products.json')
 
 const controller = {
     homeUser: (req, res) => {
@@ -38,6 +39,20 @@ const controller = {
     createProduct: (req, res) => {
         const create = productsmodel.createProduct;
         res.render('./products/productCreate');
+    },
+    storeProduct: (req, res) => {
+        let newProduct = {
+            "id": productsDB.length + 1,
+            "name": req.body.productName,
+            "description": req.body.description,
+            "image": req.body.img,
+            "category": req.body.region,
+            "colors": req.body.colors,
+            "price": req.body.price
+        }
+        productsmodel.createProduct(newProduct)
+
+        res.redirect("/products");
     },
     editProduct: (req, res) => {
         let productoEditar = products.find(product => {
