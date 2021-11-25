@@ -51,10 +51,10 @@ const controller = {
     },
     storeProduct: (req, res) => {
         let newProduct = {
-            "id": productsDB.length + 1,
+            "id": newId(),
             "name": req.body.productName,
             "description": req.body.description,
-            "image": req.body.img,
+            "image": req.file.filename,
             "category": req.body.region,
             "colors": req.body.colors,
             "price": req.body.price
@@ -72,10 +72,10 @@ const controller = {
         let productId = req.params.id;
 
         let productEdit = {
-            "id": productId,
+            "id": parseInt(productId),
             "name": req.body.productName,
             "description": req.body.description,
-            "image": req.file.img,
+            "image": req.file.filename,
             "category": req.body.region,
             "colors": req.body.colors,
             "price": req.body.price

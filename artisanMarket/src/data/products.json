@@ -63,9 +63,10 @@
         "price": 170058
     },
     {
-        "id": "8",
+        "id": 8,
         "name": "Hamaca San Jacinto",
-        "description": "prueba",
+        "description": "dsadasdas",
+        "image": "image-1637879148231-438709180fox-g0e1351f79_640.jpg",
         "category": "Andina",
         "price": "160518"
     }
