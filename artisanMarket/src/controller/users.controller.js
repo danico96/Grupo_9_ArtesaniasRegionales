@@ -1,5 +1,15 @@
 const { usermodel, productsmodel } = require('../data');
 
+const newId = () => {
+    let ultimo = 0;
+    this.getProducts().forEach(item => {
+        if (item.id > ultimo) {
+            ultimo = item.id;
+        }
+    });
+    return ultimo + 1;
+};
+
 const controller = {
     homeUser: (req, res) => {
         res.render('./web/index', { products: productsmodel.getProducts() });
@@ -36,8 +46,24 @@ const controller = {
         res.render('./products/productDetail', { product });
     },
     createProduct: (req, res) => {
-        const create = productsmodel.createProduct;
         res.render('./products/productCreate');
+    },
+    storeProduct: (req, res) => {
+        function imgName() {
+            if (!req.file) {
+                return "default-image.png";
+            } else {
+                return req.file.filename;
+            }
+        };
+
+        const newProduct = {
+            id: newId(),
+            ...req.body,
+            image: imgName()
+        };
+        productsmodel.createProduct(newProduct);
+        res.redirect('/');
     },
     editProduct: (req, res) => {
         let productoEditar = products.find(product => {
@@ -46,12 +72,8 @@ const controller = {
         res.render('./products/productEdit', { product: productoEditar });
     },
     deleteProduct: (req, res) => {
-        let productosRestantes = products.filter(product => {
-            return product.id != req.params.id;
-        })
-
-        let jsonDeProductos = JSON.stringify(productosRestantes, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
+        let productId = req.params.id;
+        productsmodel.deleteProduct(productId);
 
         res.redirect('/products');
     }

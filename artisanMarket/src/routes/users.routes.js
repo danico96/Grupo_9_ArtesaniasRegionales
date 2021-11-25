@@ -8,7 +8,7 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, path.join(__dirname, "../public/img"));
+        cb(null, path.join(__dirname, "../public/images"));
     },
     filename: function(req, file, cb) {
         const uniqueSuffix =
@@ -34,9 +34,12 @@ router.get('/products', users.indexProducts); /* GET products list. */
 router.get('/productDetail/:id', users.detailProduct); /* GET product detail page. */
 
 router.get('/productCreate', users.createProduct); /* GET product create page. */
-router.post('/productCreate', );
+router.post('/', upload.single('image'), users.storeProduct);
 
 router.get('/productEdit', users.editProduct); /* GET product edit page. */
+
+router.delete('/:id', users.deleteProduct); /* Delete one product*/ 
+
 
 // Acá exportamos el resultado
 module.exports = router;
