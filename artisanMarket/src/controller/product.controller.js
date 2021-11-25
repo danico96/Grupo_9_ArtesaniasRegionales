@@ -11,26 +11,25 @@ const productController = {
     index: (req, res) => {
         res.render('./products/products', { products });
     },
-    detail(req, res) {
-        let id = req.params.id;
-        let productoDetalle = products.find(product => {
-            return product.id == id;
-        })
+    detail: (req, res) => {
+        // let id = req.params.id;
+        // let productoDetalle = products.find(product => {
+        // return product.id == id;
+        // })
 
-        res.render('/products/productDetail', { product: productoDetalle });
+        res.render('./products/productDetail')//, { product: productoDetalle });
     },
     create: (req, res) => {
         const create = productsmodel.createProduct;
         res.render('./products/productCreate');
     },
-    edit: function(req, res) {
+    edit: (req, res) => {
         let productoEditar = products.find(product => {
             return product.id == req.params.id;
         })
         res.render('./products/productEdit', { product: productoEditar });
     },
-    delete(req, res) {
-
+    delete: (req, res) => {
         let productosRestantes = products.filter(product => {
             return product.id != req.params.id;
         })
@@ -39,9 +38,7 @@ const productController = {
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
 
         res.redirect('/products');
-    },
-    productCart: (req, res) => {
-        res.render('./products/productCart');
     }
 };
+
 module.exports = productController

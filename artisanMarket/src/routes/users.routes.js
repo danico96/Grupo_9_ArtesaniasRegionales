@@ -20,12 +20,23 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //Rutas
-router.get('/', users.home); /* GET home page. */
+router.get('/', users.homeUser); /* GET home page. */
 
-router.get('/login', users.login); /* GET login page. */
+router.get('/login', users.loginUser); /* GET login page. */
 
-router.get('/register', users.register); /* GET register page. */
-router.post('/registerUser', users.store);
+router.get('/register', users.registerUser); /* GET register page. */
+router.post('/registerUser', users.storeUser);
+
+router.get('/productCart', users.productCart); /* GET product cart page. */
+
+router.get('/products', users.indexProducts); /* GET products list. */
+
+router.get('/productDetail/:id', users.detailProduct); /* GET product detail page. */
+
+router.get('/productCreate', users.createProduct); /* GET product create page. */
+router.post('/productCreate', );
+
+router.get('/productEdit', users.editProduct); /* GET product edit page. */
 
 // Acá exportamos el resultado
 module.exports = router;
