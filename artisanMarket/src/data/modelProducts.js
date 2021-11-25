@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const DB = require('./products.json')
 
 const modelProducts = {
     getProducts: function() {
@@ -14,15 +15,10 @@ const modelProducts = {
         }
     },
     createProduct: function(newProduct) {
-        const products = this.getProducts();
-        if (this.isExist(newProduct.id)) {
-            return console.log("El producto con id " + newProduct.id + " ya existe.");
-        } else {
-            products.push(newProduct);
-            fs.writeFileSync(path.resolve(__dirname, './products.json'), JSON.stringify(products, null, 4), { encoding: "utf-8" });
+        DB.push(newProduct);
+            fs.writeFileSync(path.resolve(__dirname, './products.json'), JSON.stringify(DB, null, 4), { encoding: "utf-8" });
             return console.log("Agregado con éxito.");
-        }
-    },
+        },
     updateProduct: function(productId, productUpdated) {
         const indiceBuscado = this.getProducts().findIndex(product => product.id == productId);
         if (indiceBuscado < 0) {

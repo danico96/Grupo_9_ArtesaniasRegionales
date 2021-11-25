@@ -1,4 +1,5 @@
 const { usermodel, productsmodel } = require('../data');
+const productsDB = require('../data/products.json')
 
 const newId = () => {
     let ultimo = 0;
@@ -49,6 +50,7 @@ const controller = {
         res.render('./products/productCreate');
     },
     storeProduct: (req, res) => {
+<<<<<<< HEAD
         function imgName() {
             if (!req.file) {
                 return "default-image.png";
@@ -64,6 +66,20 @@ const controller = {
         };
         productsmodel.createProduct(newProduct);
         res.redirect('/');
+=======
+        let newProduct = {
+            "id": productsDB.length + 1,
+            "name": req.body.productName,
+            "description": req.body.description,
+            "image": req.body.img,
+            "category": req.body.region,
+            "colors": req.body.colors,
+            "price": req.body.price
+        }
+        productsmodel.createProduct(newProduct)
+
+        res.redirect("/products");
+>>>>>>> 29a0f5c42c2a70eab91467db150f1325b7f6a204
     },
     editProduct: (req, res) => {
         let productoEditar = products.find(product => {
