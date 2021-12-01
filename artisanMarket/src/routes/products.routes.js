@@ -9,7 +9,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, path.join(__dirname, "../public/img"));
+        cb(null, path.join(__dirname, "../public/images/products"));
     },
     filename: function(req, file, cb) {
         const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9) + file.originalname;
@@ -20,14 +20,19 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //Rutas
-router.get('/', products.index); /* GET products list. */
+router.get('/', products.indexProducts); /* GET products list. */
 
-router.get('/productDetail', products.detail); /* GET product detail page. */
+router.get('/productCart', products.productCart); /* GET product cart page. */
 
-router.get('/productCreate', products.create); /* GET product create page. */
-router.post('/productCreate', );
+router.get('/productDetail/:id', products.detailProduct); /* GET product detail page. */
 
-router.get('/productEdit', products.edit); /* GET product edit page. */
+router.get('/productCreate', products.createProduct); /* GET product create page. */
+router.post('/productCreate', upload.single(), products.storeProduct);
+
+router.get('/productEdit/:id', products.editProduct); /* GET product edit page. */
+router.put('/productEdit/:id', upload.single('image'), products.updateProduct);
+
+router.delete('/:id', products.deleteProduct); /* Delete one product*/ 
 
 //Acá exportamos el resultado
 module.exports = router;

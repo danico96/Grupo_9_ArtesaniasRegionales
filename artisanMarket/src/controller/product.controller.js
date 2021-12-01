@@ -1,43 +1,73 @@
 const { productsmodel } = require('../data');
 
-const path = require('path');
-const fs = require('fs');
-
-
-let jsonProducts = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), 'utf-8');
-let products = JSON.parse(jsonProducts);
+const newId = () => {
+    let ultimo = 0;
+    this.getProducts().forEach(item => {
+        if (item.id > ultimo) {
+            ultimo = item.id;
+        }
+    });
+    return ultimo + 1;
+};
 
 const productController = {
-    index: (req, res) => {
-        res.render('./products/products', { products });
+    indexProducts: (req, res) => {
+        res.render('./products/products', { products: productsmodel.getProducts() });
     },
-    detail: (req, res) => {
-        // let id = req.params.id;
-        // let productoDetalle = products.find(product => {
-        // return product.id == id;
-        // })
+    productCart: (req, res) => {
+        res.render('./products/productCart');
+    },
+    detailProduct: (req, res) => {
+        let productId = req.params.id;
+        let product = productsmodel.getProducts().find(item => item.id == productId)
 
-        res.render('./products/productDetail')//, { product: productoDetalle });
+        res.render('./products/productDetail', { product });
     },
-    create: (req, res) => {
-        const create = productsmodel.createProduct;
+    createProduct: (req, res) => {
         res.render('./products/productCreate');
     },
-    edit: (req, res) => {
-        let productoEditar = products.find(product => {
-            return product.id == req.params.id;
-        })
-        res.render('./products/productEdit', { product: productoEditar });
+    storeProduct: (req, res) => {
+        let newProduct = {
+            "id": newId(),
+            "name": req.body.productName,
+            "description": req.body.description,
+            "image": req.file.filename,
+            "category": req.body.region,
+            "colors": req.body.colors,
+            "price": req.body.price
+        }
+        productsmodel.createProduct(newProduct)
+
+        res.redirect("/products");
     },
-    delete: (req, res) => {
-        let productosRestantes = products.filter(product => {
-            return product.id != req.params.id;
-        })
+    editProduct: (req, res) => {
+        let productId = req.params.id;
+        let product = productsmodel.getProducts().find(item => item.id == productId);
+        res.render('./products/productEdit', { product });
+    },
+    updateProduct: (req, res) => {
+        let productId = req.params.id;
 
-        let jsonDeProductos = JSON.stringify(productosRestantes, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), jsonDeProductos);
+        let productEdit = {
+            "id": parseInt(productId),
+            "name": req.body.productName,
+            "description": req.body.description,
+            "image": req.file.filename,
+            "category": req.body.region,
+            "colors": req.body.colors,
+            "price": req.body.price
+        }
+        productsmodel.updateProduct(productId, productEdit);
 
-        res.redirect('/products');
+        res.redirect("/products");
+    },
+    deleteProduct: (req, res) => {
+        console.log('Aquí está');
+        res.send('Entrando');
+        // let productId = req.params.id;
+        // productsmodel.deleteProduct(productId);
+
+        // res.redirect('/products');
     }
 };
 

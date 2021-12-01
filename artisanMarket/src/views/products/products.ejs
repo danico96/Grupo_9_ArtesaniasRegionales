@@ -30,7 +30,7 @@
                             <td>
                                 <h3>Acciones</h3>
                             </td>
-                            <td><a href='./productCreate'> Crear nuevo </a></td>
+                            <td><a href='./products/productCreate'> Crear nuevo </a></td>
                         </thead>
                         <tbody>
                             <% products.forEach(product=> { %>
@@ -48,8 +48,8 @@
                                         <%= product.category %>
                                     </td>
                                     <td>
-                                        <a href="./productDetail/<%= product.id %>" class="info">Detalle</a>
-                                        <a href="./productEdit/<%= product.id %>" class="edit">Editar</a>
+                                        <a href="./products/productDetail/<%= product.id %>" class="info">Detalle</a>
+                                        <a href="./products/productEdit/<%= product.id %>" class="edit">Editar</a>
                                         <form action="/<%= product.id %>?_method=DELETE" method="POST">
                                             <div>
                                                 <button>Eliminar</button>
@@ -59,7 +59,6 @@
                                 </tr>
                                 <% }) %>
                         </tbody>
-
                     </table>
                 </div>
             </div>

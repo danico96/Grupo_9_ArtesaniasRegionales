@@ -14,10 +14,10 @@
                     <% products.forEach(product => { %>
                         <article class="products">
                             <h4> <%= product.name %> </h4>
-                            <img src="/images/<%= product.image %> " alt="product_img" class="product_img">
+                            <img src="/images/products/<%= product.image %> " alt="product_img" class="product_img">
                             <p class="description"><%= product.description %>  </p>
                             <p class="price">$<%= product.price %>  </p>
-                            <a href="/productDetail/<%= product.id %>">Ver más</a>
+                            <a href="/products/productDetail/<%= product.id %>">Ver más</a>
                         </article>
                     <% }) %>     
                 </section>

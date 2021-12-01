@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-const DB = require('./products.json')
 
 const modelProducts = {
     getProducts: function() {
@@ -15,7 +14,7 @@ const modelProducts = {
         }
     },
     createProduct: function(newProduct) {
-        DB.push(newProduct);
+        this.getProducts().push(newProduct);
             fs.writeFileSync(path.resolve(__dirname, './products.json'), JSON.stringify(DB, null, 4), { encoding: "utf-8" });
             return console.log("Agregado con éxito.");
         },
