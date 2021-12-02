@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <!-- Head -->
-<head><link rel="stylesheet" href="./css/login.css"></head>
+
+<head>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
 <%- include ('../partials/head') %>
 
     <body>
@@ -18,16 +21,21 @@
                 </div>
                 <div class="rigth-side">
                     <div class="form">
-                        <form action="" method="POST">
-                            <p>Nombre de usuario</p>
-                            <input type="text">
-                            <br><br>
-                            <p>Contraseña</p>
-                            <input type="password"><br><br>
-                            <a href="/register"><strong>¿No tienes cuenta? Registrate</strong></a><br><br>
-                            <p class="btn-login">
-                                <button type="submit"><span class="text-btn">Iniciar sesión</span></button>
-                            </p>
+                        <form action="/login" method="POST">
+                            <p>E mail</p>
+                            <input type="text" name="email">
+                            <% if (locals.errors && errors.email) {%>
+                                <div>
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
+                                    <br><br>
+                                    <p>Contraseña</p>
+                                    <input type="password" name="password"><br><br>
+                                    <a href="/register"><strong>¿No tienes cuenta? Registrate</strong></a><br><br>
+                                    <p class="btn-login">
+                                        <button type="submit"><span class="text-btn">Iniciar sesión</span></button>
+                                    </p>
                         </form>
                     </div>
                 </div>
