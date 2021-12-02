@@ -1,4 +1,4 @@
-const { productsmodel } = require('../data');
+const { productsmodel } = require('../model');
 
 const newId = () => {
     let ultimo = 0;

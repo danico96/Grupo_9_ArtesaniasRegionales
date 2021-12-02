@@ -1,4 +1,4 @@
-const { usermodel, productsmodel } = require('../data');
+const { usermodel, productsmodel } = require('../model');
 
 const controller = {
     homeUser: (req, res) => {
