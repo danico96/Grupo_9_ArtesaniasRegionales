@@ -50,7 +50,7 @@
                                     <td>
                                         <a href="./products/productDetail/<%= product.id %>" class="info">Detalle</a>
                                         <a href="./products/productEdit/<%= product.id %>" class="edit">Editar</a>
-                                        <form action="/<%= product.id %>?_method=DELETE" method="POST">
+                                        <form action="products/<%= product.id %>?_method=DELETE" method="POST">
                                             <div>
                                                 <button>Eliminar</button>
                                             </div>
