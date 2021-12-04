@@ -24,7 +24,7 @@ router.get("/", users.homeUser); /* GET home page. */
 router.get("/login", users.loginUser); /* GET login page. */
 router.post("/login", users.loginProcess);
 router.get("/register", users.registerUser); /* GET register page. */
-router.post("/registerUser", users.storeUser);
+router.post("/registerUser", upload.single('imgPerfil'), users.storeUser);
 
 // Acá exportamos el resultado
 module.exports = router;

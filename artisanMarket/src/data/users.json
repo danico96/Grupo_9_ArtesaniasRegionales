@@ -111,5 +111,21 @@
         "email": "pintor32@gmail.com",
         "password": "$2a$10$xqolZxgSiYCm1s4tR7MFcug0VQP9ryUcusdEcKJFes7gsyxyroA3G",
         "category": "vendedor"
+    },
+    {
+        "id": 14,
+        "first_name": "Tomas",
+        "last_name": "Lopez Correa",
+        "email": "cristian@cristian.com",
+        "password": "$2a$10$sSF4UAxXCBLf9P4mRp1oA.Y0bHOjBFRG4nDIAzumXoWgt54JL8Llu",
+        "category": "user"
+    },
+    {
+        "id": 15,
+        "first_name": "Tomas",
+        "last_name": "Lopez Correa",
+        "email": "cristian@cristian.com",
+        "password": "$2a$10$WT6D25amfABG3M7WVWmn8O8u5vm.dtr6mJg1kJPSyeVW4xV7dfYDC",
+        "category": "user"
     }
 ]

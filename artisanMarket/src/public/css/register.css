@@ -46,19 +46,37 @@ body {
 }
 
 .btn-login button {
-  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: #5678ef;
+  cursor: pointer;
 }
 
-/* viewport */
-
-/* @media (min-width: 481px) {
-    .formulario {
-        justify-content: center;
-    }
+.custom-input-file {
+  background-color: #a3a3a3;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 0 auto 0;
+  min-height: 15px;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 30%;
+  border-radius: 3px;
 }
 
-@media (min-width: 768px) {
-    .formulario {
-        justify-content: center;
-    }
-} */
+.custom-input-file .input-file {
+  border: 10000px solid transparent;
+  cursor: pointer;
+  font-size: 10000px;
+  margin: 0;
+  opacity: 0;
+  outline: 0 none;
+  padding: 0;
+  position: absolute;
+  right: -1000px;
+  top: -1000px;
+}
