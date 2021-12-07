@@ -35,16 +35,17 @@ const controller = {
   },
   storeUser: (req, res) => {
     let newUser = {
-      id: usersDB.length + 1,
+      id: Date.now(),
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       email: req.body.email,
       password: bcryptjs.hashSync(req.body.password, 10),
       category: req.body.category,
+      image: req.file.path,
     };
     usermodel.createUser(newUser);
 
-    res.redirect("/login");
+    res.redirect('/login');
   },
 };
 

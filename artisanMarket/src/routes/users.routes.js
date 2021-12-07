@@ -11,13 +11,11 @@ const storage = multer.diskStorage({
     cb(null, path.join(__dirname, "../public/images/users"));
   },
   filename: function (req, file, cb) {
-    const uniqueSuffix =
-      Date.now() + "-" + Math.round(Math.random() * 1e9) + file.originalname;
-    cb(null, file.fieldname + "-" + uniqueSuffix);
-  },
+    cb(null, file.fieldname + "-" + Date.now());
+  }
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({ storage });
 
 //Rutas
 router.get("/", users.homeUser); /* GET home page. */

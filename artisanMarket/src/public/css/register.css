@@ -33,6 +33,10 @@ body {
   border-radius: 10px;
 }
 
+.inputContainer {
+  margin-top: 20px;
+}
+
 .formu {
   text-align: center;
   margin-top: 20px;

@@ -89,43 +89,28 @@
         "category": "user"
     },
     {
-        "id": 11,
-        "first_name": "Jazmin",
-        "last_name": "Rojas Betancur",
-        "email": "jazminvaleria234@gmail.com",
-        "password": "123456",
-        "category": "user"
-    },
-    {
-        "id": 12,
+        "id": 1638832785548,
         "first_name": "Tomas",
         "last_name": "Lopez Correa",
         "email": "Tomas@digital.com",
-        "password": "1234567",
-        "category": "user"
-    },
-    {
-        "id": 13,
-        "first_name": "leonardo",
-        "last_name": "pintor",
-        "email": "pintor32@gmail.com",
-        "password": "$2a$10$xqolZxgSiYCm1s4tR7MFcug0VQP9ryUcusdEcKJFes7gsyxyroA3G",
+        "password": "$2a$10$BFJHNCMa99Dr6kPQb4wOl.ABYzKqwTpfa0/us3JEo0IN9iIvtD.QK",
         "category": "vendedor"
     },
     {
-        "id": 14,
-        "first_name": "Tomas",
+        "id": 1638833039820,
+        "first_name": "Jazmin",
         "last_name": "Lopez Correa",
-        "email": "cristian@cristian.com",
-        "password": "$2a$10$sSF4UAxXCBLf9P4mRp1oA.Y0bHOjBFRG4nDIAzumXoWgt54JL8Llu",
+        "email": "jazminvaleria234@gmail.com",
+        "password": "$2a$10$bwV1u/pS7AlQiHm7WOIfFuuFbQFZohs80wK0/zFugm/wjg77l6ih.",
         "category": "user"
     },
     {
-        "id": 15,
-        "first_name": "Tomas",
-        "last_name": "Lopez Correa",
-        "email": "cristian@cristian.com",
-        "password": "$2a$10$WT6D25amfABG3M7WVWmn8O8u5vm.dtr6mJg1kJPSyeVW4xV7dfYDC",
-        "category": "user"
+        "id": 1638833174417,
+        "first_name": "Sebastian",
+        "last_name": "Rojas Betancur",
+        "email": "karen@digitalhouse.com",
+        "password": "$2a$10$qXbH4yFgN4i9Tg3K/weF7uQvDudDF5RAgghYVpLcJEkpaWCIwrShm",
+        "category": "vendedor",
+        "image": "D:\\Universidad\\DigitalHouse\\proyectoIntegrador\\Grupo_9_ArtesaniasRegionales\\artisanMarket\\src\\public\\images\\users\\imgPerfil-1638833174316"
     }
 ]
