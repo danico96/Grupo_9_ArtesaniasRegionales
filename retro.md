@@ -34,6 +34,12 @@ https://miro.com/app/board/o9J_lqn06XU=/?invite_link_id=170055165223
 
 * Seguimos cumpliendo con la entrega del sprint y el buen ambiente dentro del equipo.
 
+## Sprint 4
+
+* Se realizó división de actividades, la comunicación ha mejorado y se mejoraron las frecuencias de reuniones semanales.
+
+* Se cumplio con la fecha de la entrega del sprint.
+
 
 
 
