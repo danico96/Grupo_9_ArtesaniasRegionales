@@ -14,6 +14,19 @@
             <ul>
                 <% if(locals.usuario) { %>
                     <li>
+                        <div class="Perfil">
+                            <img src="/images/users/<%=locals.usuario.imgPerfil %>" style='border-radius: 100%;' alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            <%=locals.usuario.first_name %>
+                        </p>
+                        <p>
+                            <%=locals.usuario.last_name %>
+                        </p>
+                    </li>
+                    <li>
                         <a href="/products/productCart">
                             <i class="fas fa-shopping-cart"></i>
                             <p> Carrito </p>
@@ -22,11 +35,7 @@
                     <li>
                         <a href="/logout">Cerrar sesión<i class="fas fa-sign-out-alt"></i></a>
                     </li>
-                    <li>
-                        <div class="Perfil">
-                            <img src="/images/users/<%=locals.usuario.avatar %>" style='border-radius: 100%;' alt="">
-                        </div>
-                    </li>
+
                     <% } else { %>
                         <li>
                             <a href="/register">
@@ -47,8 +56,10 @@
     <nav class="browse-navbar">
         <ul>
             <li><a href="#">Regiones</a></li>
-            <li><a href="/products">Listado de Productos</a></li>
             <li><a href="#">Contactanos</a></li>
+            <% if(locals.usuario.category=="vendedor" ){%>
+                <li><a href="/products">Administración de Productos</a></li>
+                <% } %>
         </ul>
     </nav>
     <div class="burger-menu">

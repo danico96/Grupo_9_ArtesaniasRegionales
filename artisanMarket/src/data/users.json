@@ -127,13 +127,5 @@
         "email": "cristian@cristian.com",
         "password": "$2a$10$WT6D25amfABG3M7WVWmn8O8u5vm.dtr6mJg1kJPSyeVW4xV7dfYDC",
         "category": "user"
-    },
-    {
-        "id": 16,
-        "first_name": "leon",
-        "last_name": "pintor",
-        "email": "pintor_32@hotmail.com",
-        "password": "$2a$10$Igk8Kb5miwawkeZKzA7QeehcydMA22zUuJ6Km31vOwt5FPjO8vfI6",
-        "category": "vendedor"
     }
 ]
