@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const rutas = require('./routes');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 // view engine setup
 app.set('view engine', 'ejs');

@@ -18,8 +18,11 @@ const controller = {
       );
       if (Okpass) {
         delete userToLogin.password;
-        // req.session.userLogged = userToLogin;
-        return res.redirect("/");
+        req.session.usuario = userToLogin;
+        if(req.body.recordarme){
+          res.cookie('email',userToLogin.email,{maxAge: 1000 * 60 * 60 * 24})
+        }
+        return res.redirect('/');
       }
     }
     return res.render("./users/login", {
@@ -29,6 +32,11 @@ const controller = {
         },
       },
     });
+  },
+  logout: (req,res) =>{
+    req.session.destroy();
+    res.cookie('email',null,{maxAge: -1});
+    res.redirect('/')
   },
   registerUser: (req, res) => {
     res.render("./users/register");

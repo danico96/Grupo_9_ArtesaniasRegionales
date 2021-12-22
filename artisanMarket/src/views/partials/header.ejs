@@ -12,24 +12,35 @@
         </div>
         <nav class="main-navbar">
             <ul>
-                <li>
-                    <a href="/register">
-                        <i class="far fa-id-card"></i>
-                        <p> Registro </p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/login">
-                        <i class="fas fa-user"></i>
-                        <p> Ingreso </p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/products/productCart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <p> Carrito </p>
-                    </a>
-                </li>
+                <% if(locals.usuario) { %>
+                    <li>
+                        <a href="/products/productCart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <p> Carrito </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/logout">Cerrar sesión<i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                    <li>
+                        <div class="Perfil">
+                            <img src="/images/users/<%=locals.usuario.avatar %>" style='border-radius: 100%;' alt="">
+                        </div>
+                    </li>
+                    <% } else { %>
+                        <li>
+                            <a href="/register">
+                                <i class="far fa-id-card"></i>
+                                <p> Registro </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/login">
+                                <i class="fas fa-user"></i>
+                                <p> Ingreso </p>
+                            </a>
+                        </li>
+                        <%}%>
             </ul>
         </nav>
     </div>
