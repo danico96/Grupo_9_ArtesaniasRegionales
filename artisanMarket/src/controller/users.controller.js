@@ -1,11 +1,8 @@
-const { usermodel, productsmodel } = require("../model");
+const {usermodel} = require("../model");
 const usersDB = require("../data/users.json");
 const bcryptjs = require("bcryptjs");
 
 const controller = {
-  homeUser: (req, res) => {
-    res.render("./web/index", { products: productsmodel.getProducts() });
-  },
   loginUser: (req, res, next) => {
     res.render("./users/login");
   },
@@ -47,8 +44,10 @@ const controller = {
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       email: req.body.email,
+      imgPerfil: req.file ? req.file.filename : 'default.jpg',
       password: bcryptjs.hashSync(req.body.password, 10),
       category: req.body.category,
+      role: 1
     };
     usermodel.createUser(newUser);
 

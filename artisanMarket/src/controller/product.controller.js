@@ -11,6 +11,10 @@ const newId = () => {
 };
 
 const productController = {
+    homeUser: (req, res) => {
+        res.render("./web/index", { products: productsmodel.getProducts() });
+      },    
+
     indexProducts: (req, res) => {
         res.render('./products/products', { products: productsmodel.getProducts() });
     },

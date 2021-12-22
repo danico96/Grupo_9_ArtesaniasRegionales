@@ -34,6 +34,10 @@ header .top-header .box-logo {
     margin-right: auto;
 }
 
+header .top-header .box-logo a {
+    text-decoration: none;
+}
+
 header .top-header .box-logo .logo {
     width: 70%;
 }
@@ -59,6 +63,10 @@ header .top-header .main-navbar ul,
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+}
+
+header .ImgPerfil {
+    width: 10%;
 }
 
 .top-header .main-navbar ul li {
@@ -393,16 +401,18 @@ form p textarea {
     margin-bottom: 20px;
     padding: 5px;
 }
-.productTable tbody tr > td{
+
+.productTable tbody tr>td {
     border: 1px solid black;
     height: 30px;
     padding-left: 3px;
-  }
-  .productTable{
+}
+
+.productTable {
     padding-left: 40px;
     margin-top: 20px;
-  
-  }
+
+}
 
 /* viewport */
 

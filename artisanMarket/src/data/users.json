@@ -82,50 +82,22 @@
     },
     {
         "id": 10,
-        "first_name": "Cristian",
-        "last_name": "Rojas Betancur",
-        "email": "criztian5600@gmail.com",
-        "password": "12345",
-        "category": "user"
+        "first_name": "Leon",
+        "last_name": "Pintor",
+        "email": "pintor_32@hotmail.com",
+        "imgPerfil": "default.jpg",
+        "password": "$2a$10$L10/QOFYZMS6LgEITlSNlefUyif1XdhpEz3Yk778MU6z49l2te3ta",
+        "category": "user",
+        "role": 1
     },
     {
         "id": 11,
-        "first_name": "Jazmin",
-        "last_name": "Rojas Betancur",
-        "email": "jazminvaleria234@gmail.com",
-        "password": "123456",
-        "category": "user"
-    },
-    {
-        "id": 12,
-        "first_name": "Tomas",
-        "last_name": "Lopez Correa",
-        "email": "Tomas@digital.com",
-        "password": "1234567",
-        "category": "user"
-    },
-    {
-        "id": 13,
-        "first_name": "leonardo",
+        "first_name": "pintor",
         "last_name": "pintor",
         "email": "pintor32@gmail.com",
-        "password": "$2a$10$xqolZxgSiYCm1s4tR7MFcug0VQP9ryUcusdEcKJFes7gsyxyroA3G",
-        "category": "vendedor"
-    },
-    {
-        "id": 14,
-        "first_name": "Tomas",
-        "last_name": "Lopez Correa",
-        "email": "cristian@cristian.com",
-        "password": "$2a$10$sSF4UAxXCBLf9P4mRp1oA.Y0bHOjBFRG4nDIAzumXoWgt54JL8Llu",
-        "category": "user"
-    },
-    {
-        "id": 15,
-        "first_name": "Tomas",
-        "last_name": "Lopez Correa",
-        "email": "cristian@cristian.com",
-        "password": "$2a$10$WT6D25amfABG3M7WVWmn8O8u5vm.dtr6mJg1kJPSyeVW4xV7dfYDC",
-        "category": "user"
+        "imgPerfil": "default.jpg",
+        "password": "$2a$10$A4nXWTawIhRThTgtVEhKk.KDV2Vt/44v7Byj.qctWbic5GRWDbFKK",
+        "category": "vendedor",
+        "role": 1
     }
 ]
