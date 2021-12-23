@@ -14,6 +14,8 @@
                     <h3 class="title-product"> <%= user.first_name %> <%= user.last_name %> </h3>
                     <img src="/images/users/<%= user.imgPerfil %>" alt="user" class="main-img">
                     <div class="characteristic">
+                        <h4> Email </h4>
+                        <p><%= user.email %></p>
                         <h4> Tipo de Usuario </h4>
                         <p><%= user.category %></p>
                     </div>
