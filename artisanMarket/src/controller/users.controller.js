@@ -40,14 +40,14 @@ const controller = {
   },
   storeUser: (req, res) => {
     let newUser = {
-      id: usersDB.length + 1,
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
-      email: req.body.email,
-      imgPerfil: req.file ? req.file.filename : 'default.jpg',
-      password: bcryptjs.hashSync(req.body.password, 10),
-      category: req.body.category,
-      role: 1
+      "id": usersDB.length + 1,
+      "first_name": req.body.first_name,
+      "last_name": req.body.last_name,
+      "email": req.body.email,
+      "imgPerfil": req.file ? req.file.filename : 'default.jpg',
+      "password": bcryptjs.hashSync(req.body.password, 10),
+      "category": req.body.category,
+      "role": 1
     };
     usermodel.createUser(newUser);
 

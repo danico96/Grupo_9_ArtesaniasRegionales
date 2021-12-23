@@ -65,8 +65,12 @@ header .top-header .main-navbar ul,
     margin: auto;
 }
 
+header .Perfil {
+    text-align: right;
+}
+
 header .ImgPerfil {
-    width: 10%;
+    width: 8%;
 }
 
 .top-header .main-navbar ul li {

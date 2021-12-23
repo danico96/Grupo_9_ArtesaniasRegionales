@@ -14,9 +14,10 @@
             <ul>
                 <% if(locals.usuario) { %>
                     <li>
-                        <div class="Perfil">
-                            <img class="ImgPerfil" src="/images/users/<%=locals.usuario.imgPerfil %>" style='border-radius: 100%;' alt="">
-                        </div>
+                        <p class="Perfil">
+                            <img class="ImgPerfil" src="/images/users/<%=locals.usuario.imgPerfil %>"
+                                style='border-radius: 100%;' alt="">
+                        </p>
                     </li>
                     <li>
                         <p>
@@ -33,7 +34,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/logout"> Cerrar sesión  <i class="fas fa-sign-out-alt"></i></a>
+                        <a href="/logout"> Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </li>
                     <% } else { %>
                         <li>

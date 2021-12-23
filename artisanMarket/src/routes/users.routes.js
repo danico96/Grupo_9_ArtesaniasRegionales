@@ -23,7 +23,7 @@ router.get("/", products.homeUser); /* GET home page. */
 router.get("/login", users.loginUser); /* GET login page. */
 router.post("/login", users.loginProcess);
 router.get("/register", users.registerUser); /* GET register page. */
-router.post("/registerUser", upload.single('imgPerfil'), users.storeUser);
+router.post("/registerUser", upload.single(), users.storeUser);
 router.get('/logout', users.logout);
 
 // Acá exportamos el resultado

@@ -82,21 +82,11 @@
     },
     {
         "id": 10,
-        "first_name": "Leon",
-        "last_name": "Pintor",
+        "first_name": "Leonardo",
+        "last_name": "PINTOR",
         "email": "pintor_32@hotmail.com",
         "imgPerfil": "default.jpg",
-        "password": "$2a$10$L10/QOFYZMS6LgEITlSNlefUyif1XdhpEz3Yk778MU6z49l2te3ta",
-        "category": "user",
-        "role": 1
-    },
-    {
-        "id": 11,
-        "first_name": "pintor",
-        "last_name": "pintor",
-        "email": "pintor32@gmail.com",
-        "imgPerfil": "default.jpg",
-        "password": "$2a$10$A4nXWTawIhRThTgtVEhKk.KDV2Vt/44v7Byj.qctWbic5GRWDbFKK",
+        "password": "$2a$10$sgKgO59c0qTpkA01.l0lwuLQLNHRRrQZHMzgbJ5kQExORdSbLoNxq",
         "category": "vendedor",
         "role": 1
     }
