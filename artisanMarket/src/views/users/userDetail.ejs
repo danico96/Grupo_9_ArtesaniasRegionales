@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Head -->
+<%- include ('../partials/head') %>
+
+    <body>
+        <!-- Header -->
+        <%- include ('../partials/header') %>
+        <% if(locals.usuario.role=="2" ){%>
+
+            <main>
+                <section class="user"> 
+                    <h3 class="title-user"> <%= user.first_name %> </h3>
+                    <h3 class="title-user"> <%= user.last_name %> </h3>
+                    <img src="/images/users/<%= user.imgPerfil %>" alt="user" class="main-img">
+                    <div class="grid-detail">
+                    <div class="characteristic">
+                        <h4> Tipo de Usuario </h4>
+                        <p><%= user.category %></p>
+                    </div>
+                </section>
+            </main>
+            <% } else { %>
+                <h3>Acceso Denegado</h3>
+            <% } %>
+
+            <!-- Footer -->
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

@@ -6,64 +6,68 @@
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
-
-            <!-- todos los productos -->
-            <div class="allproducts">
-                <div>
+            <% if(locals.usuario.category=="vendedor" ){%>
+                <!-- todos los productos -->
+                <div class="allproducts">
                     <div>
-                        <h2>Todos los productos</h2>
+                        <div>
+                            <h2>Todos los productos</h2>
+                        </div>
+                        <table class="productTable">
+                            <thead>
+                                <td>
+                                    <h3>Id</h3>
+                                </td>
+                                <td>
+                                    <h3>Nombre</h3>
+                                </td>
+                                <td>
+                                    <h3>Precio</h3>
+                                </td>
+                                <td>
+                                    <h3>Región</h3>
+                                </td>
+                                <td>
+                                    <h3>Acciones</h3>
+                                </td>
+                                <td><a href='./products/productCreate'> Crear nuevo </a></td>
+                            </thead>
+                            <tbody>
+                                <% products.forEach(product=> { %>
+                                    <tr>
+                                        <td>
+                                            <%= product.id %>
+                                        </td>
+                                        <td>
+                                            <%= product.name %>
+                                        </td>
+                                        <td>
+                                            <%= product.price %>
+                                        </td>
+                                        <td>
+                                            <%= product.category %>
+                                        </td>
+                                        <td>
+                                            <a href="./products/productDetail/<%= product.id %>"
+                                                class="info">Detalle</a>
+                                            <a href="./products/productEdit/<%= product.id %>" class="edit">Editar</a>
+                                            <form action="products/<%= product.id %>?_method=DELETE" method="POST">
+                                                <div>
+                                                    <button>Eliminar</button>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
                     </div>
-                    <table class="productTable">
-                        <thead>
-                            <td>
-                                <h3>Id</h3>
-                            </td>
-                            <td>
-                                <h3>Nombre</h3>
-                            </td>
-                            <td>
-                                <h3>Precio</h3>
-                            </td>
-                            <td>
-                                <h3>Región</h3>
-                            </td>
-                            <td>
-                                <h3>Acciones</h3>
-                            </td>
-                            <td><a href='./products/productCreate'> Crear nuevo </a></td>
-                        </thead>
-                        <tbody>
-                            <% products.forEach(product=> { %>
-                                <tr>
-                                    <td>
-                                        <%= product.id %>
-                                    </td>
-                                    <td>
-                                        <%= product.name %>
-                                    </td>
-                                    <td>
-                                        <%= product.price %>
-                                    </td>
-                                    <td>
-                                        <%= product.category %>
-                                    </td>
-                                    <td>
-                                        <a href="./products/productDetail/<%= product.id %>" class="info">Detalle</a>
-                                        <a href="./products/productEdit/<%= product.id %>" class="edit">Editar</a>
-                                        <form action="products/<%= product.id %>?_method=DELETE" method="POST">
-                                            <div>
-                                                <button>Eliminar</button>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <% }) %>
-                        </tbody>
-                    </table>
                 </div>
-            </div>
-            <!-- Footer -->
-            <%- include('../partials/footer') %>
+                <% } else { %>
+                    <h3>Acceso Denegado</h3>
+                    <% } %>
+                        <!-- Footer -->
+                        <%- include('../partials/footer') %>
     </body>
 
 </html>

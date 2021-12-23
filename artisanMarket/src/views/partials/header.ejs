@@ -60,6 +60,9 @@
             <% if(locals.usuario.category=="vendedor" ){%>
                 <li><a href="/products">Administración de Productos</a></li>
                 <% } %>
+                    <% if(locals.usuario.role=="2" ){%>
+                        <li><a href="/users">Administración de Usuarios</a></li>
+                        <% } %>
         </ul>
     </nav>
     <div class="burger-menu">

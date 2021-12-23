@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Head -->
+<%- include ('../partials/head') %>
+
+    <body>
+        <!-- Header -->
+        <%- include ('../partials/header') %>
+        <% if(locals.usuario.role=="2" ){%>
+
+            <!-- todos los productos -->
+            <div class="allusers">
+                <div>
+                    <div>
+                        <h2>Lista de Usuarios</h2>
+                    </div>
+                    <table class="usersTable">
+                        <thead>
+                            <td>
+                                <h3>Id</h3>
+                            </td>
+                            <td>
+                                <h3>Nombre</h3>
+                            </td>
+                            <td>
+                                <h3>Apellido</h3>
+                            </td>
+                            <td>
+                                <h3>email</h3>
+                            </td>
+                            <td>
+                                <h3>Category</h3>
+                            </td>
+                            <td>
+                                <h3>Role</h3>
+                            </td>
+                        </thead>
+                        <tbody>
+                            <% users.forEach(user=> { %>
+                                <tr>
+                                    <td>
+                                        <%= user.id %>
+                                    </td>
+                                    <td>
+                                        <%= user.first_name %>
+                                    </td>
+                                    <td>
+                                        <%= user.last_name %>
+                                    </td>
+                                    <td>
+                                        <%= user.email %>
+                                    </td>
+                                    <td>
+                                        <%= user.category %>
+                                    </td>
+                                    <td>
+                                        <%= user.role %>
+                                    </td>
+                                    <td>
+                                        <a href="./users/userDetail/<%= user.id %>" class="info">Detalle</a>
+                                        <a href="./users/userEdit/<%= user.id %>" class="edit">Editar</a>
+                                        <form action="users/<%= user.id %>?_method=DELETE" method="POST">
+                                            <div>
+                                                <button>Eliminar</button>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <% } else { %>
+                <h3>Acceso Denegado</h3>
+            <% } %>
+            <!-- Footer -->
+            <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

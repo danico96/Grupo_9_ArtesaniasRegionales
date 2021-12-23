@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Head -->
+<%- include ('../partials/head') %>
+
+    <body>
+    <!-- Header -->
+        <%- include ('../partials/header') %>
+        <% if(locals.usuario.role=="2" ){%>
+            <main class="userEdit">
+                <div>
+                    <h2>Editar usuario</h2>
+                    <h2><%= user.first_name %> <%= user.last_name %></h2>
+                </div>
+                <form action="/users/userEdit/<%= user.id %>?_method=PUT" method="POST" enctype='multipart/form-data' >
+
+                    <div>
+                        <label for="first_name">Nombres</label><br><br>
+                        <input type="text" name="first_name" value='<%= user.first_name %>' required>
+                    </div><br>
+                    <div>
+                        <label for="last_name">Apellidos</label><br><br>
+                        <input type="text" name="last_name" value='<%= user.last_name %>' required>
+                    </div><br>
+                    <div>
+                        <label for="email">Correo electrónico</label><br><br>
+                        <input type="email" name="email" value='<%= user.email %>' required>
+                    </div><br>
+                    <div>
+                        <label for="password">Contraseña</label><br><br>
+                        <input type="password" name="password" required>
+                    </div><br>
+                    <div>
+                        <label for="category">Perfil</label><br><br>
+                        <select name="category" value='<%= user.category %>' required="true">
+                            <option value="" selected disabled>Seleccione un perfil</option>
+                            <option value="vendedor">Vendedor</option>
+                            <option value="user">Comprador</option>
+                        </select>
+                    </div><br>
+                    <p>
+                    <h3>Foto de Perfil</h3>
+                    </p>
+                    <p>
+                        <input type="file" name="imgPerfil" accept=".jpg,.png" required>
+                    </p>
+                    <p class="btn-login">
+                        <button type="submit"> Actualizar </button>
+                    </p>
+                </form>
+            </main>
+            <% } else { %>
+                <h3>Acceso Denegado</h3>
+            <% } %>
+
+            <!-- Footer -->
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

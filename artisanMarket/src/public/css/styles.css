@@ -417,6 +417,25 @@ form p textarea {
     margin-top: 20px;
 
 }
+.usersTable tbody tr>td {
+    border: 1px solid black;
+    height: 30px;
+    padding-left: 3px;
+}
+
+.usersTable {
+    padding-left: 40px;
+    margin-top: 20px;
+
+}
+/* User Edit */
+
+.userEdit {
+    margin: auto;
+    width: 90vw;
+    text-align: center;
+    padding: 10px;
+}
 
 /* viewport */
 

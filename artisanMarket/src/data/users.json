@@ -83,11 +83,11 @@
     {
         "id": 10,
         "first_name": "Leonardo",
-        "last_name": "PINTOR",
+        "last_name": "Pintor",
         "email": "pintor_32@hotmail.com",
         "imgPerfil": "default.jpg",
         "password": "$2a$10$sgKgO59c0qTpkA01.l0lwuLQLNHRRrQZHMzgbJ5kQExORdSbLoNxq",
         "category": "vendedor",
-        "role": 1
+        "role": 2
     }
 ]
