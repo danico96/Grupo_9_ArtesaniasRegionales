@@ -20,12 +20,14 @@
                         </p>
                     </li>
                     <li>
-                        <p>
-                            <%=locals.usuario.first_name %>
-                        </p>
-                        <p>
-                            <%=locals.usuario.last_name %>
-                        </p>
+                        <a href="./users/userDetail/<%= locals.usuario.id %>">
+                            <p>
+                                <%=locals.usuario.first_name %>
+                            </p>
+                            <p>
+                                <%=locals.usuario.last_name %>
+                            </p>
+                        </a>
                     </li>
                     <li>
                         <a href="/products/productCart">
