@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&display=swap");
 
+:root {
+  --primaryColor: rgba(150, 201, 61, 1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,171 +17,85 @@ body {
   overflow-x: hidden;
 }
 
-/* footer */
-
-footer {
-  width: 90%;
-  padding: 10px;
-  text-align: center;
-}
-
-footer section {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-
 /* index */
 
-img {
-  width: 100%;
+.contenido {
+  width: 100% !important;
 }
 
-main .masvendido h3,
-main .regions h3 {
-  margin-top: 300px;
-  font-size: 30px;
-  padding: 10px;
+.container {
+  width: 100% !important;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+  margin: 0;
 }
 
-main .masvendido .products {
-  width: 80vw;
-  margin: auto;
-  background: wheat;
-  box-shadow: 5px 9px 5px -4px rgba(56, 55, 56, 1);
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 15px;
-  margin-bottom: 15px;
-}
-
-main .products h4 {
+.contenido h1 {
+  margin-top: 400px;
+  font-weight: bold;
   text-align: center;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin: 4px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-main .products .product_img {
-  max-width: 100%;
-  border: 3px solid rgb(247, 213, 151);
-}
+/* REGIONES */
 
-.price {
-  font-size: 20px;
-  font-weight: bold;
-  background-color: yellow;
-  display: inline;
-}
-
-.description {
-  display: block;
-  margin: 10px;
-}
-
-main .regions .andina {
-  background-image: url("/images/andina.jpg");
-  background-size: cover;
-  width: 100vw;
-  height: 200px;
+.regions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 
-main .regions .caribe {
-  background-image: url("/images/caribe.jpg");
+.regionCard {
+  background: var(--i);
+  width: 500px;
+  height: 250px;
+  margin: 20px 20px;
   background-size: cover;
-  width: 100vw;
-  height: 200px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-
-main .regions .pacifica {
-  background-image: url("/images/pacifica.jpg");
-  background-size: cover;
-  width: 100vw;
-  height: 200px;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  border-radius: 6px;
+  transition: all 0.5s;
 }
 
-main .regions .orinoquia {
-  background-image: url("/images/orinoquia.jpg");
-  background-size: cover;
-  width: 100vw;
-  height: 200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-main .regions .amazonica {
-  background-image: url("/images/amazonica.jpg");
-  background-size: cover;
-  width: 100vw;
-  height: 200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-main .regions .insular {
-  background-image: url("/images/insular.jpg");
-  background-size: cover;
-  width: 100vw;
-  height: 200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-main .regions .andina h4,
-.caribe h4,
-.pacifica h4,
-.orinoquia h4,
-.amazonica h4,
-.insular h4 {
-  color: rgb(255, 217, 0);
-  font-size: 22px;
-  font-weight: 600;
-}
-
-main .regions .andina .description-region,
-.caribe .description-region,
-.pacifica .description-region,
-.orinoquia .description-region,
-.amazonica .description-region,
-.insular .description-region {
+.content h4,
+p {
+  font-size: 15px;
   color: white;
-  width: 90%;
+  margin: 10px 0;
+}
+
+.regionCard:hover .content {
+  opacity: 1;
 }
 
 /* productCart*/
 
-.carrito {
+/* .carrito {
   align-items: center;
   padding: 10px;
   margin: 10px;
   text-align: center;
 }
 
-.productcar {
+.productCar {
   margin: auto;
   margin-top: 10px;
 }
 
-.productcar article {
+.productCar article {
   width: 80%;
   margin: auto;
   background: wheat;
@@ -209,65 +127,11 @@ form p button {
   border-radius: 2px;
   padding: 10px;
   margin-bottom: 8px;
-}
+} */
 
 /* PorductDetail */
 
-main .mainproduct {
-  width: 80%;
-  margin: 20px auto;
-  text-align: center;
-}
 
-main .mainproduct .title-product {
-  font-size: 20px;
-  color: rgb(238, 164, 26);
-}
-
-main .mainproduct .main-img {
-  width: 80%;
-}
-
-main .mainproduct .box-price h4,
-.box-quantity h4,
-.description h4,
-.characteristic h4 {
-  color: rgb(238, 164, 26);
-  font-size: 18px;
-  margin: 10px 0 5px 0;
-  border-top: 1px solid gray;
-  padding-top: 10px;
-}
-
-main .mainproduct .characteristic {
-  padding-bottom: 10px;
-  border-bottom: 1px solid gray;
-}
-
-main .mainproduct .box-price p,
-.box-quantity p,
-.description p,
-.characteristic p {
-  font-size: 16px;
-  font-weight: 300;
-}
-
-main .mainproduct #quantity {
-  padding: 2px;
-  margin: 3px;
-}
-
-main .mainproduct .shop,
-.add {
-  padding: 5px;
-  margin: 5px;
-  width: 70%;
-  border-radius: 5px;
-  border: 1px solid #148f77;
-  background: #1abc9c;
-  color: white;
-  font-weight: 400;
-}
 
 /* Product Edit */
 
@@ -354,9 +218,16 @@ form p textarea {
   }
 
   main .masvendido h3,
-  main .regions h3 {
+  main .regions h1 {
     display: inline-block;
     width: 100%;
+  }
+
+  main .regions h1 {
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+    margin: 50px 0;
   }
 
   main .regions .andina,
@@ -373,9 +244,6 @@ form p textarea {
   }
 
   /* productCar*/
-  .productcar {
-    width: 45%;
-  }
 
   /* productDetail*/
   main .mainproduct {
@@ -484,16 +352,16 @@ form p textarea {
   }
 
   /* productCar*/
-  .productcar {
+  /* .productCar {
     width: 30%;
-  }
+  } */
 
   /* productDetail*/
-  main .mainproduct {
+  /* main .mainproduct {
     display: flex;
     flex-wrap: wrap;
     width: 60%;
-  }
+  } */
 
   /* Product Edit */
   .productEdit {
@@ -513,24 +381,14 @@ form p textarea {
     padding: 10px;
   }
 
-  main .mainproduct .description,
+  /* main .mainproduct .description,
   .characteristic {
     margin: 0;
     width: 45%;
     border-bottom: 1px solid gray;
-  }
+  } */
 
   /*Products */
-  .allproducts {
-    margin: auto;
-    text-align: center;
-    padding: 2%;
-  }
-
-  .allproducts table {
-    margin: auto;
-    padding: 2%;
-  }
 
   .nuevo {
     padding: 1%;

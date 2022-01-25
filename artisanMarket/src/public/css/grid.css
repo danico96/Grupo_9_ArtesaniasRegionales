@@ -1,0 +1,43 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 15px;
+}
+
+@for $i from 1 through 12 {
+  .grid-#{$i} {
+    grid-column: span ($i);
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  @for $i from 1 through 12 {
+    .grid-xs-#{$i} {
+      grid-column: span ($i);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .grid-md-#{$i} {
+      grid-column: span ($i);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .grid-lg-#{$i} {
+      grid-column: span ($i);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .grid-xl-#{$i} {
+      grid-column: span ($i);
+    }
+  }
+}

@@ -1,62 +1,81 @@
 /*Main*/
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .formulario {
-    width: 90vw;
-    height: 80vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-}
-
-.left-side {
-    align-items: center;
-}
-
-.rigth-side {
-    width: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(233, 233, 233);
-    border-radius: 10px;
+    position: relative;
+  width: 100%;
+  height: 40vh;
+  align-items: center;
+  margin-top: 300px;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 .form {
-    padding: 30px;
-    text-align: center;
-    font-weight: 200;
+  background-color: rgba(218, 218, 218, .7);
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 6px;
+  height: 90%;
+  padding-top: 10px;
+}
+
+/* .filter {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(243, 243, 243, .2);
+} */
+
+.form p {
+    color: black;
+}
+
+.form form {
+    display: block;
+}
+
+.form form input {
+    margin: 13px 0;
+    border-radius: 5px;
+}
+
+.form form input:focus {
+    outline: deepskyblue;
+    border: 2px solid deepskyblue;
 }
 
 .form a {
-    font-weight: 300;
+  font-weight: 300;
+  text-decoration: none;
+  color: rgb(33, 142, 231);
 }
 
 .text-btn {
-    text-align: center;
+  text-align: center;
 }
 
-
-.btn-login button{
-    padding: 5px 30px;
-    text-align: center;
-    width: 100%;
+.btn-login button {
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: rgba(150, 201, 61, 1);;
+  cursor: pointer;
 }
 
 /* viewport */
 
 @media (min-width: 481px) {
-    .formulario {
-        justify-content: center;
-    }
+  .formulario {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 768px) {
-    .formulario {
-        justify-content: center;
-    }
+  .formulario {
+    justify-content: center;
+  }
 }

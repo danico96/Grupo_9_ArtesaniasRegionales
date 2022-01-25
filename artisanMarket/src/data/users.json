@@ -112,5 +112,14 @@
         "password": "$2a$10$qXbH4yFgN4i9Tg3K/weF7uQvDudDF5RAgghYVpLcJEkpaWCIwrShm",
         "category": "vendedor",
         "image": "D:\\Universidad\\DigitalHouse\\proyectoIntegrador\\Grupo_9_ArtesaniasRegionales\\artisanMarket\\src\\public\\images\\users\\imgPerfil-1638833174316"
+    },
+    {
+        "id": 1641328345437,
+        "first_name": "Tomas",
+        "last_name": "Salazar",
+        "email": "cristian@cristian.com",
+        "password": "$2a$10$CRFvYmEm4TsMRPhpTWVY9.2Mv3NCzXSZNHunlxyDsHkpeqJI1Tp6i",
+        "category": "user",
+        "image": "D:\\Universidad\\DigitalHouse\\proyectoIntegrador\\Grupo_9_ArtesaniasRegionales\\artisanMarket\\src\\public\\images\\users\\imgPerfil-1641328345280"
     }
 ]

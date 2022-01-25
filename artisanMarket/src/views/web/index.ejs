@@ -11,63 +11,86 @@
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
-
             <main>
-                <div class="contenedor-masvendido">
-                    <section class="masvendido">
-                        <h3> Lo más vendido </h3>
+                <div class="contenido">
+                    <h1> Lo más vendido </h1>
+                    <div class="container">
                         <% products.forEach(product=> { %>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="face face1">
-                                        <div class="content">
-                                            <h2><%= product.name %> </h2>
-                                            <p> <%= product.description %></p>
-                                        </div>
-                                    </div>
-                                    <div class="face face2">
-                                        <h2><%= product.id %></h2>
+                            <div class="wrapper">
+                                <div class="card ">
+                                    <img style="max-width: 300px;" src="/images/products/<%= product.image %>"
+                                        alt="armadillo">
+                                    <div class="info">
+                                        <h1>
+                                            <%= product.name %>
+                                        </h1>
+                                        <p>
+                                            <%= product.description %>
+                                        </p>
+                                        <a href="" class="btn">Read more</a>
                                     </div>
                                 </div>
                             </div>
                             <% }) %>
-                    </section>
+                    </div>
                 </div>
-                
-                
-
                 <section class="regions">
-                    <h3>Regiones</h3>
-                    <article class="andina">
-                        <h4>Región Andina</h4>
-                        <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-                            quae dolor est perspiciatis ratione.</p>
-                    </article>
-                    <article class="caribe">
-                        <h4>Región Caribe</h4>
-                        <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-                            quae dolor est perspiciatis ratione.</p>
-                    </article>
-                    <article class="pacifica">
-                        <h4>Región Pacífica</h4>
-                        <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-                            quae dolor est perspiciatis ratione.</p>
-                    </article>
-                    <article class="orinoquia">
-                        <h4>Región de la Orinoquía</h4>
-                        <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-                            quae dolor est perspiciatis ratione.</p>
-                    </article>
-                    <article class="amazonica">
-                        <h4>Región de la Amazonía</h4>
-                        <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-                            quae dolor est perspiciatis ratione.</p>
-                    </article>
-                    <article class="insular">
-                        <h4>Región Insular</h4>
-                        <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-                            quae dolor est perspiciatis ratione.</p>
-                    </article>
+                    <h1>Regiones</h1>
+
+                    <div class="regionCard" style="--i:url(/images/andina.jpg)">
+                        <article class="content">
+                            <h4>Región Andina</h4>
+                            <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Esse,
+                                quae dolor est perspiciatis ratione.</p>
+                        </article>
+                    </div>
+
+                    <div class="regionCard" style="--i:url(/images/caribe.jpg)">
+                        <article class="content">
+                            <h4>Región Caribe</h4>
+                            <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Esse,
+                                quae dolor est perspiciatis ratione.</p>
+                        </article>
+                    </div>
+
+                    <div class="regionCard" style="--i:url(/images/pacifica.jpg)">
+                        <article class="content">
+                            <h4>Región Pacífica</h4>
+                            <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Esse,
+                                quae dolor est perspiciatis ratione.</p>
+                        </article>
+                    </div>
+
+                    <div class="regionCard" style="--i:url(/images/orinoquia.jpg)">
+                        <article class="content">
+                            <h4>Región de la Orinoquía</h4>
+                            <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Esse,
+                                quae dolor est perspiciatis ratione.</p>
+                        </article>
+                    </div>
+
+                    <div class="regionCard" style="--i:url(/images/amazonica.jpg)">
+                        <article class="content">
+                            <h4>Región de la Amazonía</h4>
+                            <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Esse,
+                                quae dolor est perspiciatis ratione.</p>
+                        </article>
+                    </div>
+
+                    <div class="regionCard" style="--i:url(/images/insular.jpg)">
+                        <article class="content">
+                            <h4>Región Insular</h4>
+                            <p class="description-region">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Esse,
+                                quae dolor est perspiciatis ratione.</p>
+                        </article>
+                    </div>
+
 
                 </section>
             </main>

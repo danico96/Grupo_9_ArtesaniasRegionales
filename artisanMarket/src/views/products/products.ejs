@@ -3,63 +3,48 @@
 <!-- Head -->
 <%- include ('../partials/head') %>
 
+    <head>
+        <link rel="stylesheet" href="/css/products.css">
+    </head>
+
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
 
             <!-- todos los productos -->
-            <div class="allproducts">
+            <div class="allProducts">
                 <div>
                     <div>
                         <h2>Todos los productos</h2>
-                    </div>
-                    <table class="productTable">
-                        <thead>
-                            <td>
-                                <h3>Id</h3>
-                            </td>
-                            <td>
-                                <h3>Nombre</h3>
-                            </td>
-                            <td>
-                                <h3>Precio</h3>
-                            </td>
-                            <td>
-                                <h3>Región</h3>
-                            </td>
-                            <td>
-                                <h3>Acciones</h3>
-                            </td>
-                            <td><a href='./products/productCreate'> Crear nuevo </a></td>
-                        </thead>
-                        <tbody>
-                            <% products.forEach(product=> { %>
-                                <tr>
-                                    <td>
-                                        <%= product.id %>
-                                    </td>
-                                    <td>
-                                        <%= product.name %>
-                                    </td>
-                                    <td>
-                                        <%= product.price %>
-                                    </td>
-                                    <td>
-                                        <%= product.category %>
-                                    </td>
-                                    <td>
-                                        <a href="./products/productDetail/<%= product.id %>" class="info">Detalle</a>
-                                        <a href="./products/productEdit/<%= product.id %>" class="edit">Editar</a>
-                                        <form action="products/<%= product.id %>?_method=DELETE" method="POST">
-                                            <div>
-                                                <button>Eliminar</button>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <% }) %>
-                        </tbody>
-                    </table>
+                    </div><br><br>
+                    <% products.forEach(product=> { %>
+                        <div class="productContainer">
+                            <div class="infoProduct">
+                                <img src="/images/products/<%= product.image%>" alt="">
+                                <div class="nameProduct">
+                                    <p><strong>
+                                            <%= product.name %>
+                                        </strong></p>
+                                </div>
+                            </div>
+                            <div class="btnsCRUD">
+                                <div class="btn">
+                                    <a href="./products/productDetail/<%= product.id %>" class="info">Detalle</a>
+                                </div>
+                                <div class="btn">
+                                    <a href="./products/productEdit/<%= product.id %>" class="edit">Editar</a>
+                                </div>
+                                <div class="btn">
+                                    <form action="products/<%= product.id %>?_method=DELETE" method="POST">
+                                        <div>
+                                            <button>Eliminar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+
                 </div>
             </div>
             <!-- Footer -->

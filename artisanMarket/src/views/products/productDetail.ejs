@@ -4,40 +4,56 @@
 <!-- Head -->
 <%- include ('../partials/head') %>
 
+    <head>
+        <link rel="stylesheet" href="/css/productDetail.css">
+    </head>
+
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
 
-            <main>
-                <section class="mainproduct"> 
-                    <h3 class="title-product"> <%= product.name %> </h3>
-                    <img src="/images/products/<%= product.image %>" alt="Canasto" class="main-img">
-                    <div class="grid-detail">
-                        <div class="box-price">
-                            <h4> Precio </h4>
-                            <p> $<%= product.price %> COP </p>
+            <main class="mainProduct">
+                <div class="productDetail">
+                    <div class="imgSide">
+                        <img src="/images/products/<%= product.image %>" alt="Canasto" class="main-img">
+                    </div>
+                    <div class="infoSide">
+                        <h1 class="title-product">
+                            <%= product.name %>
+                        </h1>
+
+                        <div class="grid-detail">
+                            <div class="box-price">
+                                <h4> Precio </h4>
+                                <p> $ <%= product.price %> COP </p>
+                            </div>
+                            <div class="box-quantity">
+                                <h4> Cantidad </h4><br>
+                                <select name="Cantidad" id="quantity">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <button type="button" class="add"> Agregar al carrito</button>
                         </div>
-                        <div class="box-quantity">
-                            <h4> Cantidad </h4>
-                            <select name="Cantidad" id="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <div class="description">
+                            <h4>Descripción</h4>
+                            <p>
+                                <%= product.description %>
+                            </p>
                         </div>
-                        <button type="button" class="add"> Agregar al carrito</button>
+                        <div class="characteristic">
+                            <h4> Región</h4>
+                            <p>
+                                <%= product.category %>
+                            </p>
+                        </div>
                     </div>
-                    <div class="description">
-                        <h4>Descripción</h4>
-                        <p><%= product.description %></p>
-                    </div>
-                    <div class="characteristic">
-                        <h4> Región</h4>
-                        <p><%= product.category %></p>
-                    </div>
-                </section>
+
+                </div>
             </main>
 
             <!-- Footer -->

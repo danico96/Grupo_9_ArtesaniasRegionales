@@ -2,6 +2,10 @@
 <html lang="en">
 
 <!-- Head -->
+
+<head>
+    <link rel="stylesheet" href="/css/productCart.css">
+</head>
 <%- include ('../partials/head') %>
 
     <body>
@@ -9,71 +13,79 @@
         <%- include ('../partials/header') %>
 
             <main class="carrito">
-                <h3>Carrito de compras <i class="fas fa-shopping-cart"></i></h3>
-                <section class="productcar">
-                        <article class="products">
-                            <div class="hamaca-san-jacinto">
-                                <h2>Hamaca San Jacinto</h2>
-                            </div>
-                            <img src="/images/products/Hamaca san jacinto.jpeg" width="360" alt="hamaca-sanjacinto"
-                                class="product_img">
-                            <h4 class="description">Hamaca cuadro acordonada amarillo/azul/verde || Asociación de
-                                Artesanos de San Jacinto
-                            </h4>
-                            <p class="price">$477.000</p>
-                            <form class="cantidad" action="/" method="get"></form>
-                            <label>Cantidad:</label>
-                            <select name="cant">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                            <p class="eliminar"><a href="#">Eliminar</a></p>
-                        </article>
-                        <article class="products">
-                            <div class="WillysPitalito">
-                                <h2>Willys Pitalito Grande Rojo</h2>
-                            </div>
-                            <img src="/images/products/willy.jpg" width="360" alt="Willy" class="product_img">
-                            <h4 class="description">Willys elaborado en Arcilla por manos artesanas en el departamento
-                                del Huila.
-                            </h4>
-                            <p class="price">$88.000</p>
-                            <form class="cantidad" action="/" method="get"></form>
-                            <label>Cantidad:</label>
-                            <select name="cant">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                            <p class="eliminar"><a href="#">Eliminar</a></p>
-                        </article>
-                        <article class="products">
-                            <div class="canasto-iraca">
-                                <h2>Canasto Tejido En Iraca</h2>
-                            </div>
-                            <img src="/images/products/canasto-iraca.jpg" width="360" alt="Canasto-iraca" class="product_img">
-                            <h4 class="description">Canasto tejido elaborado por manos artesanas con Iraca en el
-                                departamento de Nariño
-                            </h4>
-                            <p class="price">$45.000</p>
-                            <form class="cantidad" action="/" method="get"></form>
-                            <label>Cantidad:</label>
-                            <select name="cant">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                            <p class="eliminar"><a href="#">Eliminar</a></p>
-                        </article>
+                <h1>Carrito de compras <i class="fas fa-shopping-cart"></i></h1>
+                <section class="productCar">
+                    <div class="products">
+                        <h2>Hamaca San Jacinto</h2>
+                        <img src="/images/products/Hamaca san jacinto.jpeg" width="360" alt="hamaca-sanjacinto"
+                            class="product_img">
+                        <h4 class="description">Hamaca cuadro acordonada amarillo/azul/verde || Asociación de
+                            Artesanos de San Jacinto
+                        </h4>
+                        <p class="price">$477.000</p>
+                        <label>Cantidad:</label>
+                        <select name="cant">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select><br>
+                        <a class="eliminar" href="#">
+                            <div>Eliminar</div>
+                        </a>
+                    </div>
+
+                    <div class="products">
+                        <div class="WillysPitalito">
+                            <h2>Willys Pitalito Grande Rojo</h2>
+                        </div>
+                        <img src="/images/products/willy.jpg" width="360" alt="Willy" class="product_img">
+                        <h4 class="description">Willys elaborado en Arcilla por manos artesanas en el departamento
+                            del Huila.
+                        </h4>
+                        <p class="price">$88.000</p>
+                        <label>Cantidad:</label>
+                        <select name="cant">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select><br>
+                        <a class="eliminar" href="#">
+                            <div>Eliminar</div>
+                        </a>
+                    </div>
+
+                    <div class="products">
+                        <div class="canasto-iraca">
+                            <h2>Canasto Tejido En Iraca</h2>
+                        </div>
+                        <img src="/images/products/canasto-iraca.jpg" width="360" alt="Canasto-iraca"
+                            class="product_img">
+                        <h4 class="description">Canasto tejido elaborado por manos artesanas con Iraca en el
+                            departamento de Nariño
+                        </h4>
+                        <p class="price">$45.000</p>
+                        <label>Cantidad:</label>
+                        <select name="cant">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select><br>
+                        <a class="eliminar" href="#">
+                            <div>Eliminar</div>
+                        </a>
+                    </div>
                 </section>
-                <h4>Envío: $30.000</h4>
-                <h3>Total $</h3>
-                <form action="/buy" method="get">
-                    <p>
-                        <button type="submit" name="/">Comprar</button>
-                    </p>
-                </form>
+                <div class="confirmar">
+                    <div class="confirmarContent">
+                        <h3>Total $ 640.000 COP</h3>
+                    </div>
+                    <div class="btnComprar">
+                        <form action="/buy" method="get">
+                            <button type="submit" name="/">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+
             </main>
 
             <!-- Footer -->
