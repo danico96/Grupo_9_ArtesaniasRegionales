@@ -1,8 +1,15 @@
-const db = require('../database/models');
+const path = require('path');
+const db = require(path.resolve(__dirname, '../database/models'));
 
 const prueba = {
-    getAll: () => {
-        console.log(db.users);
+    getAll: async() => {
+        try {
+            const result = await db.products.findAll();
+            console.log(result);
+        } catch (error) {
+            console.log(error);
+            
+        }
     }
 }
 

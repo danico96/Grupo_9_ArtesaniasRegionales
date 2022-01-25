@@ -7,7 +7,7 @@
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
-        <% if(locals.usuario) { %>
+        <%# if(locals.usuario) { %>
 
             <main class="carrito">
                 <h3>Carrito de compras <i class="fas fa-shopping-cart"></i></h3>
@@ -76,9 +76,9 @@
                     </p>
                 </form>
             </main>
-            <% } else { %>
-                <h3>Acceso Denegado</h3>
-            <% } %>
+            <%# } else { %>
+                <!-- <h3>Acceso Denegado</h3> -->
+            <%# } %>
             <!-- Footer -->
             <%- include('../partials/footer') %>
 

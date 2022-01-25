@@ -6,7 +6,7 @@
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
-            <% if(locals.usuario.category=="vendedor" ){%>
+            <%# if(locals.usuario.category=="vendedor" ){%>
                 <!-- todos los productos -->
                 <div class="allproducts">
                     <div>
@@ -45,7 +45,7 @@
                                             <%= product.price %>
                                         </td>
                                         <td>
-                                            <%= product.category %>
+                                            <%= product.regions_id %>
                                         </td>
                                         <td>
                                             <a href="./products/productDetail/<%= product.id %>"
@@ -63,9 +63,9 @@
                         </table>
                     </div>
                 </div>
-                <% } else { %>
-                    <h3>Acceso Denegado</h3>
-                    <% } %>
+                <%# } else { %>
+                    <!-- <h3>Acceso Denegado</h3> -->
+                    <%# } %>
                         <!-- Footer -->
                         <%- include('../partials/footer') %>
     </body>

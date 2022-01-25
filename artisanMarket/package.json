@@ -6,8 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon src/index.js",
-        "dev": "NODE_ENV=dev & odemon src/index.js",
-        "build": "sequelize-auto -h 127.0.0.1 -d artisanMarket -u daniel -x 1234 -p 3307  --dialect mysql"
+        "dev": "NODE_ENV=development & nodemon src/index.js",
+        "build": "sequelize-auto -h 127.0.0.1 -d artisanMarket -u root -x 1234 -p 3307  --dialect mysql"
     },
     "keywords": [],
     "author": "",

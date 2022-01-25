@@ -1,19 +1,19 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('profile', {
+  return sequelize.define('roles', {
     id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    profileName: {
-      type: DataTypes.STRING(45),
+    roleName: {
+      type: DataTypes.STRING(15),
       allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'profile',
+    tableName: 'roles',
     timestamps: false,
     indexes: [
       {

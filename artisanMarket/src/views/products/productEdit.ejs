@@ -6,7 +6,7 @@
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
-            <% if(locals.usuario.category=="vendedor" ){%>
+            <%# if(locals.usuario.category=="vendedor" ){%>
                 <main class="productEdit">
                     <div>
                         <h2>Editar producto</h2>
@@ -52,9 +52,9 @@
                         </p>
                     </form>
                 </main>
-                <% } else { %>
-                    <h3>Acceso Denegado</h3>
-                    <% } %>
+                <%# } else { %>
+                    <!-- <h3>Acceso Denegado</h3> -->
+                    <%# } %>
                         <!-- Footer -->
                         <%- include('../partials/footer') %>
     </body>

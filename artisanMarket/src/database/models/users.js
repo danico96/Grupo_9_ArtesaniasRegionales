@@ -8,28 +8,32 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     name: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(50),
       allowNull: false
     },
     lastname: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(50),
       allowNull: false
     },
     email: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(100),
       allowNull: false,
       unique: "email_UNIQUE"
     },
     password: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(30),
       allowNull: false
     },
-    profile_id: {
+    image: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    roles_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       references: {
-        model: 'profile',
+        model: 'roles',
         key: 'id'
       }
     }
@@ -44,7 +48,7 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "id" },
-          { name: "profile_id" },
+          { name: "roles_id" },
         ]
       },
       {
@@ -56,10 +60,10 @@ module.exports = function(sequelize, DataTypes) {
         ]
       },
       {
-        name: "fk_users_profile_idx",
+        name: "fk_users_roles1_idx",
         using: "BTREE",
         fields: [
-          { name: "profile_id" },
+          { name: "roles_id" },
         ]
       },
     ]

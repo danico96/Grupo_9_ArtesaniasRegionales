@@ -8,16 +8,24 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     name: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(100),
       allowNull: false
     },
     price: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     description: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(500),
       allowNull: false
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    picture: {
+      type: DataTypes.STRING(100),
+      allowNull: true
     },
     regions_id: {
       type: DataTypes.INTEGER,
