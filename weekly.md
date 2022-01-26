@@ -32,3 +32,25 @@ Seguimos teniendo problemas de comunicación, aunque no en igual medida. Falta t
 
 Como solución estamos haciendo reuniones cada vez mas periódicas para suplir la falta de comunicación que aún evidenciamos como grupo, repasar los conceptos de CRUD para dar una solución lo mas acertada posible a los lineamientos de este sprint.
 
+## Reunión del Sprint 5
+
+Se actualizó el tablero del proyecto con base en las actividades que ya se habían realizado que fueron:
+
+* Product.json y users.json con datos de productos
+* Administración completa CRUD
+* Actualización del tablero
+
+Seguimos con algunos problemas internos en cuanto a comunicación, pero esperamos terminar el proyecto satisfactoriamente.
+
+## Reunión del Sprint 6
+
+Se actualizó el tablero del proyecto con base en las actividades que ya se habían realizado que fueron:
+
+* Diagrama de BD
+* Script de creación de estructura de BD
+* Script de datos de BD
+* Creación de carpeta Sequialize
+* BREAD
+
+Los problemas de comunicación no han mejorado mucho, estamos a la espera de poder hacer un merge entre dos ramas para mejorar el frontend del proyecto.
+

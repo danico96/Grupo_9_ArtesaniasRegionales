@@ -40,6 +40,22 @@ https://miro.com/app/board/o9J_lqn06XU=/?invite_link_id=170055165223
 
 * Se cumplio con la fecha de la entrega del sprint.
 
+## Sprint 5
 
+* Se realizó división de actividades, pero no se cumplio con la misma existen problemas de comunicación graves en los que debemos trabajar para cumplir con el proyecto.
 
+* No fue posible cumplir con la fecha de entrega del sprint.
 
+* Se debe mejorar el ambiente de trabajo ya que debido a la falta de comunicación y compromiso con el proyecto existe incomodidad dentro del grupo.
+
+## Sprint 6
+
+* No se realizó una adecuada división de actividades, por lo cual no se cumplio con la misma.
+
+* Existen problemas de comunicación en los que debemos trabajar para cumplir con el proyecto.
+
+* No fue posible cumplir con la fecha de entrega del sprint.
+
+* Se debe mejorar el ambiente de trabajo.
+
+* Se deben cumplir los compromisos adquiridos.
