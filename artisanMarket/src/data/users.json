@@ -118,5 +118,15 @@
         "password": "$2a$10$PtWm5VcdlQhmnB4YiCsrtOje2ql.18IZEU7tSupPzB11eubpYo892",
         "category": "user",
         "role": 1
+    },
+    {
+        "id": 1643207085867,
+        "first_name": "Cristian",
+        "last_name": "Rojas",
+        "email": "criztian@criztian.com",
+        "imgPerfil": "default.jpg",
+        "password": "$2a$10$fEEMOXt76TMFufNFBWBxd.RMUh3Ciqp5ayVXg6mnQPS/QFpPGn1Re",
+        "category": "vendedor",
+        "role": 1
     }
 ]

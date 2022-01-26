@@ -20,24 +20,46 @@
             </div> -->
             <nav class="main-navbar">
                 <ul>
-                    <li>
-                        <a href="/register">
-                            <i class="far fa-id-card"></i>
-                            <p> Registro </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/login">
-                            <i class="fas fa-user"></i>
-                            <p> Ingreso </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/products/productCart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <p> Carrito </p>
-                        </a>
-                    </li>
+                    <% if(locals.usuario) { %>
+                        <li>
+                            <p class="Perfil">
+                                <img class="ImgPerfil" src="/images/users/<%=locals.usuario.imgPerfil %>"
+                                    style='border-radius: 100%;' alt="">
+                            </p>
+                        </li>
+                        <li>
+                            <a href="./users/userDetail/<%= locals.usuario.id %>">
+                                <p>
+                                    <%=locals.usuario.first_name %>
+                                </p>
+                                <p>
+                                    <%=locals.usuario.last_name %>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/products/productCart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p> Carrito </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/logout"> Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                        </li>
+                        <% } else { %>
+                            <li>
+                                <a href="/register">
+                                    <i class="far fa-id-card"></i>
+                                    <p> Registro </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/login">
+                                    <i class="fas fa-user"></i>
+                                    <p> Ingreso </p>
+                                </a>
+                            </li>
+                            <%}%>
                 </ul>
             </nav>
             <nav class="browse-navbar">
