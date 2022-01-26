@@ -11,7 +11,7 @@
             <main>
                 <section class="mainproduct"> 
                     <h3 class="title-product"> <%= product.name %> </h3>
-                    <img src="/images/products/<%= product.image %>" alt="Canasto" class="main-img">
+                    <img src="<%= product.picture %>" alt="Canasto" class="main-img">
                     <div class="grid-detail">
                         <div class="box-price">
                             <h4> Precio </h4>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="characteristic">
                         <h4> Región</h4>
-                        <p><%= product.category %></p>
+                        <p><%= product.regions_id %></p>
                     </div>
                 </section>
             </main>
