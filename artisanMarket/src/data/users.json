@@ -6,7 +6,8 @@
         "email": "lbarkaway0@ycombinator.com",
         "password": "iL8uGrtw7r",
         "category": "user",
-        "image": "user_1.jpg"
+        "imgPerfil": "default.jpg",
+        "role": 1
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "email": "jreddle1@ovh.net",
         "password": "kILd3AariaPs",
         "category": "user",
-        "image": "user_2.jpg"
+        "imgPerfil": "default.jpg",
+        "role": 1
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "email": "dpetchell2@addtoany.com",
         "password": "WC4kQn",
         "category": "user",
-        "image": "user_3.jpg"
+        "imgPerfil": "default.jpg",
+        "role": 1
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "email": "sflacknell3@unc.edu",
         "password": "nVz5UX",
         "category": "user",
-        "image": "user_4.jpg"
+        "imgPerfil": "default.jpg",
+        "role": 1
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "email": "eblakeney4@google.de",
         "password": "VxFQwDVtiY",
         "category": "user",
-        "image": "user_5.jpg"
+        "imgPerfil": "default.jpg",
+        "role": 1
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "email": "ballchin5@nba.com",
         "password": "D8HxJ08UaM",
         "category": "user",
-        "image": "user_6.jpg"
+        "imgPerfil": "default.jpg",
+        "role": 1
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "email": "thallibone6@webs.com",
         "password": "V0dpUs",
         "category": "user",
-        "image": "user_7.jpg"
+        "imgPerfil": "default.jpg",
+        "role": 1
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@
         "email": "msmall7@xrea.com",
         "password": "OC3O6HxykREO",
         "category": "user",
-        "image": "user_8.jpg"
+        "imgPerfil": "default.jpg",
+        "role": 1
     },
     {
         "id": 9,
@@ -78,48 +86,37 @@
         "email": "llampbrecht8@sciencedirect.com",
         "password": "Mr6gGczCYrH",
         "category": "user",
-        "image": "user_9.jpg"
+        "imgPerfil": "default.jpg",
+        "role": 1
     },
     {
         "id": 10,
-        "first_name": "Cristian",
-        "last_name": "Rojas Betancur",
-        "email": "criztian5600@gmail.com",
-        "password": "12345",
-        "category": "user"
-    },
-    {
-        "id": 1638832785548,
-        "first_name": "Tomas",
-        "last_name": "Lopez Correa",
-        "email": "Tomas@digital.com",
-        "password": "$2a$10$BFJHNCMa99Dr6kPQb4wOl.ABYzKqwTpfa0/us3JEo0IN9iIvtD.QK",
-        "category": "vendedor"
-    },
-    {
-        "id": 1638833039820,
-        "first_name": "Jazmin",
-        "last_name": "Lopez Correa",
-        "email": "jazminvaleria234@gmail.com",
-        "password": "$2a$10$bwV1u/pS7AlQiHm7WOIfFuuFbQFZohs80wK0/zFugm/wjg77l6ih.",
-        "category": "user"
-    },
-    {
-        "id": 1638833174417,
-        "first_name": "Sebastian",
-        "last_name": "Rojas Betancur",
-        "email": "karen@digitalhouse.com",
-        "password": "$2a$10$qXbH4yFgN4i9Tg3K/weF7uQvDudDF5RAgghYVpLcJEkpaWCIwrShm",
+        "first_name": "Leonardo",
+        "last_name": "Pintor",
+        "email": "pintor_32@hotmail.com",
+        "imgPerfil": "LeonardoP.PNG",
+        "password": "$2a$10$sgKgO59c0qTpkA01.l0lwuLQLNHRRrQZHMzgbJ5kQExORdSbLoNxq",
         "category": "vendedor",
-        "image": "D:\\Universidad\\DigitalHouse\\proyectoIntegrador\\Grupo_9_ArtesaniasRegionales\\artisanMarket\\src\\public\\images\\users\\imgPerfil-1638833174316"
+        "role": 2
     },
     {
-        "id": 1641328345437,
-        "first_name": "Tomas",
-        "last_name": "Salazar",
-        "email": "cristian@cristian.com",
-        "password": "$2a$10$CRFvYmEm4TsMRPhpTWVY9.2Mv3NCzXSZNHunlxyDsHkpeqJI1Tp6i",
+        "id": 11,
+        "first_name": "Jorge",
+        "last_name": "Moreno",
+        "email": "pintor32@gmail.com",
+        "imgPerfil": "default.jpg",
+        "password": "$2a$10$69rwTexnFa69SOBcLuQPK.2XGGOL63FK9aJ0cyuuToVo3f0SMEDES",
         "category": "user",
-        "image": "D:\\Universidad\\DigitalHouse\\proyectoIntegrador\\Grupo_9_ArtesaniasRegionales\\artisanMarket\\src\\public\\images\\users\\imgPerfil-1641328345280"
+        "role": 1
+    },
+    {
+        "id": 12,
+        "first_name": "a",
+        "last_name": "b",
+        "email": "cristian@cristian.com",
+        "imgPerfil": "default.jpg",
+        "password": "$2a$10$PtWm5VcdlQhmnB4YiCsrtOje2ql.18IZEU7tSupPzB11eubpYo892",
+        "category": "user",
+        "role": 1
     }
 ]
