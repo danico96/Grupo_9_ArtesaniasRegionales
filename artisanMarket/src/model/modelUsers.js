@@ -1,68 +1,54 @@
-const fs = require("fs");
 const path = require("path");
-const DB = require("../data/users.json");
+const db = require(path.resolve(__dirname, '../database/models'));
 
 const modelUsers = {
-  getUsers: function () {
-    return JSON.parse(
-      fs.readFileSync(path.resolve(__dirname, "../data/users.json"), {
-        encoding: "utf-8",
-      })
-    );
-  },
-  findAll: function () {
-    return this.getUsers();
-  },
-  findByField: function (field, text) {
-    let allUsers = this.findAll();
-    let userFound = allUsers.find((oneUser) => oneUser[field] === text);
-    return userFound;
-  },
-  isExist: function (id) {
-    const isExist = DB.find((user) => user.id == id);
-    if (isExist) {
-      return true;
-    } else {
-      return false;
+  getUsers: async function () {
+    try {
+      const result = await db.users.findAll();
+      return result;
+    } catch (error) {
+      console.log(error.message);
     }
   },
-  createUser: function (newUser) {
-    DB.push(newUser);
-    fs.writeFileSync(
-      path.resolve(__dirname, "../data/users.json"),
-      JSON.stringify(DB, null, 4),
-      { encoding: "utf-8" }
-    );
-    return console.log("Agregado con éxito.");
+  getOneUser: async function (id) {
+    try {
+      const user = await db.users.findByPk(id);
+      return user;
+    } catch (error) {
+      console.log(error.message);
+    }
   },
-  updateUser: function (userId, userUpdated) {
-    const indiceBuscado = this.getUsers().findIndex(
-      (user) => user.id == userId
-    );
-    if (indiceBuscado < 0) {
-      return console.log(
-        "El usuario con id " + userId + " no esta registado en la base de datos"
-      );
-    } else {
-      let newDB = this.getUsers();
-      newDB[indiceBuscado] = userUpdated;
-      fs.writeFileSync(
-        path.resolve(__dirname, "../data/users.json"),
-        JSON.stringify(newDB, null, 4),
-        { encoding: "utf-8" }
-      );
+  createUser: async function (newUser) {
+    try {
+      await db.users.create(newUser)
+      return console.log("Agregado con éxito.");
+  } catch (error) {
+      console.log(error.message);
+  }
+  },
+  updateUser: async function (userId, userUpdated) {
+    try {
+      await db.users.update(
+        {
+          ...userUpdated
+        },
+        {
+          where: { id: userId }
+        });
       return console.log("Actualizado con éxito");
+    } catch (error) {
+      console.log(error.message);
     }
   },
-  deleteUser: function (userId) {
-    const newDB = this.getUsers().filter((user) => user.id != userId);
-    this.getUsers().push(newDB);
-    fs.writeFileSync(
-      path.resolve(__dirname, "../data/users.json"),
-      JSON.stringify(newDB, null, 4),
-      { encoding: "utf-8" }
-    );
-  },
+  deleteUser: async function (userId) {
+    try {
+      await db.users.destroy({
+        where: { id: userId }
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 };
 
 module.exports = modelUsers;

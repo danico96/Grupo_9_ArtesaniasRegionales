@@ -21,15 +21,15 @@
                 </div>
                 <div class="rigth-side">
                     <div class="formu">
-                        <form action="/registerUser" method="POST">
+                        <form action="/users/registerUser" method="POST" enctype="multipart/form-data">
 
                             <div>
-                                <label for="first_name">Nombres</label><br><br>
-                                <input type="text" name="first_name" required>
+                                <label for="name">Nombres</label><br><br>
+                                <input type="text" name="name" required>
                             </div><br>
                             <div>
-                                <label for="last_name">Apellidos</label><br><br>
-                                <input type="text" name="last_name" required>
+                                <label for="lastname">Apellidos</label><br><br>
+                                <input type="text" name="lastname" required>
                             </div><br>
 
 
@@ -42,18 +42,18 @@
                                 <input type="password" name="password" required>
                             </div><br>
                             <div>
-                                <label for="category">Perfil</label><br><br>
-                                <select name="category" required="true">
+                                <label for="role">Perfil</label><br><br>
+                                <select name="role" required="true">
                                     <option value="" selected disabled>Seleccione un perfil</option>
-                                    <option value="vendedor">Vendedor</option>
-                                    <option value="user">Comprador</option>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Cliente</option>
                                 </select>
                             </div><br>
                             <p>
                             <h3>Foto de Perfil</h3>
                             </p>
                             <p>
-                                <input type="file" name="imgPerfil" accept=".jpg,.png" required>
+                                <input type="file" name="image" accept=".jpg,.png" required>
                             </p>
                             <p class="btn-login">
                                 <button type="submit">Registrarse</button>

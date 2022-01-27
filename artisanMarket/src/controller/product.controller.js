@@ -1,16 +1,6 @@
-//const { products } = require('.');
 const { productsmodel } = require('../model');
 
 const productController = {
-    homeUser: async (req, res) => {
-        try {
-            const products = await productsmodel.getProducts();
-            res.render("./web/index", { products });
-        } catch (error) {
-            console.log(error.message);
-        }
-    },
-
     indexProducts: async (req, res) => {
         try {
             const products = await productsmodel.getProducts();
@@ -46,7 +36,7 @@ const productController = {
             console.log(error.message);
         }
     },
-
+    
     storeProduct: async (req, res) => {
         try {
             let newProduct = {
@@ -84,7 +74,7 @@ const productController = {
                 "description": req.body.description,
                 "picture": req.file.filename,
                 "regions_id": req.body.region,
-                "quantity": req.body.quantity, //falta cambiar en formulario
+                "quantity": req.body.quantity,
                 "price": req.body.price
             };
 

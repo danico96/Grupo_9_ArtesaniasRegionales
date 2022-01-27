@@ -7,23 +7,23 @@
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
-        <% if(locals.usuario) { %>
+        <%# if(locals.usuario) { %>
 
             <main>
                 <section class="mainproduct"> 
-                    <h3 class="title-product"> <%= user.first_name %> <%= user.last_name %> </h3>
-                    <img src="/images/users/<%= user.imgPerfil %>" alt="user" class="main-img">
+                    <h3 class="title-product"> <%= user.name %> <%= user.lastname %> </h3>
+                    <img src="/images/users/<%= user.image %>" alt="user" class="main-img">
                     <div class="characteristic">
                         <h4> Email </h4>
                         <p><%= user.email %></p>
                         <h4> Tipo de Usuario </h4>
-                        <p><%= user.category %></p>
+                        <p><%= user.roles_id %></p>
                     </div>
                 </section>
             </main>
-            <% } else { %>
-                <h3>Acceso Denegado</h3>
-            <% } %>
+            <%# } else { %>
+                <!-- <h3>Acceso Denegado</h3> -->
+            <%# } %>
 
             <!-- Footer -->
             <%- include('../partials/footer') %>

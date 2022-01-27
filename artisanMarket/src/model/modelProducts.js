@@ -31,14 +31,18 @@ const modelProducts = {
         }
     },
     updateProduct: async function (productId, productUpdated) {
-        await db.products.update(
-            {
-                ...productUpdated
-            },
-            {
-                where: { id: productId }
-            });
-        return console.log("Actualizado con éxito");
+        try {
+            await db.products.update(
+                {
+                    ...productUpdated
+                },
+                {
+                    where: { id: productId }
+                });
+            return console.log("Actualizado con éxito");   
+        } catch (error) {
+            console.log(error.message);
+        }
     },
     deleteProduct: async function (productId) {
         try {
