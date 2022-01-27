@@ -1,6 +1,4 @@
 const path = require('path');
-//const fs = require('fs');
-
 const db = require(path.resolve(__dirname, '../database/models'));
 
 const modelProducts = {
@@ -52,7 +50,5 @@ const modelProducts = {
         }
     }
 }
-
-//modelProducts.isExist(10);
 
 module.exports = modelProducts;
