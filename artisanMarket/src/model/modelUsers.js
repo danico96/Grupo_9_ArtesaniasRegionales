@@ -10,6 +10,19 @@ const modelUsers = {
       console.log(error.message);
     }
   },
+  getUserByField: async function (user) {
+    try {
+      const result = await db.users.findOne({
+        where: {
+          email: user.email,
+          password: user.password
+        }
+      });
+      return result;
+    } catch (error) {
+      console.log(error.message);
+    }
+  },
   getOneUser: async function (id) {
     try {
       const user = await db.users.findByPk(id);

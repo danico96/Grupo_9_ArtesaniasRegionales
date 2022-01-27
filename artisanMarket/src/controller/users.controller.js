@@ -19,22 +19,10 @@ const controller = {
   },
   loginProcess: async (req, res) => {
     try {
-      let userToLogin = usermodel.findByField("email", req.body.email);
-      if (userToLogin) {
-        let Okpass = bcryptjs.compareSync(
-          req.body.password,
-          userToLogin.password
-        );
-        if (Okpass) {
-          delete userToLogin.password;
-          req.session.usuario = userToLogin;
-          if (req.body.recordarme) {
-            res.cookie("email", userToLogin.email, {
-              maxAge: 1000 * 60 * 60 * 24,
-            });
-          }
-          return res.redirect("/");
-        }
+      let body = req.body;
+      const result = await usermodel.getUserByField(body);
+      if (result.length) {
+        return res.redirect('/')
       }
       return res.render("./users/login", {
         errors: {
@@ -43,6 +31,30 @@ const controller = {
           },
         },
       });
+      // let userToLogin = usermodel.findByField("email", req.body.email);
+      // if (userToLogin) {
+      //   let Okpass = bcryptjs.compareSync(
+      //     req.body.password,
+      //     userToLogin.password
+      //   );
+      //   if (Okpass) {
+      //     delete userToLogin.password;
+      //     req.session.usuario = userToLogin;
+      //     if (req.body.recordarme) {
+      //       res.cookie("email", userToLogin.email, {
+      //         maxAge: 1000 * 60 * 60 * 24,
+      //       });
+      //     }
+      //     return res.redirect("/");
+      //   }
+      // }
+      // return res.render("./users/login", {
+      //   errors: {
+      //     email: {
+      //       msg: "Las credenciales son inválidas",
+      //     },
+      //   },
+      // });
     } catch (error) {
       console.log(error.message);
     }
