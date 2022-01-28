@@ -1,14 +1,14 @@
-var DataTypes = require("sequelize").DataTypes;
-var _products = require("./products");
-var _regions = require("./regions");
-var _roles = require("./roles");
-var _users = require("./users");
+let DataTypes = require("sequelize").DataTypes;
+let _products = require("./products");
+let _regions = require("./regions");
+let _roles = require("./roles");
+let _users = require("./users");
 
 function initModels(sequelize) {
-  var products = _products(sequelize, DataTypes);
-  var regions = _regions(sequelize, DataTypes);
-  var roles = _roles(sequelize, DataTypes);
-  var users = _users(sequelize, DataTypes);
+  let products = _products(sequelize, DataTypes);
+  let regions = _regions(sequelize, DataTypes);
+  let roles = _roles(sequelize, DataTypes);
+  let users = _users(sequelize, DataTypes);
 
   products.belongsTo(regions, { as: "region", foreignKey: "regions_id"});
   regions.hasMany(products, { as: "products", foreignKey: "regions_id"});
