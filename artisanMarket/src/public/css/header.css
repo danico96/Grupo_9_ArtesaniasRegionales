@@ -1,5 +1,12 @@
 /* INICIO WAVE */
 
+
+.main-navbar .ImgPerfil {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
 .bg_color {
   width: 6000px;
   height: 30%;
@@ -153,8 +160,14 @@ header .top-header .main-navbar ul,
   margin: auto;
 }
 
+header .top-header .main-navbar ul {
+  align-items: center;
+  color: white;
+  flex-direction: row-reverse;
+}
+
 .top-header .main-navbar ul li {
-  margin: 0 25px;
+  margin: 0 10px;
   border-radius: 10%;
 }
 

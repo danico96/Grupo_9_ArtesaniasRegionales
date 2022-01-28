@@ -128,5 +128,55 @@
         "password": "$2a$10$fEEMOXt76TMFufNFBWBxd.RMUh3Ciqp5ayVXg6mnQPS/QFpPGn1Re",
         "category": "vendedor",
         "role": 1
+    },
+    {
+        "id": 1643381529466,
+        "first_name": "Tomas",
+        "last_name": "Salazar",
+        "email": "tomas@tomas.com",
+        "imgPerfil": "foto-1643381529358.png",
+        "password": "$2a$10$xSQfQuS6VrK8lnxYm9KPjuh0P6Kpi4A3mrr610xEj9lXQBhO5dzsu",
+        "category": "user",
+        "role": 1
+    },
+    {
+        "id": 1643381587801,
+        "first_name": "Tomas",
+        "last_name": "Salazar",
+        "email": "tomas@tomas.com",
+        "imgPerfil": ".png",
+        "password": "$2a$10$YjdmtoIVUbjCW2MXb7QS5.eZwf4qabTfbVrK43WQmOmPc8gH9BQDi",
+        "category": "user",
+        "role": 1
+    },
+    {
+        "id": 1643385056525,
+        "first_name": "Sebastian",
+        "last_name": "Finn",
+        "email": "sebas@sebas.com",
+        "imgPerfil": "default.jpg",
+        "password": "$2a$10$0fVJUN0y5UJCMHUZ1wwcceCCzBjZ/jgOY37UNtMwwvy6QV4.RyDzC",
+        "category": "vendedor",
+        "role": 1
+    },
+    {
+        "id": 1643385057953,
+        "first_name": "Sebastian",
+        "last_name": "Finn",
+        "email": "sebas@sebas.com",
+        "imgPerfil": "default.jpg",
+        "password": "$2a$10$0R9dlG/aw0J1ErCqrzwCVOMUnjxfSrKCykCTlvrCvEHIlufMnE9Lm",
+        "category": "vendedor",
+        "role": 1
+    },
+    {
+        "id": 1643385091963,
+        "first_name": "Sebastian",
+        "last_name": "Finn",
+        "email": "sebas@sebas.com",
+        "imgPerfil": "default.jpg",
+        "password": "$2a$10$GP7KxDfBY8ZKa0dinUVWo.sNZPH5gKXo.Bvkj.lColdrcZf8epT9C",
+        "category": "vendedor",
+        "role": 1
     }
 ]

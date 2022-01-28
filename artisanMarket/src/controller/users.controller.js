@@ -5,7 +5,7 @@ const bcryptjs = require("bcryptjs");
 const controller = {
   indexUsers: (req, res) => {
     res.render('./users/users', { users: usermodel.getUsers() });
-},
+  },
   loginUser: (req, res, next) => {
     res.render("./users/login");
   },
@@ -70,27 +70,27 @@ const controller = {
     let userId = req.params.id;
     let user = usermodel.getUsers().find(item => item.id == userId);
     res.render('./users/userEdit', { user });
-},
-updateUser: (req, res) => {
-  let userId = req.params.id;
+  },
+  updateUser: (req, res) => {
+    let userId = req.params.id;
 
-  let userEdit = {
-    "id": req.params.id,
-    "first_name": req.params.first_name,
-    "last_name": req.params.last_name,
-    "email": req.params.email,
-    "imgPerfil": req.params.imgPerfil,
-    "category": req.params.category,
-    "role": req.params.role,
+    let userEdit = {
+      "id": req.params.id,
+      "first_name": req.params.first_name,
+      "last_name": req.params.last_name,
+      "email": req.params.email,
+      "imgPerfil": req.params.imgPerfil,
+      "category": req.params.category,
+      "role": req.params.role,
+    }
+    usersmodel.updateUser(userId, userEdit);
+
+    res.redirect("/users");
+  },
+  deleteUser: (req, res) => {
+    console.log('Aquí está');
+    res.send('Entrando');
   }
-  usersmodel.updateUser(userId, userEdit);
-
-  res.redirect("/users");
-},
-deleteUser: (req, res) => {
-  console.log('Aquí está');
-  res.send('Entrando');
-}
 };
 
 module.exports = controller;

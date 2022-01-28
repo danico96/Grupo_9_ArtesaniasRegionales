@@ -9,10 +9,10 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '../../public/images/users'));
+      cb(null, path.resolve(__dirname, '../public/images/users'));
     },
     filename: function (req, file, cb) {
-      cb(null, 'foto' + '-' + Date.now()+ path.extname(file.originalname));      
+      cb(null, path.extname(file.originalname)) + '-' + Date.now();      
     }
   })
    
@@ -24,7 +24,7 @@ router.get("/", products.homeUser); /* GET home page. */
 router.get("/login", users.loginUser); /* GET login page. */
 router.post("/login", users.loginProcess);
 router.get("/register", users.registerUser); /* GET register page. */
-router.post("/registerUser", upload.single(), users.storeUser);
+router.post("/registerUser", upload.single('imgPerfil'), users.storeUser);
 router.get('/logout', users.logout);
 router.get('/userDetail/:id', users.detailUser); /* GET product detail page. */
 router.get('/userEdit/:id', users.editUser); /* GET product edit page. */

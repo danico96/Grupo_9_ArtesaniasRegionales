@@ -22,29 +22,23 @@
                 <ul>
                     <% if(locals.usuario) { %>
                         <li>
-                            <p class="Perfil">
-                                <img class="ImgPerfil" src="/images/users/<%=locals.usuario.imgPerfil %>"
-                                    style='border-radius: 100%;' alt="">
-                            </p>
+                            <img class="ImgPerfil" src="/images/users/<%=locals.usuario.imgPerfil %>" alt="">
                         </li>
                         <li>
                             <a href="./users/userDetail/<%= locals.usuario.id %>">
                                 <p>
                                     <%=locals.usuario.first_name %>
-                                </p>
-                                <p>
-                                    <%=locals.usuario.last_name %>
+                                        <%=locals.usuario.last_name %>
                                 </p>
                             </a>
                         </li>
                         <li>
                             <a href="/products/productCart">
                                 <i class="fas fa-shopping-cart"></i>
-                                <p> Carrito </p>
                             </a>
                         </li>
                         <li>
-                            <a href="/logout"> Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                            <a href="/logout" style="color: white;"> <i class="fas fa-sign-out-alt"></i></a>
                         </li>
                         <% } else { %>
                             <li>
