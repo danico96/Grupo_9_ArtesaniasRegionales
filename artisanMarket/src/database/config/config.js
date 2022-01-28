@@ -1,6 +1,6 @@
 module.exports = {
   "development": {
-    "username": "daniel",
+    "username": "admin",
     "password": "1234",
     "database": "artisanMarket",
     "host": "127.0.0.1",
@@ -8,7 +8,7 @@ module.exports = {
     "port": "3307"
   },
   "test": {
-    "username": "daniel",
+    "username": "root",
     "password": "1234",
     "database": "artisanMarket",
     "host": "127.0.0.1",
@@ -16,7 +16,7 @@ module.exports = {
     "port": "3307"
   },
   "production": {
-    "username": "daniel",
+    "username": "root",
     "password": "1234",
     "database": "artisanMarket",
     "host": "127.0.0.1",
