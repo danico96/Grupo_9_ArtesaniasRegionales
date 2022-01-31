@@ -5,7 +5,7 @@ const controller = {
   indexUsers: async (req, res) => {
     try {
       const users = await usermodel.getUsers();
-      return res.render('./users/users', { users });
+      return res.render("./users/users", { users });
     } catch (error) {
       console.log(error.message);
     }
@@ -17,56 +17,41 @@ const controller = {
       console.log(error.message);
     }
   },
-  loginProcess: async (req, res) => {
+  loginProcess: async function (req, res) {
     try {
-      let body = req.body;
-      const result = await usermodel.getUserByField(body);
-      if (result.length) {
-        return res.redirect('/')
-      }
-      return res.render("./users/login", {
-        errors: {
-          email: {
-            msg: "Las credenciales son inválidas",
+      const user = await usermodel.loginVerification(req.body.email);
+      if (user.length == 0) {
+        return res.render("./users/login", {
+          errors: {
+            email: { msg: "¡Correo no encontrado!" },
           },
-        },
-      });
-      // let userToLogin = usermodel.findByField("email", req.body.email);
-      // if (userToLogin) {
-      //   let Okpass = bcryptjs.compareSync(
-      //     req.body.password,
-      //     userToLogin.password
-      //   );
-      //   if (Okpass) {
-      //     delete userToLogin.password;
-      //     req.session.usuario = userToLogin;
-      //     if (req.body.recordarme) {
-      //       res.cookie("email", userToLogin.email, {
-      //         maxAge: 1000 * 60 * 60 * 24,
-      //       });
-      //     }
-      //     return res.redirect("/");
-      //   }
-      // }
-      // return res.render("./users/login", {
-      //   errors: {
-      //     email: {
-      //       msg: "Las credenciales son inválidas",
-      //     },
-      //   },
-      // });
+          oldData: req.body,
+        });
+      }
+      if (
+        !bcryptjs.compareSync(req.body.password, user[0].dataValues.password)
+      ) {
+        console.log(user);
+        console.log(user[0].dataValues.password);
+        res.render("./users/login", {
+          errors: {
+            password: { msg: "¡Contraseña Incorrecta!" },
+          },
+          oldData: req.body,
+        });
+      } else {
+        delete user[0].dataValues.password;
+        req.session.userLogged = user;
+        console.log(user);
+        res.redirect("/");
+      }
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
   },
-  logout: async (req, res) => {
-    try {
-      req.session.destroy();
-      res.cookie("email", null, { maxAge: -1 });
-      res.redirect("/");
-    } catch (error) {
-      console.log(error.message);
-    }
+  logout: function (req, res) {
+    req.session.destroy();
+    return res.redirect("/");
   },
   registerUser: async (req, res) => {
     try {
@@ -78,16 +63,16 @@ const controller = {
   storeUser: async (req, res) => {
     try {
       let newUser = {
-        "name": req.body.name,
-        "lastname": req.body.lastname,
-        "email": req.body.email,
-        "password": req.body.password,
-        "image": req.file.filename,
-        "roles_id": req.body.role
-      }
+        name: req.body.name,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        image: req.file != undefined ? req.file.filename: 'default.jpg',
+        roles_id: req.body.role,
+      };
       await usermodel.createUser(newUser);
 
-      res.redirect("/users");
+      res.redirect("./login");
     } catch (error) {
       console.log(error.message);
     }
@@ -97,7 +82,7 @@ const controller = {
       let userId = req.params.id;
       let user = await usermodel.getOneUser(userId);
 
-      res.render('./users/userDetail', { user });
+      res.render("./users/userDetail", { user });
     } catch (error) {
       console.log(error.message);
     }
@@ -106,7 +91,7 @@ const controller = {
     try {
       let userId = req.params.id;
       let user = await usermodel.getOneUser(userId);
-      res.render('./users/userEdit', { user });
+      res.render("./users/userEdit", { user });
     } catch (error) {
       console.log(error.message);
     }
@@ -116,13 +101,13 @@ const controller = {
       let userId = req.params.id;
 
       let userEdit = {
-        "name": req.body.name,
-        "lastname": req.body.lastname,
-        "email": req.body.email,
-        "password": req.body.password,
-        "image": req.file.filename,
-        "roles_id": req.body.role,
-      }
+        name: req.body.name,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        image: req.file.filename,
+        roles_id: req.body.role,
+      };
       await usermodel.updateUser(userId, userEdit);
 
       res.redirect("/users");
@@ -138,7 +123,7 @@ const controller = {
     } catch (error) {
       console.log(error.message);
     }
-  }
+  },
 };
 
 module.exports = controller;

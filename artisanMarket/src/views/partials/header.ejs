@@ -12,20 +12,20 @@
         </div>
         <nav class="main-navbar">
             <ul>
-                <% if(locals.usuario) { %>
+                <% if(locals.isLogged){ %>
                     <li>
                         <p class="Perfil">
-                            <img class="ImgPerfil" src="/images/users/<%=locals.usuario.imgPerfil %>"
+                            <img class="ImgPerfil" src="/images/users/<%= locals.userLogged[0].image%>"
                                 style='border-radius: 100%;' alt="">
                         </p>
                     </li>
                     <li>
-                        <a href="./users/userDetail/<%= locals.usuario.id %>">
+                        <a href="./users/userDetail/<%= locals.userLogged[0].id%>">
                             <p>
-                                <%=locals.usuario.first_name %>
+                                <%= locals.userLogged[0].name%>
                             </p>
                             <p>
-                                <%=locals.usuario.last_name %>
+                                <%= locals.userLogged[0].lastname%>
                             </p>
                         </a>
                     </li>
@@ -38,7 +38,7 @@
                     <li>
                         <a href="/logout"> Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </li>
-                    <% } else { %>
+                    <%} else{ %>
                         <li>
                             <a href="/users/register">
                                 <i class="far fa-id-card"></i>
@@ -59,12 +59,10 @@
         <ul>
             <li><a href="#">Regiones</a></li>
             <li><a href="#">Contactanos</a></li>
-            <% if(locals.usuario.category=="vendedor" ){%>
+            <%# if(locals.userLogged[0].roles_id=="1" ){%>
                 <li><a href="/products">Administración de Productos</a></li>
-                <% } %>
-                    <% if(locals.usuario.role=="2" ){%>
-                        <li><a href="/users">Administración de Usuarios</a></li>
-                        <% } %>
+                <li><a href="/users">Administración de Usuarios</a></li>
+                <%# } %>
         </ul>
     </nav>
     <div class="burger-menu">

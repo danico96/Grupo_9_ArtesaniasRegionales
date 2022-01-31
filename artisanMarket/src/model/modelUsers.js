@@ -1,5 +1,5 @@
 const path = require("path");
-const db = require(path.resolve(__dirname, '../database/models'));
+const db = require(path.resolve(__dirname, "../database/models"));
 
 const modelUsers = {
   getUsers: async function () {
@@ -23,6 +23,16 @@ const modelUsers = {
       console.log(error.message);
     }
   },
+loginVerification: async (email) => {
+  try {
+    const user = await db.users.findAll({
+      where: { email: email },
+    });
+    return user;
+  } catch (error) {
+    return console.log(error);
+  }
+},
   getOneUser: async function (id) {
     try {
       const user = await db.users.findByPk(id);
@@ -33,21 +43,22 @@ const modelUsers = {
   },
   createUser: async function (newUser) {
     try {
-      await db.users.create(newUser)
+      await db.users.create(newUser);
       return console.log("Agregado con éxito.");
-  } catch (error) {
+    } catch (error) {
       console.log(error.message);
-  }
+    }
   },
   updateUser: async function (userId, userUpdated) {
     try {
       await db.users.update(
         {
-          ...userUpdated
+          ...userUpdated,
         },
         {
-          where: { id: userId }
-        });
+          where: { id: userId },
+        }
+      );
       return console.log("Actualizado con éxito");
     } catch (error) {
       console.log(error.message);
@@ -56,12 +67,12 @@ const modelUsers = {
   deleteUser: async function (userId) {
     try {
       await db.users.destroy({
-        where: { id: userId }
+        where: { id: userId },
       });
     } catch (error) {
       console.log(error.message);
     }
-  }
+  },
 };
 
 module.exports = modelUsers;

@@ -5,7 +5,7 @@ const rutas = require('./routes');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const acceso = require('./middlewares/acceso');
+const {userSession, userLogged} = require('./middlewares')
 
 // view engine setup
 app.set('view engine', 'ejs');
@@ -24,9 +24,9 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
-app.use(acceso);
 
 app.use(express.static(path.resolve(__dirname, './public')));
+app.use(userLogged);
 
 app.use('/', rutas);
 

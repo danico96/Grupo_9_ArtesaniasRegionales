@@ -6,9 +6,8 @@
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
-            <%# if(locals.usuario.role=="2" ){%>
-
-                <!-- todos los productos -->
+            <!-- todos los productos -->
+            <% if(locals.userLogged[0].roles_id=="1" ){%>
                 <div class="allusers">
                     <div>
                         <div>
@@ -69,9 +68,11 @@
                         </table>
                     </div>
                 </div>
-                <%#} else { %>
-                    <!-- <h3>Acceso Denegado</h3> -->
-                    <%# } %>
+                <% } else {%>
+                    <h3>Acceso denegado</h3>
+                    <% } %>
+
+
                         <!-- Footer -->
                         <%- include('../partials/footer') %>
 

@@ -24,10 +24,10 @@
                         <form action="/users/login" method="POST">
                             <p>E mail</p>
                             <input type="text" name="email">
-                            <% if (locals.errors && errors.email) {%>
-                                <div>
+                            <% if (locals.errors && errors.email) { %>
+                                <p>
                                     <%= errors.email.msg %>
-                                </div>
+                                </p>
                                 <% } %>
                                     <br><br>
                                     <p>Contraseña</p>
@@ -39,6 +39,11 @@
                                     <p class="btn-login">
                                         <button type="submit"><span class="text-btn">Iniciar sesión</span></button>
                                     </p>
+                                    <% if (locals.errors && errors.auth) { %>
+                                        <p>
+                                            <%= errors.auth.msg %>
+                                        </p>
+                                        <% } %>
                         </form>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 module.exports = {
   "development": {
-    "username": "admin",
+    "username": "root",
     "password": "1234",
     "database": "artisanMarket",
     "host": "127.0.0.1",
