@@ -57,12 +57,18 @@
     </div>
     <nav class="browse-navbar">
         <ul>
+            <% if(!locals.isLogged){%>
             <li><a href="#">Regiones</a></li>
             <li><a href="#">Contactanos</a></li>
-            <%# if(locals.userLogged[0].roles_id=="1" ){%>
+            <% } else if (locals.userLogged[0].roles_id=="2") { %>
+            <li><a href="#">Regiones</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <%} else {%>
+                <li><a href="#">Regiones</a></li>
+                <li><a href="#">Contactanos</a></li>
                 <li><a href="/products">Administración de Productos</a></li>
                 <li><a href="/users">Administración de Usuarios</a></li>
-                <%# } %>
+                <% } %>
         </ul>
     </nav>
     <div class="burger-menu">
