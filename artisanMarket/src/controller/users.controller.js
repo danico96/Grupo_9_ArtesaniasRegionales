@@ -23,7 +23,7 @@ const controller = {
       if (user.length == 0) {
         return res.render("./users/login", {
           errors: {
-            email: { msg: "¡Correo no encontrado!" },
+            email: { msg: "Correo no encontrado" },
           },
           oldData: req.body,
         });
@@ -35,7 +35,7 @@ const controller = {
         console.log(user[0].dataValues.password);
         res.render("./users/login", {
           errors: {
-            password: { msg: "¡Contraseña Incorrecta!" },
+            password: { msg: "Contraseña Incorrecta" },
           },
           oldData: req.body,
         });
