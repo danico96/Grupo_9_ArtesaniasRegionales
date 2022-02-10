@@ -13,40 +13,56 @@
         <%- include ('../partials/header') %>
 
             <main class="formulario">
-
-
-                <div class="form">
-                    <form action="/registerUser" method="POST" enctype="multipart/form-data">
-
-                        <div class="inputContainer">
-                            <label class="labelInput" for="first_name">Nombres</label><br>
-                            <input type="text" name="first_name" placeholder="Ej: Juan Pablo">
-                        </div>
-                        <div class="inputContainer">
-                            <label class="labelInput" for="last_name">Apellidos</label><br>
-                            <input type="text" name="last_name" placeholder="Ej: Lopez Correa">
-                        </div>
-
-
-                        <div class="inputContainer">
-                            <label class="labelInput" for="email">Correo electrónico</label><br>
-                            <input type="email" name="email" placeholder="Ej: juan@pablo.com">
-                        </div>
-                        <div class="inputContainer">
-                            <label class="labelInput" for="password">Contraseña</label><br>
-                            <input type="password" name="password" >
-                        </div>
-                        <div class=" inputContainer">
-                            <input type="file" class="" name="imgPerfil" accept=".png,.jpg" >
-                        </div><br>
-                        <p class="btn-login">
-                            <button type="submit">Registrarse</button>
-                        </p>
-                        <a href="/login"><strong>¿Ya tienes cuenta?</strong></a><br><br>
-
-                    </form>
+                <div class="left-side">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json"
+                        background="transparent" speed="1" style="width: 50vw; height: 400px;" loop autoplay>
+                    </lottie-player>
                 </div>
+                <div class="rigth-side">
+                    <div class="formu">
+                        <form action="/users/registerUser" method="POST" enctype="multipart/form-data">
 
+                            <div>
+                                <label for="name">Nombres</label><br><br>
+                                <input type="text" name="name" required>
+                            </div><br>
+                            <div>
+                                <label for="lastname">Apellidos</label><br><br>
+                                <input type="text" name="lastname" required>
+                            </div><br>
+
+
+                            <div>
+                                <label for="email">Correo electrónico</label><br><br>
+                                <input type="email" name="email" required>
+                            </div><br>
+                            <div>
+                                <label for="password">Contraseña</label><br><br>
+                                <input type="password" name="password" required>
+                            </div><br>
+                            <div>
+                                <label for="role">Perfil</label><br><br>
+                                <select name="role" required="true">
+                                    <option value="" selected disabled>Seleccione un perfil</option>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Cliente</option>
+                                </select>
+                            </div><br>                           
+                            <p>
+                            <h3>Foto de Perfil</h3>
+                            </p>
+                            <p>
+                                <input type="file" name="image" accept=".jpg,.png" required>
+                            </p>
+                            <p class="btn-login">
+                                <button type="submit">Registrarse</button>
+                            </p>
+                            <a href="/login"><strong>¿Ya tienes cuenta?</strong></a><br><br>
+
+                        </form>
+                    </div>
+                </div>
             </main>
 
             <!-- Footer -->

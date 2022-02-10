@@ -4,21 +4,34 @@
 <!-- Head -->
 <%- include ('../partials/head') %>
 
+    <head>
+        <link rel="stylesheet" href="/css/userDetail.css">
+    </head>
+
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
 
-            <main>
-                <section class="mainproduct"> 
-                    <h3 class="title-product"> <%= user.name %> <%= user.lastname %> </h3>
-                    <img src="/images/users/<%= user.image %>" alt="user" class="main-img">
-                    <div class="characteristic">
-                        <h4> Email </h4>
-                        <p><%= user.email %></p>
-                        <h4> Tipo de Usuario </h4>
-                        <p><%= user.roles_id %></p>
+            <main class="mainUser">
+                <div class="userDetail">
+                    <div class="imgSide">
+                        <img src="/images/users/<%= user.image %>" alt="product_img" class="main-img">
                     </div>
-                </section>
+                    <div class="infoSide">
+                        <h1 class="title-product">
+                            <%= user.name %>
+                                <%= user.lastname %>
+                        </h1>
+                        <div class="grid-detail" <h4> Email </h4>
+                            <p>
+                                <%= user.email %>
+                            </p>
+                            <h4> Tipo de Usuario </h4>
+                            <p>
+                                <%= user.roles_id %>
+                            </p>
+                        </div>
+                    </div>
             </main>
 
             <!-- Footer -->
