@@ -1,0 +1,85 @@
+.carrito {
+    margin-top: 300px;
+    width: 100%;
+  }
+  
+  .carrito h1 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .productCar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .products {
+    width: 350px;
+    background-color: rgba(230, 230, 230, 0.8);
+    text-align: center;
+  }
+  
+  .products h2 {
+    margin: 20px 0;
+  }
+  
+  .products img {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    max-width: 90%;
+  }
+  
+  .products h4 {
+    width: 70%;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  
+  .products p {
+    color: #000;
+    margin: 10px 0;
+  }
+  
+  .eliminar {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .products .eliminar div {
+    margin: 20px 0;
+    background-color: rgb(240, 87, 87);
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 10px;
+  }
+  
+  .confirmar {
+    text-align: left;
+    font-size: 18px;
+    margin-top: 50px;
+    background-color: deepskyblue;
+    width: 50%;
+    height: 80px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    transition: all 0.5s;
+    transform: translateX(0px);
+  }
+  
+  .confirmarContent {
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .btnComprar form button {
+    border-radius: 0;
+    /* border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px; */
+    border-radius: 40px;
+  }
