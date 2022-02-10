@@ -20,73 +20,73 @@
             </div> -->
             <nav class="main-navbar">
                 <ul>
-                <% if(locals.isLogged){ %>
-                    <li>
-                        <p class="Perfil">
-                            <img class="ImgPerfil" src="/images/users/<%= locals.userLogged[0].image%>"
-                                style='border-radius: 100%;' alt="">
-                        </p>
-                    </li>
-                    <li>
-                        <a href="./users/userDetail/<%= locals.userLogged[0].id%>">
-                            <p>
-                                <%= locals.userLogged[0].name%>
-                            </p>
-                            <p>
-                                <%= locals.userLogged[0].lastname%>
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/products/productCart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <p> Carrito </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/logout"> Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
-                    </li>
-                    <%} else{ %>
+                    <% if(locals.isLogged){ %>
                         <li>
-                            <a href="/users/register">
-                                <i class="far fa-id-card"></i>
-                                <p> Registro </p>
+                            <p class="Perfil">
+                                <img class="ImgPerfil" src="/images/users/<%= locals.userLogged[0].image%>"
+                                    style='border-radius: 100%;' alt="">
+                            </p>
+                        </li>
+                        <li>
+                            <a href="./users/userDetail/<%= locals.userLogged[0].id%>">
+                                <p>
+                                    <%= locals.userLogged[0].name%>
+                                </p>
+                                <p>
+                                    <%= locals.userLogged[0].lastname%>
+                                </p>
                             </a>
                         </li>
                         <li>
-                            <a href="/users/login">
-                                <i class="fas fa-user"></i>
-                                <p> Ingreso </p>
+                            <a href="/products/productCart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p> Carrito </p>
                             </a>
                         </li>
-                        <%}%>
-            </ul>
-        </nav>
+                        <li>
+                            <a href="/logout"> Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                        </li>
+                        <%} else{ %>
+                            <li>
+                                <a href="/users/register">
+                                    <i class="far fa-id-card"></i>
+                                    <p> Registro </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/users/login">
+                                    <i class="fas fa-user"></i>
+                                    <p> Ingreso </p>
+                                </a>
+                            </li>
+                            <%}%>
+                </ul>
+            </nav>
+            <nav class="browse-navbar">
+                <ul>
+                    <% if(!locals.isLogged){%>
+                        <li><a href="#">Regiones</a></li>
+                        <li><a href="#">Contactanos</a></li>
+                        <% } else if (locals.userLogged[0].roles_id=="2" ) { %>
+                            <li><a href="#">Regiones</a></li>
+                            <li><a href="#">Contactanos</a></li>
+                            <%} else {%>
+                                <li><a href="#">Regiones</a></li>
+                                <li><a href="#">Contactanos</a></li>
+                                <li><a href="/products">Administración de Productos</a></li>
+                                <li><a href="/users">Administración de Usuarios</a></li>
+                                <% } %>
+                </ul>
+            </nav>
+        </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="wave w1"></div>
+        <div class="wave w2"></div>
     </div>
-    <nav class="browse-navbar">
-        <ul>
-            <% if(!locals.isLogged){%>
-            <li><a href="#">Regiones</a></li>
-            <li><a href="#">Contactanos</a></li>
-            <% } else if (locals.userLogged[0].roles_id=="2") { %>
-            <li><a href="#">Regiones</a></li>
-            <li><a href="#">Contactanos</a></li>
-            <%} else {%>
-                <li><a href="#">Regiones</a></li>
-                <li><a href="#">Contactanos</a></li>
-                <li><a href="/products">Administración de Productos</a></li>
-                <li><a href="/users">Administración de Usuarios</a></li>
-                <% } %>
-        </ul>
-    </nav>
-    <div class="burger-menu">
-        <i class="fas fa-bars"></i>
-    </div>
-    <div class="wave w1"></div>
-    <div class="wave w2"></div>
-</div>
 
-<!-- FINAL WAVE -->
+    <!-- FINAL WAVE -->
 
 
 

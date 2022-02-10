@@ -1,62 +1,57 @@
+s (52 sloc)  2.24 KB
+   
 <!DOCTYPE html>
 <html lang="es">
 <!-- Head -->
 <%- include ('../partials/head') %>
 
     <body>
-        <!-- Header -->
+    <!-- Header -->
         <%- include ('../partials/header') %>
-            <%# if(locals.usuario.category=="vendedor" ){%>
-                <main class="productEdit">
-                    <div>
-                        <h2>Editar producto</h2>
-                        <h2>
-                            <%= product.name %>
-                        </h2>
-                    </div>
-                    <form action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST"
-                        enctype='multipart/form-data'>
-                        <p>
-                            <input type="text" name="productName" placeholder="Nombre del producto"
-                                value='<%= product.name %>' required>
-                        </p>
-                        <h3>Descripción</h3>
-                        <p>
-                            <textarea type="text" name="description" value='description' required></textarea>
-                        </p>
-                        <p>
-                            <label>Seleccione una región: </label>
-                            <select name="region">
-                                <option value="1">Andina</option>
-                                <option value="2">Pacífica</option>
-                                <option value="3">Caribe</option>
-                                <option value="4">Amazonía</option>
-                                <option value="5">Orinoquía</option>
-                                <option value="6">Insular</option>
-                            </select>
-                        </p>
-                        <p>
-                            <input type="text" name="quantity" placeholder="Cantidad" value='<%= product.quantity %>' required>
-                        </p>
-                        <p>
-                            <input type="text" name="price" placeholder="Precio" value='<%= product.price  %>' required>
-                        </p>
-                        <p>
-                        <h3>Foto de producto</h3>
-                        </p>
-                        <p>
-                            <input type="file" name="image" accept=".jpg,.png" required>
-                        </p>
-                        <p>
-                            <button type="submit" name="/">Guardar</button>
-                        </p>
-                    </form>
-                </main>
-                <%# } else { %>
-                    <!-- <h3>Acceso Denegado</h3> -->
-                    <%# } %>
-                        <!-- Footer -->
-                        <%- include('../partials/footer') %>
+            <main class="productEdit">
+                <div>
+                    <h2>Editar producto</h2>
+                    <h2><%= product.name %> </h2>
+                </div>
+                <form action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST" enctype='multipart/form-data' >
+                    <p>
+                        <input type="text" name="productName" placeholder="Nombre del producto" value='<%= product.name %>'  required>
+                    </p>
+                    <h3>Descripción</h3>
+                    <p>
+                        <textarea type="text" name="description" value='description'  required></textarea>
+                    </p>
+                    <p>
+                        <label>Seleccione una región: </label>
+                        <select name="region">
+                            <option value="Andina">Andina</option>
+                            <option value="Caribe">Caribe</option>
+                            <option value="Pacifica">Pacífica</option>
+                            <option value="Orinoquia">Orinoquía</option>
+                            <option value="Amazonia">Amazonía</option>
+                            <option value="Insular">Insular</option>
+                        </select>
+                    </p>
+                    <p>
+                        <input type="text" name="colors" placeholder="Color" value='<%= product.colors %>'required>
+                    </p>
+                    <p>
+                        <input type="text" name="price" placeholder="Precio" value='<%= product.price  %>' required>
+                    </p>
+                    <p>
+                    <h3>Foto de producto</h3>
+                    </p>
+                    <p>
+                        <input type="file" name="image" accept=".jpg,.png" required>
+                    </p>
+                    <p>
+                        <button type="submit" name="/">Guardar</button>
+                    </p>
+                </form>
+            </main>
+
+            <!-- Footer -->
+            <%- include('../partials/footer') %>
     </body>
 
 </html>
