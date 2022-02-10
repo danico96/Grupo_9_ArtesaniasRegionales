@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `artisanMarket`.`users` (
   `name` VARCHAR(50) NOT NULL,
   `lastname` VARCHAR(50) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
-  `password` VARCHAR(30) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
   `image` VARCHAR(100) NULL,
   `roles_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`, `roles_id`),
