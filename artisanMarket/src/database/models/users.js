@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
       unique: "email_UNIQUE"
     },
     password: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(100),
       allowNull: false
     },
     image: {

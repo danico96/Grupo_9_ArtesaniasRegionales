@@ -4,53 +4,46 @@
 <!-- Head -->
 
 <head>
-    <link rel="stylesheet" href="./css/login.css">
+	<link rel="stylesheet" href="/css/login.css">
 </head>
 <%- include ('../partials/head') %>
 
-    <body>
-        <!-- Header -->
-        <%- include ('../partials/header') %>
+	<body>
+		<!-- Header -->
+		<%- include ('../partials/header') %>
 
-            <main class="formulario">
-                <div class="left-side">
-                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_eoiuzkfc.json"
-                        background="transparent" speed="1" style="width: 50vw; height: 400px;" loop autoplay>
-                    </lottie-player>
-                </div>
-                <div class="rigth-side">
-                    <div class="form">
-                        <form action="/users/login" method="POST">
-                            <p>E mail</p>
-                            <input type="text" name="email">
-                            <% if (locals.errors && errors.email) { %>
-                                <p>
-                                    <%= errors.email.msg %>
-                                </p>
-                                <% } %>
-                                    <br><br>
-                                    <p>Contraseña</p>
-                                    <input type="password" name="password"><br><br>
-                                    <input type="checkbox" class="check-box" name="recordar"><span>Recuerdame</span>
-                                    <p>
-                                        <a href="/register"><strong>¿No tienes cuenta?</strong></a><br><br>
-                                    </p>
-                                    <p class="btn-login">
-                                        <button type="submit"><span class="text-btn">Iniciar sesión</span></button>
-                                    </p>
-                                    <% if (locals.errors && errors.auth) { %>
-                                        <p>
-                                            <%= errors.auth.msg %>
-                                        </p>
-                                        <% } %>
-                        </form>
-                    </div>
-                </div>
-            </main>
+			<main class="formulario">
 
-            <!-- Footer -->
-            <%- include('../partials/footer') %>
-    </body>
+				<div class="form">
+					<form action="/users/login" method="POST">
+						<label for="email">Email</label><br>
+						<input type="text" name="email"><br>
+						<% if (locals.errors && errors.email) { %>
+							<p>
+								<%= errors.email.msg %>
+							</p>
+							<% } %>
+								<br><br>
+								<label for="password">Contraseña</label><br>
+								<input type="password" name="password"><br><br>
+								<input type="checkbox" class="check-box" name="recordar"><span>Recuerdame</span>
+								<p>
+									<a href="/users/register"><strong>¿No tienes cuenta?</strong></a><br><br>
+								</p>
+								<p class="btn-login">
+									<button type="submit"><span class="text-btn">Iniciar sesión</span></button>
+								</p>
+								<% if (locals.errors && errors.auth) { %>
+									<p>
+										<%= errors.auth.msg %>
+									</p>
+									<% } %>
+					</form>
+				</div>
+			</main>
+
+			<!-- Footer -->
+			<%- include('../partials/footer') %>
+	</body>
 
 </html>

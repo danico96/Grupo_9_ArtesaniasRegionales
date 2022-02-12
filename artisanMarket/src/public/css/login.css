@@ -24,12 +24,6 @@ body {
   padding-top: 10px;
 }
 
-.filter {
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  background-color: rgba(243, 243, 243, .2);
-}
-
 .form p {
     color: black;
 }
@@ -52,6 +46,10 @@ body {
   font-weight: 300;
   text-decoration: none;
   color: rgb(33, 142, 231);
+}
+
+.check-box {
+  width: 30px;
 }
 
 .text-btn {
