@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Head -->
+
+<head>
+	<link rel="stylesheet" href="/css/productCreate.css">
+</head>
 <%- include ('../partials/head') %>
 
-    <body>
-        <!-- Header -->
-        <%- include ('../partials/header') %>
-        <%# if(locals.usuario.category=="vendedor" ){%>
-                <main class="productEdit">
-                    <div>
-                        <h2>Agregar producto</h2>
-                    </div>
-                    <form action="/products/productCreate" method="POST" enctype='multipart/form-data'>
-                        <p>
-                            <input type="text" name="productName" placeholder="Nombre del producto" required>
-                        </p>
-                        <h3>Descripción</h3>
-                        <p>
-                            <textarea type="text" name="description" value=description required></textarea>
-                        </p>
-                        <p>
-                            <label>Seleccione una región: </label>
-                            <select name="region">
-                                <option value="1">Andina</option>
-                                <option value="2">Pacífica</option>
-                                <option value="3">Caribe</option>
-                                <option value="4">Amazonía</option>
-                                <option value="5">Orinoquía</option>
-                                <option value="6">Insular</option>
-                            </select>
-                        </p>
-                        <p>
-                            <input type="text" name="quantity" placeholder="Cantidad" required>
-                        </p>
-                        <p>
-                            <input type="text" name="price" placeholder="Precio" required>
-                        </p>
-                        <p>
-                        <h3>Foto de producto</h3>
-                        </p>
-                        <p>
-                            <input type="file" name="image" accept=".jpg,.png" required>
-                        </p>
-                        <p>
-                            <button type="submit" name="/">Guardar</button>
-                        </p>
-                    </form>
-                </main>
-                <%# } else { %>
-                    <!-- <h3>Acceso Denegado</h3> -->
-                    <%# } %>
-                        <!-- Footer -->
-                        <%- include('../partials/footer') %>
-    </body>
+	<body>
+		<!-- Header -->
+		<%- include ('../partials/header') %>
+			<%# if(locals.usuario.category=="vendedor" ){%>
+				<main class="formulario">
+					<div class="form">
+						<div>
+							<h2>Agregar producto</h2>
+						</div>
+						<form action="/products/productCreate" method="POST" enctype='multipart/form-data'>
+							<div>
+								<label for="productName">Nombre del producto</label><br>
+								<input type="text" name="productName" placeholder="Nombre del producto" required><br>
+							</div><br>
+							<h3>Descripción</h3>
+							<div>
+								<label for="description">Descripción</label><br>
+								<textarea type="text" name="description" value=description required></textarea><br>
+							</div><br>
+							<div>
+								<label for="region">Seleccione una región</label><br>
+								<select name="region">
+									<option value="1">Andina</option>
+									<option value="2">Pacífica</option>
+									<option value="3">Caribe</option>
+									<option value="4">Amazonía</option>
+									<option value="5">Orinoquía</option>
+									<option value="6">Insular</option>
+								</select>
+							</div><br>
+							<div>
+								<label for="quantity">Cantidad</label><br>
+								<input type="text" name="quantity" placeholder="Cantidad" required><br>
+							</div><br>
+							<div>
+								<label for="price">Precio</label><br>
+								<input type="text" name="price" placeholder="Precio" required><br>
+							</div><br>
+
+							<p>
+							<h3>Foto de producto</h3>
+							</p>
+							<p>
+								<input type="file" name="image" accept=".jpg,.png" required>
+							</p>
+							<p class="btn-login">
+								<button type="submit"><span class="text-btn">Guardar</span></button>
+							</p>
+						</form>
+					</div>
+				</main>
+				<%# } else { %>
+					<!-- <h3>Acceso Denegado</h3> -->
+					<%# } %>
+						<!-- Footer -->
+						<%- include('../partials/footer') %>
+	</body>
 
 </html>

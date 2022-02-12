@@ -13,11 +13,15 @@
 		<%- include ('../partials/header') %>
 
 			<main class="formulario">
-
+				<div class="errores">
+					<ul>
+				
+					</ul>
+				</div>
 				<div class="form">
-					<form action="/users/login" method="POST">
+					<form class="form-login" action="/users/login" method="POST">
 						<label for="email">Email</label><br>
-						<input type="text" name="email"><br>
+						<input type="text" id="email" name="email"><br>
 						<% if (locals.errors && errors.email) { %>
 							<p>
 								<%= errors.email.msg %>
@@ -25,7 +29,7 @@
 							<% } %>
 								<br><br>
 								<label for="password">Contraseña</label><br>
-								<input type="password" name="password"><br><br>
+								<input type="password" id="password" name="password"><br><br>
 								<input type="checkbox" class="check-box" name="recordar"><span>Recuerdame</span>
 								<p>
 									<a href="/users/register"><strong>¿No tienes cuenta?</strong></a><br><br>
@@ -44,6 +48,8 @@
 
 			<!-- Footer -->
 			<%- include('../partials/footer') %>
+
+			<script src="/js/users/login.js"></script>
 	</body>
 
 </html>
