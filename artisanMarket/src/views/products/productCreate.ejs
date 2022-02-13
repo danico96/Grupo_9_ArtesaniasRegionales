@@ -18,16 +18,17 @@
 						</div>
 						<form action="/products/productCreate" method="POST" enctype='multipart/form-data'>
 							<div>
-								<label for="productName">Nombre del producto</label><br>
+								<label for="productName"></label><br>
 								<input type="text" name="productName" placeholder="Nombre del producto" required><br>
 							</div><br>
 							<h3>Descripción</h3>
 							<div>
-								<label for="description">Descripción</label><br>
+								<label for="description"></label><br>
 								<textarea type="text" name="description" value=description required></textarea><br>
 							</div><br>
 							<div>
-								<label for="region">Seleccione una región</label><br>
+								<h3>Seleccione una región</h3>
+								<label for="region"></label><br>
 								<select name="region">
 									<option value="1">Andina</option>
 									<option value="2">Pacífica</option>
@@ -38,20 +39,23 @@
 								</select>
 							</div><br>
 							<div>
-								<label for="quantity">Cantidad</label><br>
+								<h3>Cantidad</h3>
+								<label for="quantity"></label><br>
 								<input type="text" name="quantity" placeholder="Cantidad" required><br>
 							</div><br>
 							<div>
-								<label for="price">Precio</label><br>
+								<h3>Precio</h3>
+								<label for="price"></label><br>
 								<input type="text" name="price" placeholder="Precio" required><br>
 							</div><br>
-
-							<p>
-							<h3>Foto de producto</h3>
-							</p>
-							<p>
-								<input type="file" name="image" accept=".jpg,.png" required>
-							</p>
+							<div>
+								<p>
+								<h3>Foto de producto</h3>
+								</p>
+								<p class="image-load">
+									<input type="file" name="image" accept=".jpg,.png" required>
+								</p>
+							</div><br>
 							<p class="btn-login">
 								<button type="submit"><span class="text-btn">Guardar</span></button>
 							</p>

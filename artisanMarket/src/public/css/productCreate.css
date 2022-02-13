@@ -5,7 +5,7 @@ body {
 .formulario {
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 125vh;
   align-items: center;
   margin-top: 300px;
   display: flex;
@@ -52,6 +52,10 @@ body {
 
 .text-btn {
   text-align: center;
+}
+.image-load {
+  display: flex;
+  margin: auto;
 }
 
 .btn-login button {
