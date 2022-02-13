@@ -20,7 +20,8 @@
 				</div>
 				<div class="form">
 					<form class="form-login" action="/users/login" method="POST">
-						<label for="email">Email</label><br>
+						<h3>Email</h3>
+						<label for="email"></label><br>
 						<input type="text" id="email" name="email"><br>
 						<% if (locals.errors && errors.email) { %>
 							<p>
@@ -28,7 +29,8 @@
 							</p>
 							<% } %>
 								<br><br>
-								<label for="password">Contraseña</label><br>
+								<h3>Contraseña</h3>
+								<label for="password"></label><br>
 								<input type="password" id="password" name="password"><br><br>
 								<input type="checkbox" class="check-box" name="recordar"><span>Recuerdame</span>
 								<p>

@@ -64,6 +64,7 @@ body {
   border-radius: 3px;
   background-color: rgba(150, 201, 61, 1);
   cursor: pointer;
+  padding: 3px;
 }
 
 /* viewport */
