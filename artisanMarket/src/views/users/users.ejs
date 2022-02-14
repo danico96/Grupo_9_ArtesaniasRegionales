@@ -3,6 +3,10 @@
 <!-- Head -->
 <%- include ('../partials/head') %>
 
+    <head>
+        <link rel="stylesheet" href="/css/users.css">
+    </head>
+
     <body>
         <!-- Header -->
         <%- include ('../partials/header') %>
@@ -12,69 +16,48 @@
                     <div>
                         <div>
                             <h2>Lista de Usuarios</h2>
-                        </div>
-                        <table class="usersTable">
-                            <thead>
-                                <td>
-                                    <h3>Id</h3>
-                                </td>
-                                <td>
-                                    <h3>Nombre</h3>
-                                </td>
-                                <td>
-                                    <h3>Apellido</h3>
-                                </td>
-                                <td>
-                                    <h3>email</h3>
-                                </td>
-                                <td>
-                                    <h3>Role</h3>
-                                </td>
-                                <td>
-                                    <h3>Opciones</h3>
-                                </td>
-                                <td><a href='./users/register'> Registrar </a></td>
-                            </thead>
-                            <tbody>
-                                <% users.forEach(user=> { %>
-                                    <tr>
-                                        <td>
-                                            <%= user.id %>
-                                        </td>
-                                        <td>
-                                            <%= user.name %>
-                                        </td>
-                                        <td>
-                                            <%= user.lastname %>
-                                        </td>
-                                        <td>
-                                            <%= user.email %>
-                                        </td>
-                                        <td>
-                                            <%= user.roles_id %>
-                                        </td>
-                                        <td>
-                                            <a href="./users/userDetail/<%= user.id %>" class="info">Detalle</a>
-                                            <a href="./users/userEdit/<%= user.id %>" class="edit">Editar</a>
-                                            <form action="./users/<%= user.id %>?_method=DELETE" method="POST">
-                                                <div>
-                                                    <button>Eliminar</button>
-                                                </div>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <% }) %>
-                            </tbody>
-                        </table>
+                        </div><br><br>
+                        <div class="btn">
+                            <a href='./users/register'> Crear nuevo </a>
+                        </div><br><br>
+                        <% users.forEach(user=> { %>
+                            <div class="userContainer">
+                                <div class="infoUser">
+                                    <img src="/images/users/<%= user.image%>" alt="">
+                                    <div class="nameUser">
+                                        <p><strong>
+                                                <%= user.id + " |"%>
+                                                <%= user.name %>
+                                                <%= user.lastname %>
+                                            </strong></p>
+                                    </div>
+                                </div>
+                                <div class="btnsCRUD">
+                                    <div class="btn">
+                                        <a href="./users/userDetail/<%= user.id %>" class="info">Detalle</a>
+                                    </div>
+                                    <div class="btn">
+                                        <a href="./users/userEdit/<%= user.id %>" class="edit">Editar</a>
+                                    </div>
+                                    <div class="btn">
+                                        <form action="./users/<%= user.id %>?_method=DELETE" method="POST">
+                                            <div>
+                                                <button>Eliminar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
-                <% } else {%>
-                    <h3>Acceso denegado</h3>
-                    <% } %>
+                <% }) %>
+                    <% } else {%>
+                        <h3>Acceso denegado</h3>
+                        <% } %>
 
 
-                        <!-- Footer -->
-                        <%- include('../partials/footer') %>
+                            <!-- Footer -->
+                            <%- include('../partials/footer') %>
 
     </body>
 
