@@ -12,19 +12,26 @@
 		<%- include ('../partials/header') %>
 			<%# if(locals.usuario.category=="vendedor" ){%>
 				<main class="formulario">
+					<div class="errores">
+						<ul>
+	
+						</ul>
+					</div>
 					<div class="form">
 						<div>
 							<h2>Agregar producto</h2>
 						</div>
-						<form action="/products/productCreate" method="POST" enctype='multipart/form-data'>
+						<form class="form-product" action="/products/productCreate" method="POST"
+							enctype='multipart/form-data'>
 							<div>
 								<label for="productName"></label><br>
-								<input type="text" name="productName" placeholder="Nombre del producto" required><br>
+								<input type="text" class="productName" name="productName" placeholder="Nombre del producto"
+									required><br>
 							</div><br>
 							<h3>Descripción</h3>
 							<div>
 								<label for="description"></label><br>
-								<textarea type="text" name="description" value=description required></textarea><br>
+								<textarea type="text" class="description" name="description" value=description required></textarea><br>
 							</div><br>
 							<div>
 								<h3>Seleccione una región</h3>
@@ -41,19 +48,19 @@
 							<div>
 								<h3>Cantidad</h3>
 								<label for="quantity"></label><br>
-								<input type="text" name="quantity" placeholder="Cantidad" required><br>
+								<input type="text" class="quantity" name="quantity" placeholder="Cantidad" required><br>
 							</div><br>
 							<div>
 								<h3>Precio</h3>
 								<label for="price"></label><br>
-								<input type="text" name="price" placeholder="Precio" required><br>
+								<input type="text" class="price" name="price" placeholder="Precio" required><br>
 							</div><br>
 							<div>
 								<p>
 								<h3>Foto de producto</h3>
 								</p>
 								<p class="image-load">
-									<input type="file" name="image" accept=".jpg,.png" required>
+									<input type="file" class="image" name="image" accept=".jpg,.png" required>
 								</p>
 							</div><br>
 							<p class="btn-login">
@@ -67,6 +74,8 @@
 					<%# } %>
 						<!-- Footer -->
 						<%- include('../partials/footer') %>
+							<script src="/js/products/product.js"></script>
+
 	</body>
 
 </html>

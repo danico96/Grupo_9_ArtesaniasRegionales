@@ -52,7 +52,6 @@ window.addEventListener("load", function () {
         errors.push('Selecciona una imagen con formato permitido (.png/.jpg/.jpeg/.gif/)')
       }
     }
-
     validarImagen();
 
     if (errors.length > 0) {
