@@ -1,42 +1,59 @@
 window.addEventListener("load", function () {
 
   let formulario = document.querySelector("form.form-register");
+  let nombre = document.querySelector('#name');
+  let apellido = document.querySelector("#lastname");
+  let email = document.querySelector("#email");
+  let password = document.querySelector("#password");
+  let imagen = document.querySelector("#image")
 
   formulario.addEventListener("submit", function (e) {
     let errors = [];
 
-    let nombre = document.querySelector("#name");
-    if (nombre.value = "") {
-      errors.push("El campo nombre está vacío");
-    } else if (/^\s+$/.test(nombre.value) || nombre.value.length < 2) {
-      errors.push("El campo nombre debe tener más de 2 caracteres");
+    function validarEmail(valor) {
+      let reg = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+      if (reg.test(valor)) {
+        return
+      } else {
+        errors.push('Ingrese un email válido')
+      }
     }
 
-    let apellido = document.querySelector("#lastname")
-    if (apellido.value = "") {
-      errors.push("El campo apellido está vacío");
-    } else if (/^\s+$/.test(apellido.value) || apellido.value.length < 2) {
-      errors.push("El campo apellido debe tener más de 2 caracteres");
+    if (nombre.value == '') {
+      errors.push('Escribe tu nombre')
+    } else if (nombre.value.length < 2) {
+      errors.push('Tu nombre debe tener más de 2 caracteres')
     }
 
-    let email = document.querySelector("#email")
-    if (email.value = "") {
-      errors.push("El campo email está vacío");
-    } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
-      errors.push("Ingrese un email válido");
+    if (apellido.value == '') {
+      errors.push('Escribe tu apellido')
+    } else if (apellido.value.length < 2) {
+      errors.push('Tu apellido debe tener más de 2 caracteres')
     }
 
-    let password = document.querySelector("#password")
-    if (password.value = "") {
-      errors.push("El campo password está vacío");
+    if (email.value == '') {
+      errors.push('Escribe tu email')
+    } else {
+      validarEmail(email.value)
+    }
+
+    if (password.value == '') {
+      errors.push('Escribe tu contraseña')
     } else if (password.value.length < 8) {
-      errors.push("El password debe tener más de 7 caracteres");
+      errors.push('Tu contraseña debe tener más de 7 caracteres')
     }
 
-    let image = document.querySelector("#image")
-    if (!(/\.(jpg|png|gif)$/i).test(image.name)) {
-      errors.push('Formato de imagen no permitido');
+    function validarImagen() {
+      let extensions = /(.jpg|.jpeg|.png|.gif)$/i;
+      let imagenPath = imagen.value;
+      if (extensions.test(imagenPath)) {
+        return
+      } else {
+        errors.push('Selecciona una imagen con formato permitido (.png/.jpg/.jpeg/.gif/)')
+      }
     }
+
+    validarImagen();
 
     if (errors.length > 0) {
       e.preventDefault();
