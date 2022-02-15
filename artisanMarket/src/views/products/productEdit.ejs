@@ -31,7 +31,7 @@ s (52 sloc) 2.24 KB
                         </div><br>
                         <h3>Descripción</h3>
                         <div>
-                            <textarea type="text" name="description" value='<%= product.description %> '
+                            <textarea type="text" name="description" value='<%= product.description %>'
                                 required></textarea>
                         </div><br>
                         <div>
@@ -61,6 +61,9 @@ s (52 sloc) 2.24 KB
                             <p>
                             <h3>Foto de producto</h3>
                             </p>
+                        </div>
+                        <div>
+                            <img src="/images/products/<%= product.picture %>" class="productImage">
                         </div>
                         <p class="image-load">
                             <input type="file" name="image" accept=".jpg,.png" required>
