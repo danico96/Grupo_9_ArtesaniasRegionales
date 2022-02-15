@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Head -->
+
+<head>
+    <link rel="stylesheet" href="/css/userEdit.css">
+</head>
 <%- include ('../partials/head') %>
 
     <body>
-    <!-- Header -->
+        <!-- Header -->
         <%- include ('../partials/header') %>
-        <%# if(locals.usuario.role=="2" ){%>
-            <main class="userEdit">
-                <div>
-                    <h2>Editar usuario</h2>
-                    <h2><%= user.name %> <%= user.lastname %></h2>
-                </div>
-                <form action="/users/userEdit/<%= user.id %>?_method=PUT" method="POST" enctype='multipart/form-data' >
+            <main class="formulario">
+                <div class="errores">
+                    <ul>
 
+                    </ul>
+                </div>
+                <div class="form">
                     <div>
-                        <label for="name">Nombres</label><br><br>
-                        <input type="text" name="name" value='<%= user.name %>' required>
+                        <h2>Editar usuario</h2>
+                        <br>
+                        <h2>
+                            <%= user.id %>
+                        </h2>
                     </div><br>
-                    <div>
-                        <label for="lastname">Apellidos</label><br><br>
-                        <input type="text" name="lastname" value='<%= user.lastname %>' required>
-                    </div><br>
-                    <div>
-                        <label for="email">Correo electrónico</label><br><br>
-                        <input type="email" name="email" value='<%= user.email %>' required>
-                    </div><br>
-                    <div>
-                        <label for="password">Contraseña</label><br><br>
-                        <input type="password" name="password" required>
-                    </div><br>
-                    <div>
-                        <label for="role">Perfil</label><br><br>
-                        <select name="role" value='<%= user.roles_id %>' required="true">
-                            <option value="" selected disabled>Seleccione un perfil</option>
-                            <option value="1">Administrador</option>
-                            <option value="2">Cliente</option>
-                        </select>
-                    </div><br>
-                    <p>
-                    <h3>Foto de Perfil</h3>
-                    </p>
-                    <p>
-                        <input type="file" name="image" accept=".jpg,.png" required>
-                    </p>
-                    <p class="btn-login">
-                        <button type="submit"> Actualizar </button>
-                    </p>
-                </form>
+                    <form action="/users/userEdit/<%= user.id %>?_method=PUT" method="POST"
+                        enctype='multipart/form-data'>
+
+                        <div>
+                            <label for="name">Nombres</label><br><br>
+                            <input type="text" name="name" value='<%= user.name %>' required>
+                        </div><br>
+                        <div>
+                            <label for="lastname">Apellidos</label><br><br>
+                            <input type="text" name="lastname" value='<%= user.lastname %>' required>
+                        </div><br>
+                        <div>
+                            <label for="email">Correo electrónico</label><br><br>
+                            <input type="email" name="email" value='<%= user.email %>' required>
+                        </div><br>
+                        <div>
+                            <label for="password">Contraseña</label><br><br>
+                            <input type="password" name="password" required>
+                        </div><br>
+                        <div>
+                            <label for="role">Perfil</label><br><br>
+                            <select name="role" value='<%= user.roles_id %>' required="true">
+                                <option value="" selected disabled>Seleccione un perfil</option>
+                                <option value="1">Administrador</option>
+                                <option value="2">Cliente</option>
+                            </select>
+                        </div><br>
+                        <p>
+                        <h3>Foto de Perfil</h3>
+                        </p>
+                        <p>
+                            <input type="file" name="image" accept=".jpg,.png" value='<%= user.image %>' required>
+                        </p>
+                        <p class="btn-login">
+                            <button type="submit"> Actualizar </button>
+                        </p>
+                    </form>
+                </div>
+
             </main>
-            <%# } else { %>
-                <!-- <h3>Acceso Denegado</h3> -->
-            <%# } %>
 
             <!-- Footer -->
             <%- include('../partials/footer') %>
