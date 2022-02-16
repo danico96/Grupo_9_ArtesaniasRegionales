@@ -12,7 +12,7 @@
         <%- include ('../partials/header') %>
             <!-- todos los usuarios -->
             <% if(locals.userLogged[0].roles_id=="1" ){%>
-                <div class="allusers">
+                <div class="allUsers">
                     <div>
                         <div>
                             <h2>Lista de Usuarios</h2>
@@ -26,9 +26,9 @@
                                     <img src="/images/users/<%= user.image%>" alt="">
                                     <div class="nameUser">
                                         <p><strong>
-                                                <%= user.id + " |"%>
-                                                <%= user.name %>
-                                                <%= user.lastname %>
+                                                <%= user.id + " |" %>
+                                                    <%= user.name %>
+                                                        <%= user.lastname %>
                                             </strong></p>
                                     </div>
                                 </div>
@@ -48,16 +48,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <% }) %>
                     </div>
                 </div>
-                <% }) %>
-                    <% } else {%>
-                        <h3>Acceso denegado</h3>
-                        <% } %>
+                <% } else {%>
+                    <h3>Acceso denegado</h3>
+                    <% } %>
 
-
-                            <!-- Footer -->
-                            <%- include('../partials/footer') %>
+                        <!-- Footer -->
+                        <%- include('../partials/footer') %>
 
     </body>
 

@@ -25,6 +25,9 @@ s (52 sloc) 2.24 KB
                         <h1>
                             <%= product.name %>
                         </h1>
+                        <div>
+                            <img src="/images/products/<%= product.picture %>" class="productImage">
+                        </div>
                     </div>
                     <form class="form-product" action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST"
                         enctype='multipart/form-data'>
@@ -66,9 +69,6 @@ s (52 sloc) 2.24 KB
                             <p>
                             <h3>Foto de producto</h3>
                             </p>
-                        </div>
-                        <div>
-                            <img src="/images/products/<%= product.picture %>" class="productImage">
                         </div>
                         <p class="image-load">
                             <input type="file" class="image" name="image" accept=".jpg,.png" required>
