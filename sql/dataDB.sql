@@ -23,16 +23,16 @@ values (1, 'Deerdre', 'Portugal', 'dportugal0@51.la', 'Jihd379lXw', 'default.png
 (20, 'Honey', 'Di Biaggi', 'hdibiaggij@phoca.cz', '8HymnyW6YuTK', 'default.png', 1);
 
 insert into products (id, name, price, description, quantity, picture, regions_id) 
-values (1, 'Phaulothamnus A. Gray', 1.72, 'Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.', 11, 'armadillo.jpg', 4),
-(2, 'Lesquerella ovalifolia Rydb. ex Britton ssp. alba (Goodman) Rollins & Shaw', 1.06, 'Aliquam erat volutpat.', 13, 'canasto-iraca', 5),
-(3, 'Croton alabamensis E.A. Sm. ex Chapm. var. alabamensis', 1.47, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio.', 1, 'colibri.jpg', 5),
-(4, 'Erigeron eatonii A. Gray', 2.22, 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.', 10, 'Hamaca san jacinto.jpeg', 5),
-(5, 'Limnanthes striata Jeps.', 1.41, 'Vivamus tortor. Duis mattis egestas metus.', 1, 'mascara.jpg', 4),
-(6, 'Polygala rectipilis S.F. Blake', 2.24, 'Nam dui.', 13, 'willy.jpg', 6),
-(7, 'Leymus ×multiflorus (Gould) Barkworth & Atkins', 2.63, 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.', 9, 'armadillo.jpg', 3),
-(8, 'Carex radiata (Wahlenb.) Small', 2.79, 'Curabitur in libero ut massa volutpat convallis.', 13, 'canasto-iraca.jpg', 3),
-(9, 'Munroa Torr., orth. cons.', 2.85, 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.', 7, 'mascara.jpg', 1),
-(10, 'Salvinia minima Baker', 2.44, 'Aenean fermentum. Donec ut mauris eget massa tempor convallis.', 7, 'colibri.jpg', 3);
+values (1, 'Armadillo Sikuani', 8.72, 'Armadillo elaborado en Madera de Balso por manos artesanas en el departamendo de Vichada.', 11, 'armadillo.jpg', 4),
+(2, 'Canasta en Iraca', 7.00, 'Conocido por el trabajo de la palma de iraca para la elaboración de sombreros y diversidad de cestos Sandoná, es heredero de las técnicas de sus antepasados quillacingas para el manejo de dicha fibra vegetal.', 13, 'canasto-iraca.jpg', 5),
+(3, 'Banco Pensador Colibrí', 12.40, 'Banco Pensador elaborado por manos artesanas con Madera Chonta en el departamento del Putumayo.', 1, 'colibri.jpg', 5),
+(4, 'Hamaca San Jacinto', 20.50, 'Al norte de Colombia, existe un territorio considerado el paraíso de la artesanía y el folclor de la costa Caribe, gracias a la elaboración de hamacas y de gaitas que entonan los sonidos tradicionales de esta región como la cumbia: San Jacinto.', 10, 'Hamaca san jacinto.jpeg', 5),
+(5, 'Willyz “Yipao” con carga de café', 4.41, 'El Willyz yipao con carga de café, es una de las expresiones más representativas del paisaje y el folclor del eje cafetero.', 7, 'willy.jpg', 4),
+(6, 'Máscara tradicional Shinyak', 2.24, 'Pieza artesanal elaborada por el taller Shinyak "En Sibundoy saben que si un sauce viejo se cae deben llamar a Marcelino Chasoy.', 13, 'mascara.jpg', 6),
+(7, 'Armadillo Sikuani', 8.72, 'Armadillo elaborado en Madera de Balso por manos artesanas en el departamendo de Vichada.', 11, 'armadillo.jpg', 1),
+(8, 'Canasta en Iraca', 7.00, 'Conocido por el trabajo de la palma de iraca para la elaboración de sombreros y diversidad de cestos Sandoná, es heredero de las técnicas de sus antepasados quillacingas para el manejo de dicha fibra vegetal.', 13, 'canasto-iraca.jpg', 2),
+(9, 'Máscara tradicional Shinyak', 2.24, 'Pieza artesanal elaborada por el taller Shinyak "En Sibundoy saben que si un sauce viejo se cae deben llamar a Marcelino Chasoy.', 13, 'mascara.jpg', 6),
+(10, 'Banco Pensador Colibrí', 12.40, 'Banco Pensador elaborado por manos artesanas con Madera Chonta en el departamento del Putumayo.', 1, 'colibri.jpg', 5);
 
 insert into roles (id, roleName) 
 values (1, 'Administrador'),
