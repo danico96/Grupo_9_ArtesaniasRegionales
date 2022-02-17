@@ -1,5 +1,6 @@
 const { usermodel } = require("../model");
 const bcryptjs = require("bcryptjs");
+const { validationResult } = require('express-validator');
 
 const controller = {
   indexUsers: async (req, res) => {
@@ -19,32 +20,40 @@ const controller = {
   },
   loginProcess: async function (req, res) {
     try {
-      const user = await usermodel.loginVerification(req.body.email);
-      if (user.length == 0) {
-        return res.render("./users/login", {
-          errors: {
-            email: { msg: "Correo no encontrado" },
-          },
-          oldData: req.body,
-        });
-      }
-      if (
-        !bcryptjs.compareSync(req.body.password, user[0].dataValues.password)
-      ) {
-        console.log(user);
-        console.log(user[0].dataValues.password);
-        res.render("./users/login", {
-          errors: {
-            password: { msg: "Contraseña Incorrecta" },
-          },
-          oldData: req.body,
-        });
+      let errorsValidation = validationResult(req);
+
+      if (errorsValidation.isEmpty) {
+        const user = await usermodel.loginVerification(req.body.email);
+        if (user.length == 0) {
+          return res.render("./users/login", {
+            errors: {
+              email: { msg: "Correo no encontrado" },
+            },
+            oldData: req.body,
+          });
+        }
+        if (
+          !bcryptjs.compareSync(req.body.password, user[0].dataValues.password)
+        ) {
+          console.log(user);
+          console.log(user[0].dataValues.password);
+          res.render("./users/login", {
+            errors: {
+              password: { msg: "Contraseña Incorrecta" },
+            },
+            oldData: req.body,
+          });
+        } else {
+          delete user[0].dataValues.password;
+          req.session.userLogged = user;
+          console.log(user);
+          res.redirect("/");
+        }
       } else {
-        delete user[0].dataValues.password;
-        req.session.userLogged = user;
-        console.log(user);
-        res.redirect("/");
+        res.render("./users/login", { errorsValidation: errorsValidation.mapped(), old: req.body });
       }
+
+
     } catch (error) {
       console.log(error);
     }
@@ -62,17 +71,24 @@ const controller = {
   },
   storeUser: async (req, res) => {
     try {
-      let newUser = {
-        name: req.body.name,
-        lastname: req.body.lastname,
-        email: req.body.email,
-        password: bcryptjs.hashSync(req.body.password, 10),
-        image: req.file != undefined ? req.file.filename: 'default.jpg',
-        roles_id: req.body.role,
-      };
-      await usermodel.createUser(newUser);
+      let errorsValidation = validationResult(req);
 
-      res.redirect("./login");
+      if (errorsValidation.isEmpty) {
+
+        let newUser = {
+          name: req.body.name,
+          lastname: req.body.lastname,
+          email: req.body.email,
+          password: bcryptjs.hashSync(req.body.password, 10),
+          image: req.file != undefined ? req.file.filename : 'default.jpg',
+          roles_id: req.body.role,
+        };
+        await usermodel.createUser(newUser);
+
+        res.redirect("./login");
+      } else {
+        res.render("./users/register", { errorsValidation: errorsValidation.mapped(), old: req.body });
+      }
     } catch (error) {
       console.log(error.message);
     }

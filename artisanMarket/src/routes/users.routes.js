@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
+const loginValidation = require('../middlewares/users/loginValidation');
+const registerValidation = require('../middlewares/users/registerValidation');
 
 const { users, products } = require("../controller");
 
@@ -22,11 +24,11 @@ const uploadImg = multer({ storage: storage });
 router.get('/', users.indexUsers); /* GET users list. */
 
 router.get("/login", users.loginUser); /* GET login page. */
-router.post("/login", users.loginProcess);
+router.post("/login", loginValidation, users.loginProcess);
 router.get('/logout', users.logout);
 
 router.get("/register", users.registerUser); /* GET register page. */
-router.post("/registerUser", uploadImg.single('image'), users.storeUser);
+router.post("/registerUser", uploadImg.single('image'), registerValidation, users.storeUser);
 
 router.get('/userDetail/:id', users.detailUser); /* GET user detail page. */
 

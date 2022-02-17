@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
+const createValidation = require('../middlewares/products/createValidation');
 
 const { products } = require('../controller')
 
@@ -27,7 +28,7 @@ router.get('/productCart', products.productCart); /* GET product cart page. */
 router.get('/productDetail/:id', products.detailProduct); /* GET product detail page. */
 
 router.get('/productCreate', products.createProduct); /* GET product create page. */
-router.post('/productCreate', uploadImg.single('image'), products.storeProduct);
+router.post('/productCreate', uploadImg.single('image'), createValidation, products.storeProduct);
 
 router.get('/productEdit/:id', products.editProduct); /* GET product edit page. */
 router.put('/productEdit/:id', uploadImg.single('image'), products.updateProduct);

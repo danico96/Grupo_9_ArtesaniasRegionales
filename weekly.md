@@ -54,3 +54,10 @@ Se actualizó el tablero del proyecto con base en las actividades que ya se hab�
 
 Los problemas de comunicación no han mejorado mucho, estamos a la espera de poder hacer un merge entre dos ramas para mejorar el frontend del proyecto.
 
+## Reunión del Sprint 7
+
+El proyecto se está trabajando entre dos integrantes puesto que, se han delegado tareas al tercer integrante pero estas no son cumplidas y tampoco se tiene una comunicación con el responsable. 
+
+Se optó por migrar de forma manual el estilo de la página a la rama principal del proyecto debido a que al realizar el merge se debían tener presente muchos cambios. La rama principal ya cuenta con el estilo pero aún le hace falta trabajo. 
+
+Los integrantes restantes se mantiene en constante comunicación, por lo que se ha podido cumplir con la mayoría de tareas y ya se cuenta con un plan de trabajo definido para cumplir a cabalidad con aquellas que hacen falta.

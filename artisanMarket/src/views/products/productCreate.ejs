@@ -14,59 +14,67 @@
 				<main class="formulario">
 					<div class="errores">
 						<ul>
-	
+
 						</ul>
 					</div>
 					<div class="form">
 						<div>
 							<h2>Agregar producto</h2>
 						</div>
-						<form class="form-product" action="/products/productCreate" method="POST"
-							enctype='multipart/form-data'>
-							<div>
-								<label for="productName"></label><br>
-								<input type="text" class="productName" name="productName" placeholder="Nombre del producto"
-									required><br>
-							</div><br>
-							<h3>Descripción</h3>
-							<div>
-								<label for="description"></label><br>
-								<textarea type="text" class="description" name="description" value=description required></textarea><br>
-							</div><br>
-							<div>
-								<h3>Seleccione una región</h3>
-								<label for="region"></label><br>
-								<select name="region">
-									<option value="1">Andina</option>
-									<option value="2">Pacífica</option>
-									<option value="3">Caribe</option>
-									<option value="4">Amazonía</option>
-									<option value="5">Orinoquía</option>
-									<option value="6">Insular</option>
-								</select>
-							</div><br>
-							<div>
-								<h3>Cantidad</h3>
-								<label for="quantity"></label><br>
-								<input type="text" class="quantity" name="quantity" placeholder="Cantidad" required><br>
-							</div><br>
-							<div>
-								<h3>Precio</h3>
-								<label for="price"></label><br>
-								<input type="text" class="price" name="price" placeholder="Precio" required><br>
-							</div><br>
-							<div>
-								<p>
-								<h3>Foto de producto</h3>
-								</p>
-								<p class="image-load">
-									<input type="file" class="image" name="image" accept=".jpg,.png" required>
-								</p>
-							</div><br>
-							<p class="btn-login">
-								<button type="submit"><span class="text-btn">Guardar</span></button>
+
+						<% if (locals.errorsValidation) { errorsValidation.forEach(error=> { %>
+							<p>
+								<% error.msg %>
 							</p>
-						</form>
+							<% }) } %>
+
+
+								<form class="form-product" action="/products/productCreate" method="POST" enctype='multipart/form-data'>
+									<div>
+										<label for="productName"></label><br>
+										<input type="text" class="productName" name="productName" placeholder="Nombre del producto"
+											required><br>
+									</div><br>
+									<h3>Descripción</h3>
+									<div>
+										<label for="description"></label><br>
+										<textarea type="text" class="description" name="description" value=description
+											required></textarea><br>
+									</div><br>
+									<div>
+										<h3>Seleccione una región</h3>
+										<label for="region"></label><br>
+										<select name="region">
+											<option value="1">Andina</option>
+											<option value="2">Pacífica</option>
+											<option value="3">Caribe</option>
+											<option value="4">Amazonía</option>
+											<option value="5">Orinoquía</option>
+											<option value="6">Insular</option>
+										</select>
+									</div><br>
+									<div>
+										<h3>Cantidad</h3>
+										<label for="quantity"></label><br>
+										<input type="text" class="quantity" name="quantity" placeholder="Cantidad" required><br>
+									</div><br>
+									<div>
+										<h3>Precio</h3>
+										<label for="price"></label><br>
+										<input type="text" class="price" name="price" placeholder="Precio" required><br>
+									</div><br>
+									<div>
+										<p>
+										<h3>Foto de producto</h3>
+										</p>
+										<p class="image-load">
+											<input type="file" class="image" name="image" accept=".jpg,.png" required>
+										</p>
+									</div><br>
+									<p class="btn-login">
+										<button type="submit"><span class="text-btn">Guardar</span></button>
+									</p>
+								</form>
 					</div>
 				</main>
 				<%# } else { %>

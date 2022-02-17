@@ -19,39 +19,44 @@
 					</ul>
 				</div>
 				<div class="form">
-					<form class="form-login" action="/users/login" method="POST">
-						<h3>Email</h3>
-						<label for="email"></label><br>
-						<input type="text" id="email" name="email"><br>
-						<% if (locals.errors && errors.email) { %>
-							<p>
-								<%= errors.email.msg %>
-							</p>
-							<% } %>
-								<br><br>
-								<h3>Contraseña</h3>
-								<label for="password"></label><br>
-								<input type="password" id="password" name="password"><br><br>
-								<input type="checkbox" class="check-box" name="recordar"><span>Recuerdame</span>
-								<p>
-									<a href="/users/register"><strong>¿No tienes cuenta?</strong></a><br><br>
-								</p>
-								<p class="btn-login">
-									<button type="submit"><span class="text-btn">Iniciar sesión</span></button>
-								</p>
-								<% if (locals.errors && errors.auth) { %>
+					<% if (locals.errorsValidation) { errorsValidation.forEach(error=> { %>
+						<h2>
+							<% error.msg %>
+						</h2>
+						<% }) } %>
+							<form class="form-login" action="/users/login" method="POST">
+								<h3>Email</h3>
+								<label for="email"></label><br>
+								<input type="text" id="email" name="email"><br>
+								<% if (locals.errors && errors.email) { %>
 									<p>
-										<%= errors.auth.msg %>
+										<%= errors.email.msg %>
 									</p>
 									<% } %>
-					</form>
+										<br><br>
+										<h3>Contraseña</h3>
+										<label for="password"></label><br>
+										<input type="password" id="password" name="password"><br><br>
+										<input type="checkbox" class="check-box" name="recordar"><span>Recuerdame</span>
+										<p>
+											<a href="/users/register"><strong>¿No tienes cuenta?</strong></a><br><br>
+										</p>
+										<p class="btn-login">
+											<button type="submit"><span class="text-btn">Iniciar sesión</span></button>
+										</p>
+										<% if (locals.errors && errors.auth) { %>
+											<p>
+												<%= errors.auth.msg %>
+											</p>
+											<% } %>
+							</form>
 				</div>
 			</main>
 
 			<!-- Footer -->
 			<%- include('../partials/footer') %>
 
-			<script src="/js/users/login.js"></script>
+				<script src="/js/users/login.js"></script>
 	</body>
 
 </html>

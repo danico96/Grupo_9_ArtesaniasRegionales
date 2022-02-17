@@ -1,4 +1,5 @@
 const { productsmodel } = require('../model');
+const { validationResult } = require('express-validator');
 
 const productController = {
     indexProducts: async (req, res) => {
@@ -36,20 +37,26 @@ const productController = {
             console.log(error.message);
         }
     },
-    
+
     storeProduct: async (req, res) => {
         try {
-            let newProduct = {
-                "name": req.body.productName,
-                "description": req.body.description,
-                "picture": req.file.filename,
-                "regions_id": req.body.region,
-                "quantity": req.body.quantity, 
-                "price": req.body.price
-            }
-            await productsmodel.createProduct(newProduct)
+            let errorsValidation = validationResult(req);
 
-            res.redirect("/products");
+            if (errorsValidation.isEmpty) {
+                let newProduct = {
+                    "name": req.body.productName,
+                    "description": req.body.description,
+                    "picture": req.file.filename,
+                    "regions_id": req.body.region,
+                    "quantity": req.body.quantity,
+                    "price": req.body.price
+                }
+                await productsmodel.createProduct(newProduct)
+
+                res.redirect("/products");
+            } else {
+                res.render('./products/productCreate', { errorsValidation: errorsValidation.mapped(), old: req.body });
+            }
         } catch (error) {
             console.log(error.message);
         }
