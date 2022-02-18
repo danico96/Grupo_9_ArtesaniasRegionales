@@ -21,7 +21,7 @@ body {
 
 .contenido {
   width: 100% !important;
-}
+  justify-content: center;}
 
 .container {
   width: 100% !important;
@@ -29,6 +29,7 @@ body {
   flex-wrap: wrap;
   margin: -0.5rem;
   margin: 0;
+  justify-content: center;
 }
 
 .contenido h1 {
