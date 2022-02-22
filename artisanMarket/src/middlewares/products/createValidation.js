@@ -13,7 +13,9 @@ let createValidation = [
   .notEmpty().withMessage('Define la cantidad del producto'),
 
   check('price')
-  .notEmpty().withMessage('Define el precio del producto')
+  .notEmpty().withMessage('Define el precio del producto'),
+
+  
 ]
 
 module.exports = createValidation;
