@@ -26,7 +26,7 @@ const apiProductController = {
               cantidad: product.quantity,
               region: product.regions_id,
               array: 'falta por cada relacion de uno a muchos',
-              imagen: 'falta URL' 
+              imagen: 'http://localhost:3000/images/products/' + product.picture
             });
         } catch (error) {
             console.log(error);
