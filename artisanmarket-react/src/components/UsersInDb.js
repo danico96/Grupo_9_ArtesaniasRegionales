@@ -20,7 +20,7 @@ function UsersInDb() {
 
   const callApi=async()=>{
     try {
-        const res = await fetch("http://localhost:3500/api/users")
+        const res = await fetch("https://artisanmarket.herokuapp.com/api/users")
         const result = await res.json()
         return result
     } catch (error) {
