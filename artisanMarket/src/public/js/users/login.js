@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
     if (password.value == '') {
       errors.push('Escribe tu contraseña')
     } else if (password.value.length < 8) {
-      errors.push('Tu contraseña tiene más de 7 caracteres')
+      errors.push('Contraseña incorrecta')
     }
 
     if (errors.length > 0) {

@@ -4,9 +4,18 @@ const apiuserscontroller = {
   Users: async (req, res) => {
     try {
       const users = await apiUserModel.getUsers();
+      const usersDetail = users.map((user) => {
+        return user = {
+        id: user.id,
+        nombre: user.name,
+        apellido: user.lastname,
+        email: user.email,
+        detalle: 'http://localhost:3000/api/users/' + user.id 
+      }
+      })
       return res.status(200).json({
         count: users.length,
-        list: users
+        list: usersDetail
       });
     } catch (error) {
       console.log(error.message);

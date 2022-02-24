@@ -13,17 +13,20 @@
 		<%- include ('../partials/header') %>
 
 			<main class="formulario">
+				<!-- errores FrontEnd -->
 				<div class="errores">
 					<ul>
 
 					</ul>
 				</div>
 				<div class="form">
-					<% if (locals.errorsValidation) { errorsValidation.forEach(error=> { %>
+					<!-- errores BackEnd -->
+					<% if (locals.errors) { errors.forEach(error=> { %>
 						<h2>
-							<% error.msg %>
+							<%= error.msg %>
 						</h2>
 						<% }) } %>
+						
 							<form class="form-login" action="/users/login" method="POST">
 								<h3>Email</h3>
 								<label for="email"></label><br>

@@ -1,39 +1,24 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const loginValidation = require('../middlewares/users/loginValidation');
-const registerValidation = require('../middlewares/users/registerValidation');
+const {multerUser, registerValidation, errors, validateImage, loginValidation, errorsLogin} = require('../middlewares/index');
 
-const { users, products } = require("../controller");
-
-//multer
-const multer = require('multer');
-
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, path.resolve(__dirname, '../public/images/users'));
-  },
-  filename: function (req, file, cb) {
-    cb(null, 'foto' + '-' + Date.now() + path.extname(file.originalname));
-  }
-})
-
-const uploadImg = multer({ storage: storage });
+const {users, products} = require("../controller");
 
 //Rutas
 router.get('/', users.indexUsers); /* GET users list. */
 
 router.get("/login", users.loginUser); /* GET login page. */
-router.post("/login", loginValidation, users.loginProcess);
+router.post("/login", loginValidation, errorsLogin, users.loginProcess);
 router.get('/logout', users.logout);
 
 router.get("/register", users.registerUser); /* GET register page. */
-router.post("/registerUser", uploadImg.single('image'), registerValidation, users.storeUser);
+router.post("/registerUser", multerUser.single('image'), registerValidation, errors, validateImage, users.storeUser);
 
 router.get('/userDetail/:id', users.detailUser); /* GET user detail page. */
 
 router.get('/userEdit/:id', users.editUser); /* GET user edit page. */
-router.put('/userEdit/:id', uploadImg.single('image'), users.updateUser);
+router.put('/userEdit/:id', multerUser.single('image'), users.updateUser);
 
 router.delete('/:id', users.deleteUser); /* Delete one user*/
 

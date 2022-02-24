@@ -5,85 +5,93 @@ s (52 sloc) 2.24 KB
 <!-- Head -->
 
 <head>
-    <link rel="stylesheet" href="/css/productEdit.css">
+	<link rel="stylesheet" href="/css/productEdit.css">
 </head>
 <%- include ('../partials/head') %>
 
-    <body>
-        <!-- Header -->
-        <%- include ('../partials/header') %>
-            <main class="formulario">
-                <div class="errores">
-                    <ul>
+	<body>
+		<!-- Header -->
+		<%- include ('../partials/header') %>
+			<main class="formulario">
+				<!-- Errores FrontEnd -->
+				<div class="errores">
+					<ul>
 
-                    </ul>
-                </div>
-                <div class="form">
-                    <div>
-                        <h2>Editar producto</h2>
-                        <br>
-                        <h1>
-                            <%= product.name %>
-                        </h1>
-                        <div>
-                            <img src="/images/products/<%= product.picture %>" class="productImage">
-                        </div>
-                    </div>
-                    <form class="form-product" action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST"
-                        enctype='multipart/form-data'>
-                        <br>
-                        <h3>Nombre de Producto</h3>
-                        <div>
-                            <input type="text" class="productName" name="productName" placeholder="Nombre del producto"
-                                value='<%= product.name %>' required>
-                        </div><br>
-                        <h3>Descripción</h3>
-                        <br>
-                        <div>
-                            <textarea name=type="text" class="description" name="description"
-                                required rows="6" cols="40"><%= product.description %></textarea>
-                        </div><br>
-                        <div>
-                            <h3>Seleccione una región</h3>
-                            <label for="region"></label><br>
-                            <select name="region">
-                                <option value="Andina">Andina</option>
-                                <option value="Caribe">Caribe</option>
-                                <option value="Pacifica">Pacífica</option>
-                                <option value="Orinoquia">Orinoquía</option>
-                                <option value="Amazonia">Amazonía</option>
-                                <option value="Insular">Insular</option>
-                            </select>
-                        </div><br>
-                        <div>
-                            <h3>Cantidad</h3>
-                            <label for="quantity"></label><br>
-                            <input type="text" class="quantity" name="quantity" placeholder="Cantidad" value='<%= product.quantity  %>'
-                                required><br>
-                        </div><br>
-                        <div>
-                            <h3>Precio</h3>
-                            <label for="price"></label><br>
-                            <input type="text" class="price" name="price" placeholder="Precio" value='<%= product.price  %>' required>
-                        </div><br>
-                        <div>
-                            <p>
-                            <h3>Foto de producto</h3>
-                            </p>
-                        </div>
-                        <p class="image-load">
-                            <input type="file" class="image" name="image" accept=".jpg,.png" required>
-                        </p>
-                        <p>
-                            <button type="submit" name="/">Guardar</button>
-                        </p>
-                    </form>
-                </div>
-            </main>
-            <!-- Footer -->
-            <%- include('../partials/footer') %>
+					</ul>
+				</div>
+				<div class="form">
+					<div>
+						<h2>Editar producto</h2>
+						<br>
+						<!-- Errores BackEnd -->
+						<% if (locals.errors) { errors.forEach(error=> { %>
+							<p>
+								<%= error.msg %>
+							</p>
+							<% }) } %>
 
-            <script src="/js/products/product.js"></script>
-    </body>
+								<h1>
+									<%= product.name %>
+								</h1>
+								<div>
+									<img src="/images/products/<%= product.picture %>" class="productImage">
+								</div>
+					</div>
+					<form class="form-product" action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST"
+						enctype='multipart/form-data'>
+						<br>
+						<h3>Nombre de Producto</h3>
+						<div>
+							<input type="text" class="productName" name="productName" placeholder="Nombre del producto"
+								value='<%= product.name %>' required>
+						</div><br>
+						<h3>Descripción</h3>
+						<br>
+						<div>
+							<textarea type="text" class="description" name="description" required rows="6"
+								cols="40"><%= product.description %></textarea>
+						</div><br>
+						<div>
+							<h3>Seleccione una región</h3>
+							<label for="region"></label><br>
+							<select name="region">
+								<option value="1">Andina</option>
+								<option value="2">Pacífica</option>
+								<option value="3">Caribe</option>
+								<option value="4">Amazonía</option>
+								<option value="5">Orinoquía</option>
+								<option value="6">Insular</option>
+							</select>
+						</div><br>
+						<div>
+							<h3>Cantidad</h3>
+							<label for="quantity"></label><br>
+							<input type="text" class="quantity" name="quantity" placeholder="Cantidad"
+								value='<%= product.quantity  %>' required><br>
+						</div><br>
+						<div>
+							<h3>Precio</h3>
+							<label for="price"></label><br>
+							<input type="text" class="price" name="price" placeholder="Precio" value='<%= product.price  %>' required>
+						</div><br>
+						<div>
+							<p>
+							<h3>Foto de producto</h3>
+							</p>
+						</div>
+						<p class="image-load">
+							<input type="file" class="image" name="image" accept=".jpg,.png,.jpeg,.gif" required>
+						</p>
+						<p>
+							<button type="submit" name="/">Guardar</button>
+						</p>
+					</form>
+				</div>
+			</main>
+			<!-- Footer -->
+			<%- include('../partials/footer') %>
+
+				<script src="/js/products/product.js"></script>
+	</body>
 
 </html>

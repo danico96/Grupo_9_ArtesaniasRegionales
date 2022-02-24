@@ -40,9 +40,6 @@ const productController = {
 
     storeProduct: async (req, res) => {
         try {
-            let errorsValidation = validationResult(req);
-
-            if (errorsValidation.isEmpty) {
                 let newProduct = {
                     "name": req.body.productName,
                     "description": req.body.description,
@@ -54,9 +51,6 @@ const productController = {
                 await productsmodel.createProduct(newProduct)
 
                 res.redirect("/products");
-            } else {
-                res.render('./products/productCreate', { errorsValidation: errorsValidation.mapped(), old: req.body });
-            }
         } catch (error) {
             console.log(error.message);
         }

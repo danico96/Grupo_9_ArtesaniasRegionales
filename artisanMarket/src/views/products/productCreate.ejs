@@ -12,6 +12,7 @@
 		<%- include ('../partials/header') %>
 			<%# if(locals.usuario.category=="vendedor" ){%>
 				<main class="formulario">
+					<!-- Errores FrontEnd -->
 					<div class="errores">
 						<ul>
 
@@ -22,9 +23,10 @@
 							<h2>Agregar producto</h2>
 						</div>
 
-						<% if (locals.errorsValidation) { errorsValidation.forEach(error=> { %>
+						<!-- Errores BackEnd -->
+						<% if (locals.errors) { errors.forEach(error=> { %>
 							<p>
-								<% error.msg %>
+								<%= error.msg %>
 							</p>
 							<% }) } %>
 
@@ -68,7 +70,7 @@
 										<h3>Foto de producto</h3>
 										</p>
 										<p class="image-load">
-											<input type="file" class="image" name="image" accept=".jpg,.png" required>
+											<input type="file" class="image" name="image" accept=".jpg,.png,.jpeg,.gif" required>
 										</p>
 									</div><br>
 									<p class="btn-login">
