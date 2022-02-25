@@ -32,7 +32,7 @@ const apiuserscontroller = {
         nombre: user.name,
         apellido: user.lastname,
         email: user.email,
-        imagen: 'http://localhost:3000/images/users/' + user.image
+        imagen: 'http://localhost:3500/images/users/' + user.image
       });
     } catch (error) {
       console.log(error.message);

@@ -11,7 +11,8 @@ const apiProductController = {
                     nombre: product.name,
                     descripcion: product.description,
                     region: product.regions_id,
-                    detalle: 'http://localhost:3000/api/products/' + product.id
+                    imagen: 'http://localhost:3500/images/products/' + product.picture,
+                    detalle: 'http://localhost:3500/api/products/' + product.id
                 }
             });
 
@@ -47,7 +48,7 @@ const apiProductController = {
                 cantidad: product.quantity,
                 region: product.regions_id,
                 array: 'falta por cada relacion de uno a muchos',
-                imagen: 'http://localhost:3000/images/products/' + product.picture
+                imagen: 'http://localhost:3500/images/products/' + product.picture
             });
         } catch (error) {
             console.log(error);
