@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const path = require("path");
-const {multerUser, registerValidation, errors, validateImage, loginValidation, errorsLogin} = require('../middlewares/index');
+const {multerUser, registerValidation, errors, validateImage, loginValidation, errorsLogin} = require('../middlewares');
 
 const {users, products} = require("../controller");
 

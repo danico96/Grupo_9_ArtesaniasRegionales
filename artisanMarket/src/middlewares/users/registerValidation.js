@@ -1,26 +1,35 @@
 const { check, validationResult } = require('express-validator');
+const { usermodel } = require('../../model');
+
+// const prueba = usermodel.getUserEmail('pruebaemail2@hotmail.com');
 
 const registerValidation = [
   check('name')
-  .notEmpty().withMessage('Escribe tu nombre').bail()
-  .isLength({min: 2}).withMessage('Nombre demasiado corto'),
+    .notEmpty().withMessage('Escribe tu nombre').bail()
+    .isLength({ min: 2 }).withMessage('Nombre demasiado corto'),
   check('lastname')
-  .notEmpty().withMessage('Escribe tu apellido').bail()
-  .isLength({min: 2}).withMessage('Apellido demasiado corto'),
+    .notEmpty().withMessage('Escribe tu apellido').bail()
+    .isLength({ min: 2 }).withMessage('Apellido demasiado corto'),
   check('email')
-  .isEmail().withMessage('Ingrese un email válido'),
+    .isEmail().withMessage('Ingrese un email válido')
+    .custom(value => {
+      const emailtry = usermodel.getUserEmail(value);
+      if(emailtry){
+        return !(value == emailtry);
+      }      
+    }).withMessage('Email en uso'),
   check('password')
-  .notEmpty().withMessage('Escribe una contraseña').bail()
-  .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
+    .notEmpty().withMessage('Escribe una contraseña').bail()
+    .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
 ]
 
 const errors = (req, res, next) => {
-  let errors =  validationResult(req);
-      if (errors.isEmpty()) {
-        next();
-      } else {
-        res.render("./users/register", { errors: errors.array(), old: req.body });
-      }
+  let errors = validationResult(req);
+  if (errors.isEmpty()) {
+    next();
+  } else {
+    res.render("./users/register", { errors: errors.array(), old: req.body });
+  }
 }
 
 const validateImage = (req, res, next) => {
@@ -39,4 +48,4 @@ const validateImage = (req, res, next) => {
   next();
 }
 
-module.exports = {registerValidation, errors, validateImage};
+module.exports = { registerValidation, errors, validateImage };

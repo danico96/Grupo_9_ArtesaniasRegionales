@@ -1,5 +1,4 @@
 const { productsmodel } = require('../model');
-const { validationResult } = require('express-validator');
 
 const productController = {
     indexProducts: async (req, res) => {

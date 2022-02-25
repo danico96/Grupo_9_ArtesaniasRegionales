@@ -10,6 +10,25 @@ const modelUsers = {
       console.log(error.message);
     }
   },
+  getUserEmail: async function (value) {
+    try {
+      const result = await db.users.findOne({
+        where: {
+          email: value,
+        }
+      });
+      if (result) {
+        const email = result.email;
+        console.log('value ' + value);
+        console.log(email);
+        return email;
+      } else {
+        return console.log('No esxiste' + value);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  },
   getUserByField: async function (user) {
     try {
       const result = await db.users.findOne({
@@ -23,16 +42,16 @@ const modelUsers = {
       console.log(error.message);
     }
   },
-loginVerification: async (email) => {
-  try {
-    const user = await db.users.findAll({
-      where: { email: email },
-    });
-    return user;
-  } catch (error) {
-    return console.log(error);
-  }
-},
+  loginVerification: async (email) => {
+    try {
+      const user = await db.users.findAll({
+        where: { email: email },
+      });
+      return user;
+    } catch (error) {
+      return console.log(error.msg);
+    }
+  },
   getOneUser: async function (id) {
     try {
       const user = await db.users.findByPk(id);
