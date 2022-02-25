@@ -6,6 +6,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const {userSession, userLogged} = require('./middlewares')
+const cors = require('cors')
 
 // view engine setup
 app.set('view engine', 'ejs');
@@ -27,6 +28,7 @@ app.use(methodOverride('_method'));
 
 app.use(express.static(path.resolve(__dirname, './public')));
 app.use(userLogged);
+app.use(cors())
 
 app.use('/', rutas);
 

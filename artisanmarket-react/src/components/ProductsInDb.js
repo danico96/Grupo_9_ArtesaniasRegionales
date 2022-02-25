@@ -15,7 +15,7 @@ function ProductsInDb() {
   };
 
   const content =
-    Products.length == 0 ? (
+    Products.length === 0 ? (
       <p>Cargando Productos</p>
     ) : (
       Products.map((product, index) => (
@@ -32,6 +32,7 @@ function ProductsInDb() {
     const ListaProductos = await callApi();
     setProducts([...Products, ...ListaProductos]);
   }, []);
+  console.log(Products);
   return (
     <div className="col-lg-6 mb-4">
       <div className="card shadow mb-4">

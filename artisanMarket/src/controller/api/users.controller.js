@@ -10,7 +10,8 @@ const apiuserscontroller = {
         nombre: user.name,
         apellido: user.lastname,
         email: user.email,
-        detalle: 'http://localhost:3000/api/users/' + user.id 
+        imagen: 'http://localhost:3500/images/users/' + user.image,
+        detalle: 'http://localhost:3500/api/users/' + user.id 
       }
       })
       return res.status(200).json({
