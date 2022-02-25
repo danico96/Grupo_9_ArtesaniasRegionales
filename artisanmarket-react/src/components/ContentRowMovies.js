@@ -1,50 +1,62 @@
-import React from 'react';
-import SmallCard from './SmallCard';
+import React, { useState, useEffect } from "react";
+import SmallCard from "./SmallCard";
+import ProductsInDb from "./ProductsInDb";
 
 /*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
+function ContentRowMovies() {
 
-let moviesInDB = {
-    title: 'Movies in Data Base',
-    color: 'primary', 
-    cuantity: 21,
-    icon: 'fa-clipboard-list'
-}
+        const [Products, setProducts] = useState([]);
+      
+        useEffect(async() => {
+          await obtenerDatosP();
+        }, []);
+      
+        const obtenerDatosP = async () => {
+          const data = await fetch("http://localhost:3500/api/products");
+          const product = await data.json();
+          setProducts(product);
+        };
+        const count = Products.count
 
-/* <!-- Total awards --> */
+        const [Users, setUsers] = useState([]);
 
-let totalAwards = {
-    title:' Total awards', 
-    color:'success', 
-    cuantity: '79',
-    icon:'fa-award'
-}
+        useEffect(async() => {
+          await obtenerDatos();
+        }, []);
+      
+        const obtenerDatos = async () => {
+          const data = await fetch("http://localhost:3500/api/users");
+          const user = await data.json();
+          setUsers(user);
+        };
+        const Usercount = Users.count
+/* <!-- Products in DB --> */
 
-/* <!-- Actors quantity --> */
+  let productsInDB = {
+    title: "Total Productos",
+    color: "primary",
+    cuantity: count,
+    icon: "fa-clipboard-list",
+  };
 
-let actorsQuantity = {
-    title:'Actors quantity' ,
-    color:'warning',
-    cuantity:'49',
-    icon:'fa-user-check'
-}
+  /* <!-- Users quantity --> */
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+  let usersQuantity = {
+    title: "Cantidad de usuarios",
+    color: "warning",
+    cuantity: Usercount,
+    icon: "fa-user-check",
+  };
 
-function ContentRowMovies(){
-    return (
-    
-        <div className="row">
-            
-            {cartProps.map( (movie, i) => {
-
-                return <SmallCard {...movie} key={i}/>
-            
-            })}
-
-        </div>
-    )
+  let cartProps = [productsInDB, usersQuantity];
+  return (
+    <div className="row">
+      {cartProps.map((movie, i) => {
+        return <SmallCard {...movie} key={i} />;
+      })}
+    </div>
+  );
 }
 
 export default ContentRowMovies;

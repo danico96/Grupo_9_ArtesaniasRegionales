@@ -9,6 +9,7 @@ function Product(props) {
                 </div>
                 <p>
                     Nombre: {props.name}<br></br>
+                    <br></br>
                     Descripción: {props.description}
                 </p>
             </div>

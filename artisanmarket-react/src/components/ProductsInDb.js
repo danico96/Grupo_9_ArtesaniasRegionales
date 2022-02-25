@@ -4,35 +4,30 @@ import Product from "./Product";
 function ProductsInDb() {
   const [Products, setProducts] = useState([]);
 
-  const callApi = async () => {
-    try {
-      const res = await fetch("https://restcountries.com/v2/all");
-      const result = await res.json();
-      return result;
-    } catch (error) {
-      throw "Error con fetch";
-    }
-  };
+  useEffect(async() => {
+    await obtenerDatos();
+  }, []);
 
+  const obtenerDatos = async () => {
+    const data = await fetch("http://localhost:3500/api/products");
+    const product = await data.json();
+    setProducts(product);
+  };
+  const count = Products.count
   const content =
     Products.length === 0 ? (
       <p>Cargando Productos</p>
     ) : (
-      Products.map((product, index) => (
+      Products.products.map((product, index) => (
         <Product
           key={index}
-          name={product.name}
-          picture={product.flags.png}
-          description={product.capital}
+          name={product.nombre}
+          picture={product.imagen}
+          description={product.descripcion}
         ></Product>
       ))
     );
 
-  useEffect(async () => {
-    const ListaProductos = await callApi();
-    setProducts([...Products, ...ListaProductos]);
-  }, []);
-  console.log(Products);
   return (
     <div className="col-lg-6 mb-4">
       <div className="card shadow mb-4">
