@@ -220,3 +220,11 @@ header .browse-navbar ul li:hover {
     color: black;
     transition:all .5s;
 }
+@media (max-width: 768px) {
+  .wave {
+    top: -40px;
+  }
+  header .top-header {
+    justify-content: center;
+  }
+}
