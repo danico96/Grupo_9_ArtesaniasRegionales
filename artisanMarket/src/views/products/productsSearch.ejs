@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<link rel="stylesheet" href="/css/cards.css">
+</head>
+
+<!-- Head -->
+<%- include ('../partials/head') %>
+
+	<body>
+		<!-- Header -->
+		<%- include ('../partials/header') %>
+			<main>
+				<div class="contenido">
+					<h1> Encontrado </h1>
+					<div class="container">
+						<% results.forEach(product=> { %>
+							<div class="wrapper">
+								<div class="card ">
+									<img style="max-width: 300px;" src="/images/products/<%= product.picture %>" alt="product_img"
+										class="product_img">
+									<div class="info">
+										<h1>
+											<%= product.name %>
+										</h1>
+										<p>
+											<%= product.description %>
+										</p>
+										<p class="price">$<%= product.price %>
+										</p>
+										<a href="/products/productDetail/<%= product.id %>" class="btn">Más Detalles</a>
+									</div>
+								</div>
+							</div>
+							<% }) %>
+					</div>
+				</div>
+			</main>
+
+			<!-- Footer -->
+			<%- include('../partials/footer') %>
+	</body>
+
+</html>

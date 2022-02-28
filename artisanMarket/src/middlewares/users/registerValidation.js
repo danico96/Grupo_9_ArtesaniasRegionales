@@ -12,12 +12,13 @@ const registerValidation = [
     .isLength({ min: 2 }).withMessage('Apellido demasiado corto'),
   check('email')
     .isEmail().withMessage('Ingrese un email válido')
-    .custom(value => {
-      const emailtry = usermodel.getUserEmail(value);
-      if(emailtry){
-        return !(value == emailtry);
-      }      
-    }).withMessage('Email en uso'),
+    .custom(async value => {
+      return await usermodel.getUserEmail(value).then(email => {
+        if (email) {
+          return Promise.reject('El email ya se encuentra registrado');
+        }
+      });
+    }),
   check('password')
     .notEmpty().withMessage('Escribe una contraseña').bail()
     .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')

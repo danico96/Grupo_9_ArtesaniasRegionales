@@ -94,6 +94,16 @@ const productController = {
         } catch (error) {
             console.log(error.message);
         }
+    },
+
+    searchProduct: async (req, res) => {
+        try {
+            let query = req.query.search;
+            let results = await productsmodel.searchProducts(query);
+            res.render('./products/productsSearch', {results});
+        } catch (error) {
+            console.log(error.message);            
+        }
     }
 };
 

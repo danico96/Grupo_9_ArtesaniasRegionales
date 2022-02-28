@@ -1,4 +1,5 @@
 const path = require('path');
+const { Op } = require('sequelize');
 const db = require(path.resolve(__dirname, '../database/models'));
 
 const modelProducts = {
@@ -49,6 +50,19 @@ const modelProducts = {
             await db.products.destroy({
                 where: { id: productId }
             });
+        } catch (error) {
+            console.log(error.message);
+        }
+    },
+    searchProducts: async function (search) {
+        try {
+            let products = await db.products.findAll({
+                where: {
+                    name: {[Op.substring]: [search]}
+                    // [Op.or]: [{name: {[Op.substring]: [search]}},{regions_id: {[Op.substring]: [search]}}]
+                }
+            });
+            return products;
         } catch (error) {
             console.log(error.message);
         }

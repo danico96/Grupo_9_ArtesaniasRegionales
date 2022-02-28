@@ -18,13 +18,9 @@ const modelUsers = {
         }
       });
       if (result) {
-        const email = result.email;
-        console.log('value ' + value);
-        console.log(email);
-        return email;
-      } else {
-        return console.log('No esxiste' + value);
-      }
+        let email = result.email;
+        return true;
+      } 
     } catch (error) {
       console.log(error.message);
     }
