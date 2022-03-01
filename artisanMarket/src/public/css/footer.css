@@ -1,18 +1,83 @@
-.footerContainer {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    bottom: -100px;
+.footer {
+  width: 100%;
+  background-color: #2196f3;
+}
+
+.footer .section-1{
+  width: 90vw;
+  margin: auto;
+  padding: 20px 0 5px 0;
+}
+
+.footer .section-1 .box {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer .section-1 .box h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.footer .section-1 .box h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer .section-1 .box h5 {
+  color: #efefef;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.footer .section-1 .box p {
+  color: #efefef;
+  margin: 0;
+  font-size: 12px;
+}
+
+.footer .section-1 .box .redes-sociales a {
+  color: rgba(255, 255, 255, 0.918);
+  margin: 0 5px;
+  font-size: 20px;
+}
+
+.footer .section-2 {
+  background-color: #2164f3;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 5px;
+}
+
+
+@media (min-width: 481px) { 
+  .footer .section-1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 15px 0 5px 0;
   }
-  
-  .footerContainer .footer section {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: nowrap;
+
+  .footer .section-2 {
+    font-size: 14px;
   }
-  
-  footer section p a {
-    color: rgb(45, 178, 255);
-    font-size: 18px;
+}
+
+@media (min-width: 768px) { 
+  .footer .section-1{
+    gap: 25px;
+    padding: 20px 0 5px 0;
   }
+
+  .footer .section-1 #main{
+    margin: auto;
+  }
+
+  .footer .section-2 {
+    text-align: right;
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+}

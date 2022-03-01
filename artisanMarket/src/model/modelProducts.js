@@ -13,7 +13,9 @@ const modelProducts = {
     },
     getOneProduct: async function (id) {
         try {
-            const isExist = await db.products.findByPk(id)
+            const isExist = await db.products.findByPk(id, {
+                include: ['region'],
+            })
             if (isExist) {
                 return isExist
             } else {
