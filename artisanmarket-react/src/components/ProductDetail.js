@@ -1,4 +1,5 @@
-function Product(props) {
+
+function ProductDetail(props) {
   return (
     <div className="col-lg-6 mb-4">
       <br></br>
@@ -7,15 +8,19 @@ function Product(props) {
           <div className="text-center">
             <img
               className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-              style={{ width: 40 + "rem" }}
+              style={{ width: 60 + "rem" }}
               src={props.picture}
             />
           </div>
           <p>
             Nombre: {props.name}
             <br></br>
+            Precio: {props.price}
             <br></br>
-            <a href="FindProduct" class="info">Detalle</a>
+            Descripción: {props.description}
+            <br></br>
+            Cantidad: {props.amount}
+            <br></br>
           </p>
         </div>
 
@@ -23,5 +28,4 @@ function Product(props) {
     </div>
   );
 }
-
-export default Product;
+export default ProductDetail;

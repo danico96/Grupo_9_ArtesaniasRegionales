@@ -13,7 +13,6 @@ function ProductsInDb() {
     const product = await data.json();
     setProducts(product);
   };
-  const count = Products.count
   const content =
     Products.length === 0 ? (
       <p>Cargando Productos</p>
@@ -21,9 +20,9 @@ function ProductsInDb() {
       Products.products.map((product, index) => (
         <Product
           key={index}
+          id={product.id}
           name={product.nombre}
           picture={product.imagen}
-          description={product.descripcion}
         ></Product>
       ))
     );
