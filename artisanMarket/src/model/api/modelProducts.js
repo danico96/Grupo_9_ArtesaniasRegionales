@@ -1,4 +1,5 @@
 const path = require('path');
+const { products } = require('../../controller');
 const db = require(path.resolve(__dirname, '../../database/models'));
 
 const apiModelProducts = {
@@ -18,6 +19,22 @@ const apiModelProducts = {
             } else {
                 return console.log("El producto no existe");
             }
+        } catch (error) {
+            console.log(error.message);
+        }
+    },
+    lastProductInDb: async function () {
+        try {
+            let allProducts = await db.products.findAll();
+            let maxId = 0;
+            let lastproduct = allProducts.filter(product => {
+                if (product.id > maxId) {
+                    maxId = product.id;
+                }
+                return
+            });
+            let lastInDb = await db.products.findByPk(maxId);
+            return lastInDb;
         } catch (error) {
             console.log(error.message);
         }
