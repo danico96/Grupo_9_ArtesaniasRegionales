@@ -51,7 +51,7 @@ function SideBar(){
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/ProductsInDb">
-                        <span>Lista de productos</span></Link>
+                        <span>Lista de Productos</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
