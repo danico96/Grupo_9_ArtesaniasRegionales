@@ -2,7 +2,6 @@
 <html lang="es">
 
 <!-- Head -->
-
 <head>
 	<link rel="stylesheet" href="/css/register.css">
 </head>
@@ -26,41 +25,36 @@
 						<% }) } %>
 
 							<form class="form-register" action="/users/registerUser" method="POST" enctype="multipart/form-data">
-								<div>
-									<label for="name">Nombres</label><br><br>
+								<h2 class="title-form">¡Regístrate gratis!</h2>
+								<div class="fiel-form">
+									<label for="name">Nombres</label><br>
 									<input type="text" id="name" name="name" placeholder="Ej: Juan Pablo" required>
-								</div><br>
-								<div>
-									<label for="lastname">Apellidos</label><br><br>
+								</div>
+								<div class="fiel-form">
+									<label for="lastname">Apellidos</label><br>
 									<input type="text" id="lastname" name="lastname" placeholder="Ej: Lopez Correa" required>
-								</div><br>
-								<div>
-									<label for="email">Correo electrónico</label><br><br>
+								</div>
+								<div class="fiel-form">
+									<label for="email">Correo electrónico</label><br>
 									<input type="email" id="email" name="email" placeholder="Ej: juan@pablo.com" required>
-								</div><br>
-								<div>
-									<label for="password">Contraseña</label><br><br>
+								</div>
+								<div class="fiel-form">
+									<label for="password">Contraseña</label><br>
 									<input type="password" id="password" name="password" required>
-								</div><br>
-								<div>
-									<label for="role">Perfil</label><br><br>
-									<select name="role" required="true">
-										<option value="" selected disabled>Seleccione un perfil</option>
-										<option value="1">Administrador</option>
-										<option value="2">Cliente</option>
-									</select>
-								</div><br>
-								<p>
-								<h3>Foto de Perfil</h3>
-								</p>
-								<p class="image-load">
+								</div>
+								<div class="fiel-form">
+									<label for="passwordOk">Confirmar contraseña</label><br>
+									<input type="password" id="passwordOk" name="passwordOk" required>
+								</div>
+								<div class="fiel-form">
+									<label for="image">Foto de perfil</label><br>
 									<input type="file" id="image" name="image" accept=".jpg,.jpeg,.png,.gif" required>
-									
-								</p>
+								</div>
+								
 								<p class="btn-login">
 									<button type="submit">Registrarse</button>
 								</p>
-								<a href="/users/login"><strong>¿Ya tienes cuenta?</strong></a><br><br>
+								<a href="/users/login"><strong>¿Ya tienes una cuenta?</strong></a>
 							</form>
 				</div>
 			</main>

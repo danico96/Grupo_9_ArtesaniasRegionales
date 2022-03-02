@@ -13,32 +13,33 @@
 		<%- include ('../partials/header') %>
 			<main>
 				<div class="contenido">
-					<h1> Lo más vendido </h1>
+					<div class="title">
+						<h1> Lo más vendido </h1>
+					</div>
 					<div class="container">
 						<% products.forEach(product=> { %>
-							<div class="wrapper">
-								<div class="card ">
-									<img style="max-width: 300px;" src="/images/products/<%= product.picture %>" alt="product_img"
-										class="product_img">
-									<div class="info">
-										<h1>
-											<%= product.name %>
-										</h1>
-										<p>
-											<%= product.description %>
-										</p>
-										<p class="price">$<%= product.price %>
-										</p>
-										<a href="/products/productDetail/<%= product.id %>" class="btn">Más Detalles</a>
-									</div>
+							<div class="card ">
+								<img style="max-width: 300px;" src="/images/products/<%= product.picture %>" alt="product_img"
+									class="product_img">
+								<div class="info">
+									<h1>
+										<%= product.name %>
+									</h1>
+									<p>
+										<%= product.description %>
+									</p>
+									<p class="price">$<%= product.price %>
+									</p>
+									<a href="/products/productDetail/<%= product.id %>" class="btn">Más Detalles</a>
 								</div>
 							</div>
 							<% }) %>
 					</div>
 				</div>
 				<section class="regions">
-					<h1>Regiones</h1>
-
+					<div class="title">
+						<h1>Regiones</h1>
+					</div>
 					<div class="regionCard" style="--i:url(/images/andina.jpg)">
 						<article class="content">
 							<h4>Región Andina</h4>
@@ -66,8 +67,11 @@
 					<div class="regionCard" style="--i:url(/images/pacifica.jpg)">
 						<article class="content">
 							<h4>Región Pacífica</h4>
-							<p class="description-region">La región pacífico colombiana está situada al oeste del país. Limita al norte con la región Caribe y con Panamá, al este con la región Andina y al sur con el vecino Ecuador.
-								La ciudad más importante de esta zona es Buenaventura, ciudad portuaria situada a unas dos horas en coche de Cali, que se ha convertido en el gran punto de partida hacia la mayoría de enclaves costeros de la región.
+							<p class="description-region">La región pacífico colombiana está situada al oeste del país. Limita al
+								norte con la región Caribe y con Panamá, al este con la región Andina y al sur con el vecino Ecuador.
+								La ciudad más importante de esta zona es Buenaventura, ciudad portuaria situada a unas dos horas en
+								coche de Cali, que se ha convertido en el gran punto de partida hacia la mayoría de enclaves costeros de
+								la región.
 								El clima de esta región es tropical, con algunas áreas de gran pluviosidad.</p>
 						</article>
 					</div>
@@ -88,9 +92,13 @@
 					<div class="regionCard" style="--i:url(/images/amazonica.jpg)">
 						<article class="content">
 							<h4>Región de la Amazonía</h4>
-							<p class="description-region">Esta es la región más extensa de todo el país, más del 40% del conjunto de Colombia es para un territorio enigmático, insólito y que todavía se considera un diamante en bruto por pulir, sobre todo en el plano turístico.
-								Porque esta región no la forman solamente Leticia, Puerto Nariño y las comunidades indígenas colindantes, también la conforman el vasto territorio de Putumayo con Mocoa a la cabeza.
-								La región del Amazonas limita al norte con la Orinoquía, separados por la marca natural del río Guaviare, al este con Venezuela y al sur con Ecuador, Brasil y Perú.</p>
+							<p class="description-region">Esta es la región más extensa de todo el país, más del 40% del conjunto de
+								Colombia es para un territorio enigmático, insólito y que todavía se considera un diamante en bruto por
+								pulir, sobre todo en el plano turístico.
+								Porque esta región no la forman solamente Leticia, Puerto Nariño y las comunidades indígenas
+								colindantes, también la conforman el vasto territorio de Putumayo con Mocoa a la cabeza.
+								La región del Amazonas limita al norte con la Orinoquía, separados por la marca natural del río
+								Guaviare, al este con Venezuela y al sur con Ecuador, Brasil y Perú.</p>
 						</article>
 					</div>
 

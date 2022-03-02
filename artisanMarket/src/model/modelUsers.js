@@ -50,7 +50,9 @@ const modelUsers = {
   },
   getOneUser: async function (id) {
     try {
-      const user = await db.users.findByPk(id);
+      const user = await db.users.findByPk(id,{
+        include: ['role']
+      });
       return user;
     } catch (error) {
       console.log(error.message);
