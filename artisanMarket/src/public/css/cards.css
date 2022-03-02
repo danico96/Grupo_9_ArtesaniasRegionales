@@ -1,90 +1,146 @@
-/* INICIO CARDS NUEVAS */
+main .contenido {
+  width: 100vw;
+}
 
-.wrapper {
-    width: 180px;
-    margin: 60px;
-  }
-  
-  .card {
-    width: 280px;
-    height: 360px;
-    padding: 2rem 1rem;
-    background-color: #fff;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    border: 1px solid var(--primaryColor);
-    transition: 0.5s ease-in-out;
-  }
-  
-  .card:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 176, 155, 0.5),
-      rgba(150, 201, 61, 1)
-    );
-    z-index: 2;
-    transition: 0.5s all;
-    opacity: 0;
-  }
-  
-  .card:hover:before {
-    opacity: 1;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .card .info {
-    position: relative;
-    z-index: 3;
-    color: #fff;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.5s all;
-  }
-  
-  .card:hover .info {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  
-  .card .info h1 {
-    margin: 0;
-  }
-  
-  .card .info p {
-    letter-spacing: 1px;
-    font-size: 15px;
-    margin-top: 8px;
-    margin-bottom: 20px;
-  }
-  
-  .card .info .btn {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    color: #000;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-  }
-  
-  .card .info .btn:hover {
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-  }
-  /* FIN CARDS NUEVAS */
+main .contenido .title {
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+main .contenido .title h1 {
+  margin: 0.5em 0;
+}
+
+main .contenido .container {
+  width: 90%;
+  margin: auto;
+}
+
+main .contenido .container .card {
+  width: 85%;
+  height: 20rem;
+  padding: 1rem;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border: 2px solid var(--primaryColor);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+main .contenido .container .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 176, 155, 0.5),
+    rgba(150, 201, 61, 1)
+  );
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+}
+
+main .contenido .container .card:hover:before {
+  opacity: 1;
+}
+
+main .contenido .container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main .contenido .container .card .info {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+
+main .contenido .container .card:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+main .contenido .container .card .info h1 {
+  margin: 0;
+}
+
+main .contenido .container .card .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+main .contenido .container .card .info .btn {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  border-radius: 5px;
+}
+
+main .contenido .container .card .info .btn:hover {
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+main .regions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main .regions .title h1 {
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+main .regions .regionCard {
+  background: var(--i);
+  width: 500px;
+  height: 250px;
+  margin: 20px 20px;
+  background-size: cover;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+}
+
+main .regions .regionCard .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  border-radius: 6px;
+  transition: all 0.5s;
+}
+
+
+main .regions .regionCard:hover .content {
+  opacity: 1;
+}
+

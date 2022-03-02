@@ -68,7 +68,7 @@ const controller = {
         email: req.body.email,
         password: bcryptjs.hashSync(req.body.password, 10),
         image: req.file != undefined ? req.file.filename : 'default.jpg',
-        roles_id: req.body.role,
+        roles_id: 2,
       };
       await usermodel.createUser(newUser);
       res.redirect("./login");
