@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 function Product(props) {
+  let id = `/FindProduct/${props.id}`
   return (
     <div className="col-lg-6 mb-4">
       <br></br>
@@ -15,7 +17,9 @@ function Product(props) {
             Nombre: {props.name}
             <br></br>
             <br></br>
-            <a href="FindProduct" class="info">Detalle</a>
+            <Link className='product__button' to={id}>
+                    Detalle
+                </Link>
           </p>
         </div>
 

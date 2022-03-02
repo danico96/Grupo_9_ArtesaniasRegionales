@@ -15,9 +15,9 @@ function ProductDetail(props) {
           <p>
             Nombre: {props.name}
             <br></br>
-            Precio: {props.price}
-            <br></br>
             Descripción: {props.description}
+            <br></br>
+            Precio: {props.price}
             <br></br>
             Cantidad: {props.amount}
             <br></br>
