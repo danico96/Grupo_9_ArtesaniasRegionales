@@ -5,6 +5,8 @@ import UsersInDb from './UsersInDb';
 import ProductsInDb from './ProductsInDb';
 import ContentRowMovies from './ContentRowMovies';
 import FindProduct from './FindProduct';
+import LastProduct from "./LastProduct";
+import LastUser from "./LastUser";
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -68,12 +70,17 @@ function SideBar(){
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />
                 </Route>
-                <Route path="/FindProduct">
+                <Route path="/LastProduct">
+                    <LastProduct />
+                </Route>
+                <Route path="/LastUser">
+                    <LastUser />
+                </Route>
+                <Route path="/FindProduct/:id">
                     <FindProduct />
                 </Route>
                 <Route component={NotFound} />
             </Switch>
-            {/*<!-- End Microdesafio 2 -->*/}
         </React.Fragment>
     )
 }

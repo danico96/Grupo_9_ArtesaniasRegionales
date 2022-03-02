@@ -1,17 +1,15 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProductDetail from "./ProductDetail";
 
-function FindProduct() {
+function LastProduct() {
   const [product, setProducts] = useState([]);
-  let { id } = useParams();
 
   useEffect(async () => {
     await obtenerDatos();
   }, []);
 
   const obtenerDatos = async () => {
-    const data = await fetch(`https://artisanmarket.herokuapp.com/api/products/${id}`);
+    const data = await fetch(`https://artisanmarket.herokuapp.com/api/products/11`);
     const product = await data.json();
     setProducts(product);
   };
@@ -31,7 +29,7 @@ function FindProduct() {
       <div className="card shadow mb-4">
         <div className="card-header py-3">
           <h5 className="m-0 font-weight-bold text-gray-800">
-            Descripción de Producto
+            Último Producto
           </h5>
         </div>
         {result}
@@ -39,4 +37,4 @@ function FindProduct() {
     </div>
   );
 }
-export default FindProduct;
+export default LastProduct;

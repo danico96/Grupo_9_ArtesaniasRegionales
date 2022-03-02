@@ -9,7 +9,7 @@ function ProductsInDb() {
   }, []);
 
   const obtenerDatos = async () => {
-    const data = await fetch("http://localhost:3500/api/products");
+    const data = await fetch("https://artisanmarket.herokuapp.com/api/products");
     const product = await data.json();
     setProducts(product);
   };
