@@ -4,6 +4,7 @@ import ContentWrapper from './ContentWrapper';
 import UsersInDb from './UsersInDb';
 import ProductsInDb from './ProductsInDb';
 import ContentRowMovies from './ContentRowMovies';
+import FindProduct from './FindProduct';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -51,7 +52,6 @@ function SideBar(){
                         <span>Lista de productos</span></Link>
                 </li>
 
-
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
@@ -67,6 +67,9 @@ function SideBar(){
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />
+                </Route>
+                <Route path="/FindProduct">
+                    <FindProduct />
                 </Route>
                 <Route component={NotFound} />
             </Switch>

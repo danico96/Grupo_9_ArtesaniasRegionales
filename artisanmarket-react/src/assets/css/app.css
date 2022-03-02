@@ -557,8 +557,7 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -.75rem;
-  margin-left: -.75rem
+  margin: auto;
 }
 
 .no-gutters {
@@ -4252,6 +4251,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
 .card {
+  text-align: center;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4279,6 +4279,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
 .card-body {
+  text-align: center;
   flex: 1 1 auto;
   padding: 1.25rem
 }
