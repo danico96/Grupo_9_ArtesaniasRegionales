@@ -5,7 +5,9 @@ const db = require(path.resolve(__dirname, '../database/models'));
 const modelProducts = {
     getProducts: async function () {
         try {
-            const result = await db.products.findAll();
+            const result = await db.products.findAll({
+                include: ['region'],
+            });
             return result;
         } catch (error) {
             console.log(error.message);

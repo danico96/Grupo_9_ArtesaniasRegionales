@@ -1,5 +1,3 @@
-s (52 sloc) 2.24 KB
-
 <!DOCTYPE html>
 <html lang="es">
 <!-- Head -->
@@ -13,47 +11,39 @@ s (52 sloc) 2.24 KB
 		<!-- Header -->
 		<%- include ('../partials/header') %>
 			<main class="formulario">
-				<!-- Errores FrontEnd -->
-				<div class="errores">
-					<ul>
+				<div class="productEdit">
+					<h2 class="title-form">Editar producto</h2>
+					<h2 class="title-product">
+						<%= product.name %>
+					</h2>
 
-					</ul>
-				</div>
-				<div class="form">
-					<div>
-						<h2>Editar producto</h2>
-						<br>
-						<!-- Errores BackEnd -->
+					<div class="img">
+						<img src="/images/products/<%= product.picture %>" class="productImage">
+					</div>
+
+					<div class="errores-back">
 						<% if (locals.errors) { errors.forEach(error=> { %>
 							<p>
-								<%= error.msg %>
+								* <%= error.msg %>
 							</p>
 							<% }) } %>
-
-								<h1>
-									<%= product.name %>
-								</h1>
-								<div>
-									<img src="/images/products/<%= product.picture %>" class="productImage">
-								</div>
 					</div>
-					<form class="form-product" action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST"
-						enctype='multipart/form-data'>
-						<br>
-						<h3>Nombre de Producto</h3>
-						<div>
+
+					<form class="form-edit" action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST" enctype='multipart/form-data'>
+						<div class="field-form">
+							<label for="productName">Nombre del producto</label><br>
 							<input type="text" class="productName" name="productName" placeholder="Nombre del producto"
 								value='<%= product.name %>' required>
-						</div><br>
-						<h3>Descripción</h3>
-						<br>
-						<div>
+						</div>
+
+						<div class="field-form">
+							<label for="description">Descripción</label><br>
 							<textarea type="text" class="description" name="description" required rows="6"
 								cols="40"><%= product.description %></textarea>
-						</div><br>
-						<div>
-							<h3>Seleccione una región</h3>
-							<label for="region"></label><br>
+						</div>
+
+						<div class="field-form"> 
+							<label for="region"> Seleccione una región</label> <br>
 							<select name="region">
 								<option value="1">Andina</option>
 								<option value="2">Pacífica</option>
@@ -62,31 +52,35 @@ s (52 sloc) 2.24 KB
 								<option value="5">Orinoquía</option>
 								<option value="6">Insular</option>
 							</select>
-						</div><br>
-						<div>
-							<h3>Cantidad</h3>
-							<label for="quantity"></label><br>
+						</div>
+											
+						<div class="field-form">
+							<label for="quantity">Cantidad</label><br>
 							<input type="text" class="quantity" name="quantity" placeholder="Cantidad"
 								value='<%= product.quantity  %>' required><br>
-						</div><br>
-						<div>
-							<h3>Precio</h3>
-							<label for="price"></label><br>
-							<input type="text" class="price" name="price" placeholder="Precio" value='<%= product.price  %>' required>
-						</div><br>
-						<div>
-							<p>
-							<h3>Foto de producto</h3>
-							</p>
 						</div>
-						<p class="image-load">
-							<input type="file" class="image" name="image" accept=".jpg,.png,.jpeg,.gif" required>
-						</p>
-						<p>
-							<button type="submit" name="/">Guardar</button>
-						</p>
+
+						<div class="field-form">
+							<label for="price">Precio</label><br>
+							<input type="text" class="price" name="price" placeholder="Precio" value='<%= product.price  %>' required>
+						</div>
+
+						<div class="field-form">
+							<label for="image">Foto del producto</label><br>
+							<input type="file" name="image" accept=".jpg,.jpeg,.png,.gif" value='<%= product.picture.filename %>'>
+						</div>
+						
+						<div class="errores-front">
+							<ul> </ul>
+						</div>
+
+						<p class="btn-login">
+							<button type="submit"> Actualizar </button>
+						</p>	
+					
 					</form>
-				</div>
+				</div>			
+
 			</main>
 			<!-- Footer -->
 			<%- include('../partials/footer') %>

@@ -104,6 +104,13 @@ main .contenido .container .card .info .btn:hover {
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
+main .contenido .noSearch {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+  margin: 40px auto;
+}
+
 /*Regions*/
 main .regions {
   display: flex;

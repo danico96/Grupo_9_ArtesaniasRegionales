@@ -3,77 +3,78 @@
 <!-- Head -->
 
 <head>
-    <link rel="stylesheet" href="/css/userEdit.css">
+	<link rel="stylesheet" href="/css/userEdit.css">
 </head>
 <%- include ('../partials/head') %>
 
-    <body>
-        <!-- Header -->
-        <%- include ('../partials/header') %>
-            <main class="formulario">
-                <div class="errores">
-                    <ul>
+	<body>
+		<!-- Header -->
+		<%- include ('../partials/header') %>
+			<main class="formulario">
+				<div class="userEdit">
+					<h2 class="title-form">Editar usuario</h2>
+					<h2 class="title-user">
+						<%= user.name %>
+							<%= user.lastname %>
+					</h2>
 
-                    </ul>
-                </div>
-                <div class="form">
-                    <div>
-                        <h2>Editar usuario</h2>
-                        <br>
-                        <h1>
-                            <%= user.name %>
-                            <%= user.lastname %> 
-                        </h1>
-                        <br>
-                        <div>
-                            <img src="/images/users/<%= user.image %>" class="userImage">
-                        </div>
-                    </div><br>
-                    <form action="/users/userEdit/<%= user.id %>?_method=PUT" method="POST"
-                        enctype='multipart/form-data'>
+					<div class="img">
+						<img src="/images/users/<%= user.image %>" class="userImage">
+					</div>
 
-                        <div>
-                            <label for="name">Nombres</label><br><br>
-                            <input type="text" name="name" value='<%= user.name %>' required>
-                        </div><br>
-                        <div>
-                            <label for="lastname">Apellidos</label><br><br>
-                            <input type="text" name="lastname" value='<%= user.lastname %>' required>
-                        </div><br>
-                        <div>
-                            <label for="email">Correo electrónico</label><br><br>
-                            <input type="email" name="email" value='<%= user.email %>' required>
-                        </div><br>
-                        <div>
-                            <label for="password">Contraseña</label><br><br>
-                            <input type="password" name="password" required>
-                        </div><br>
-                        <div>
-                            <label for="role">Perfil</label><br><br>
-                            <select name="role" value='<%= user.roles_id %>' required="true">
-                                <option value="" selected disabled>Seleccione un perfil</option>
-                                <option value="1">Administrador</option>
-                                <option value="2">Cliente</option>
-                            </select>
-                        </div><br>
-                        <div>
-                            <p>
-                            <h3>Foto de Perfil</h3>
-                            </p>
-                        </div>
-                        <p class="image-load">
-                            <input type="file" name="image" accept=".jpg,.png" value='<%= user.image %>' required>
-                        </p>
-                        <p class="btn-login">
-                            <button type="submit"> Actualizar </button>
-                        </p>
-                    </form>
-                </div>
+					<div class="errores-back">
+						<% if (locals.errors) { errors.forEach(error=> { %>
+							<p>
+								* <%= error.msg %>
+							</p>
+							<% }) } %>
+					</div>
 
-            </main>
+					<form action="/users/userEdit/<%= user.id %>?_method=PUT" method="POST" enctype='multipart/form-data' class="form-edit">
 
-            <!-- Footer -->
-            <%- include('../partials/footer') %>
-    </body>
+						<div class="field-form">
+							<label for="name">Nombres</label><br>
+							<input type="text" name="name" value='<%= user.name %>' required>
+						</div>
+						<div class="field-form">
+							<label for="lastname">Apellidos</label><br>
+							<input type="text" name="lastname" value='<%= user.lastname %>' required>
+						</div>
+						<div class="field-form">
+							<label for="email">Correo electrónico</label><br>
+							<input type="email" name="email" value='<%= user.email %>' required>
+						</div>
+						<div class="field-form">
+							<label for="password">Contraseña</label><br>
+							<input type="password" name="password" required>
+						</div>
+						<div class="field-form">
+							<label for="role">Perfil</label><br>
+							<select name="role" value='<%= user.roles_id %>' required="true">
+								<option value="" selected disabled>Seleccione un perfil</option>
+								<option value="1">Administrador</option>
+								<option value="2">Cliente</option>
+							</select>
+						</div>
+						<div class="field-form">
+							<label for="image">Elegir otra foto de perfil</label><br>
+							<input type="file" name="image" accept=".jpg,.jpeg,.png,.gif" value='<%= user.image.filename %>'>
+						</div>
+
+						<div class="errores-front">
+							<ul> </ul>
+						</div>
+
+						<p class="btn-login">
+							<button type="submit"> Actualizar </button>
+						</p>
+
+					</form>
+				</div>
+			</main>
+
+			<!-- Footer -->
+			<%- include('../partials/footer') %>
+	</body>
 
 </html>

@@ -9,7 +9,8 @@ router.get('/', products.indexProducts); /* GET products list. */
 
 router.get('/productCart', products.productCart); /* GET product cart page. */
 
-router.get('/productDetail/:id', products.detailProduct); /* GET product detail page. */
+router.get('/productDetailAdmin/:id', products.detailProductAdmin); /* GET product detail admin page. */
+router.get('/productDetail/:id', products.detailProduct); /* GET product detail admin page. */
 
 router.get('/productCreate', products.createProduct); /* GET product create page. */
 router.post('/productCreate', multerProduct.single('image'), productsValidation, errorsProduct, validateImage, products.storeProduct);

@@ -3,55 +3,63 @@
 <!-- Head -->
 <%- include ('../partials/head') %>
 
-    <head>
-        <link rel="stylesheet" href="/css/products.css">
-    </head>
+	<head>
+		<link rel="stylesheet" href="/css/products.css">
+	</head>
 
-    <body>
-        <!-- Header -->
-        <%- include ('../partials/header') %>
+	<body>
+		<!-- Header -->
+		<%- include ('../partials/header') %>
 
-            <!-- todos los productos -->
-            <div class="allProducts">
-                <div>
-                    <div>
-                        <h2>Todos los productos</h2>
-                    </div><br><br>
-                    <div class="btn">
-                        <a href='./products/productCreate'> Crear nuevo </a>
-                    </div><br><br>
-                    <% products.forEach(product=> { %>
-                        <div class="productContainer">
-                            <div class="infoProduct">
-                                <img src="/images/products/<%= product.picture%>" alt="">
-                                <div class="nameProduct">
-                                    <p><strong>
-                                            <%= product.name %>
-                                        </strong></p>
-                                </div>
-                            </div>
-                            <div class="btnsCRUD">
-                                <div class="btn">
-                                    <a href="./products/productDetail/<%= product.id %>" class="info">Detalle</a>
-                                </div>
-                                <div class="btn">
-                                    <a href="./products/productEdit/<%= product.id %>" class="edit">Editar</a>
-                                </div>
-                                <div class="btn">
-                                    <form action="products/<%= product.id %>?_method=DELETE" method="POST">
-                                        <div>
-                                            <button>Eliminar</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <% }) %>
+			<!-- todos los productos -->
+			<% if(locals.userLogged[0].roles_id=="1" ){%>
+				<div class="allProducts">
 
-                </div>
-            </div>
-            <!-- Footer -->
-            <%- include('../partials/footer') %>
-    </body>
+					<h2 class="title">Todos los productos</h2>
+
+					<div class="btn-title">
+						<a href='./products/productCreate'> Crear nuevo producto </a>
+					</div>
+
+					<% products.forEach(product=> { %>
+						<div class="productContainer">
+
+							<div class="infoProduct">
+								<img src="/images/products/<%= product.picture%>" alt="">
+								<div class="nameProduct">
+									<p>
+										<%= product.name %>
+									</p>
+									<p class="regionProduct">
+										<%= ' | ' + product.region.region %> 
+									</p>
+								</div>
+							</div>
+
+							<div class="btnsCRUD">
+								<div class="btn">
+									<a href="./products/productDetailAdmin/<%= product.id %>" class="info">Detalle</a>
+								</div>
+								<div class="btn">
+									<a href="./products/productEdit/<%= product.id %>" class="edit">Editar</a>
+								</div>
+								<div class="btn">
+									<form action="products/<%= product.id %>?_method=DELETE" method="POST">
+										<div>
+											<button>Eliminar</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<% }) %>
+				</div>
+				<% } else {%>
+					<h3>Acceso denegado</h3>
+					<% } %>
+				
+				<!-- Footer -->
+				<%- include('../partials/footer') %>
+	</body>
 
 </html>

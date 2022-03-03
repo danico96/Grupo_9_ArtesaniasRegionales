@@ -18,6 +18,17 @@ const productController = {
         }
     },
 
+    detailProductAdmin: async (req, res) => {
+        try {
+            let productId = req.params.id;
+            let product = await productsmodel.getOneProduct(productId);
+
+            res.render('./products/productDetailAdmin', { product });
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
     detailProduct: async (req, res) => {
         try {
             let productId = req.params.id;

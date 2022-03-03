@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Head -->
+<%- include ('../partials/head') %>
+
+	<head>
+		<link rel="stylesheet" href="/css/productDetailAdmin.css">
+	</head>
+
+	<body>
+		<!-- Header -->
+		<%- include ('../partials/header') %>
+
+			<main>
+				<div class="productDetail">
+					<h2 class="title-product">
+						<%= product.name %>
+					</h2>
+
+					<div class="infoSide">
+
+					<div class="img">
+						<img src="/images/products/<%= product.picture %>" alt="product_img" class="main-img">
+					</div>
+					
+						<div class="info">
+
+							<div class="field-info">
+								<h4> Precio </h4>
+								<p> $<%= product.price %> COP </p>
+							</div>
+
+							<div class="field-info">
+								<h4> Cantidad </h4>
+								<p> $<%= product.quantity %> </p>
+							</div>
+
+							<div class="field-info">
+							<h4>Descripción</h4>
+							<p> <%= product.description %> </p>
+						</div>
+
+						<div class="field-info">
+							<h4> Región</h4>
+							<p> <%= product.region.region %> </p>
+						</div>
+					</div>
+			</main>
+
+			<!-- Footer -->
+			<%- include('../partials/footer') %>
+	</body>
+
+</html>

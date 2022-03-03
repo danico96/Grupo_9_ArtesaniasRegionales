@@ -1,67 +1,124 @@
 .allProducts {
-    margin-top: 270px;
-    width: 100%;
-    padding: 0px 50px;
+  width: 90vw;
+  text-align: center;
+  margin: auto;
+}
+
+.allProducts .title {
+  margin: 20px auto;
+}
+
+.allProducts .btn-title {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.allProducts .btn-title a {
+    font-weight: 300;
+    text-decoration: none;
+    color: rgb(33, 142, 231);
+    font-size: 14px;
+}
+
+.allProducts .productContainer {
+  background-color: rgba(230, 230, 230, 0.8);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  justify-content: space-around;
+  padding: 0px 10px;
+}
+
+.allProducts .productContainer .infoProduct {
+  display: flex;
+  align-items: center;
+}
+
+.allProducts .productContainer .infoProduct img {
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.allProducts .productContainer .infoProduct .nameProduct {
+  display: flex;
+}
+.allProducts .productContainer .infoProduct .nameProduct p {
+  font-size: 12px;
+  color: #000;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.allProducts .productContainer .infoProduct .regionProduct {
+  display: none;
+}
+
+.allProducts .productContainer .btnsCRUD {
+  display: flex;
+  align-items: center;
+}
+
+.allProducts .productContainer .btnsCRUD .btn a {
+  text-decoration: none;
+  color: #fff;
+  padding: 4px 14px;
+  background-color: var(--primaryColor);
+  border-radius: 15px;
+  margin: 0 5px;
+  font-size: 12px;
+}
+
+.allProducts .productContainer .btnsCRUD .btn form div button {
+  text-decoration: none;
+  color: #fff;
+  padding: 4px 14px;
+  background-color: rgb(240, 87, 87);
+  border-radius: 15px;
+  margin: 0 5px;
+  border: none;
+  color: black;
+  font-size: 12px;
+}
+
+@media (min-width: 481px) {
+  .allProducts .btn-title a {
+    font-size: 15px;
   }
-  
-  .allProducts h1 {
-    font-size: 20px;
-  }
-  
-  .productContainer {
-    background-color: rgba(230, 230, 230, 0.8);
-    width: 100%;
+
+  .allProducts .productContainer {
     height: 100px;
+  }
+
+  .allProducts .productContainer .infoProduct img {
+    max-width: 55px;
+    max-height: 55px;
+  }
+  
+  .allProducts .productContainer .infoProduct .nameProduct p {
+    font-size: 14px;
+  }
+
+  .allProducts .productContainer .btnsCRUD .btn a {
+    font-size: 14px;
+  }
+  
+  .allProducts .productContainer .btnsCRUD .btn form div button {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .allProducts .productContainer .infoProduct .regionProduct {
     display: flex;
-    align-items: center;
-    margin: 10px 0px;
-    border-radius: 5px;
+  }
+
+  .allProducts .productContainer {
     justify-content: space-between;
-    padding: 0px 20px;
   }
-  
-  .infoProduct {
-    display: flex;
-    align-items: center;
-  }
-  
-  .infoProduct img {
-    max-width: 70px;
-    border-radius: 50%;
-    margin-right: 30px;
-  }
-  
-  .nameProduct p {
-    font-size: 16px;
-    color: #000;
-  }
-  
-  .btnsCRUD {
-    display: flex;
-    align-items: center;
-  }
-  
-  .btn {
-    margin: 0px 10px;
-  }
-  
-  .btn a {
-      text-decoration: none;
-      color: #fff;
-      padding: 10px 15px;
-      background-color: var(--primaryColor);
-      border-radius: 3px;
-  }
-  
-  .btnsCRUD:nth-child(2) form  {
-      display: flex;
-      align-items: center;
-  }
-  
-  .btnsCRUD:nth-child(2) form div button {
-      padding: 10px 15px;
-      background-color: rgb(240, 87, 87);
-      border: none;
-      border-radius: 3px;
-      font-weight: normal;
-  }
+}
+

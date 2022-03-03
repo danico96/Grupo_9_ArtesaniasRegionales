@@ -10,80 +10,73 @@
 	<body>
 		<!-- Header -->
 		<%- include ('../partials/header') %>
-			<%# if(locals.usuario.category=="vendedor" ){%>
+			<% if(locals.userLogged[0].roles_id=="1" ){%>
 				<main class="formulario">
-					<!-- Errores FrontEnd -->
-					<div class="errores">
-						<ul>
 
-						</ul>
-					</div>
-					<div class="form">
-						<div>
-							<h2>Agregar producto</h2>
+					<form class="form-product" action="/products/productCreate" method="POST" enctype='multipart/form-data'>
+						<h2 class="title-form"> Nuevo producto</h2>
+
+						<div class="errores-back">
+							<% if (locals.errors) { errors.forEach(error=> { %>
+								<p>
+									* <%= error.msg %>
+								</p>
+								<% }) } %>
 						</div>
 
-						<!-- Errores BackEnd -->
-						<% if (locals.errors) { errors.forEach(error=> { %>
-							<p>
-								<%= error.msg %>
-							</p>
-							<% }) } %>
+						<div class="field-form">
+							<label for="productName">Nombre del producto</label><br>
+							<input type="text" class="productName" name="productName" placeholder="Nombre del producto" required>
+						</div>
 
+						<div class="field-form">
+							<label for="description">Descripción</label><br>
+							<textarea type="text" class="description" name="description" value=description required></textarea>
+						</div>
 
-								<form class="form-product" action="/products/productCreate" method="POST" enctype='multipart/form-data'>
-									<div>
-										<label for="productName"></label><br>
-										<input type="text" class="productName" name="productName" placeholder="Nombre del producto"
-											required><br>
-									</div><br>
-									<h3>Descripción</h3>
-									<div>
-										<label for="description"></label><br>
-										<textarea type="text" class="description" name="description" value=description
-											required></textarea><br>
-									</div><br>
-									<div>
-										<h3>Seleccione una región</h3>
-										<label for="region"></label><br>
-										<select name="region">
-											<option value="1">Andina</option>
-											<option value="2">Pacífica</option>
-											<option value="3">Caribe</option>
-											<option value="4">Amazonía</option>
-											<option value="5">Orinoquía</option>
-											<option value="6">Insular</option>
-										</select>
-									</div><br>
-									<div>
-										<h3>Cantidad</h3>
-										<label for="quantity"></label><br>
-										<input type="text" class="quantity" name="quantity" placeholder="Cantidad" required><br>
-									</div><br>
-									<div>
-										<h3>Precio</h3>
-										<label for="price"></label><br>
-										<input type="text" class="price" name="price" placeholder="Precio" required><br>
-									</div><br>
-									<div>
-										<p>
-										<h3>Foto de producto</h3>
-										</p>
-										<p class="image-load">
-											<input type="file" class="image" name="image" accept=".jpg,.png,.jpeg,.gif" required>
-										</p>
-									</div><br>
-									<p class="btn-login">
-										<button type="submit"><span class="text-btn">Guardar</span></button>
-									</p>
-								</form>
-					</div>
+						<div class="field-form">
+							<label for="region">Seleccione una región</label><br>
+							<select name="region">
+								<option value="1">Andina</option>
+								<option value="2">Pacífica</option>
+								<option value="3">Caribe</option>
+								<option value="4">Amazonía</option>
+								<option value="5">Orinoquía</option>
+								<option value="6">Insular</option>
+							</select>
+						</div>
+
+						<div class="field-form">
+							<label for="quantity">Cantidad</label><br>
+							<input type="text" class="quantity" name="quantity" placeholder="Cantidad" required>
+						</div>
+
+						<div class="field-form">
+							<label for="price">Precio</label><br>
+							<input type="text" class="price" name="price" placeholder="Precio" required>
+						</div>
+
+						<div class="field-form">
+							<label for="image">Foto del producto</label><br>
+							<input type="file" class="image" name="image" accept=".jpg,.png,.jpeg,.gif" required>
+						</div>
+
+						<div class="errores-front">
+							<ul> </ul>
+						</div>
+
+						<p class="btn-login">
+							<button type="submit">Guardar</button>
+						</p>
+					</form>
 				</main>
-				<%# } else { %>
-					<!-- <h3>Acceso Denegado</h3> -->
-					<%# } %>
+				<% } else { %>
+					<h3>Acceso Denegado</h3>
+					<% } %>
+
 						<!-- Footer -->
 						<%- include('../partials/footer') %>
+
 							<script src="/js/products/product.js"></script>
 
 	</body>
