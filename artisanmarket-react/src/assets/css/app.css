@@ -558,6 +558,7 @@ pre code {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  justify-content: space-around;
 }
 
 .no-gutters {
@@ -7631,6 +7632,8 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .mb-4, .my-4 {
+  text-align: center;
+  margin: auto;
   margin-bottom: 1.5rem !important
 }
 
@@ -9797,8 +9800,8 @@ a:focus {
 }
 
 .bg-gradient-secondary {
-  background-color: #858796;
-  background-image: linear-gradient(180deg, #858796 10%, #60616f 100%);
+  background-color: #2196f3;
+  background-image: linear-gradient(180deg, #2196f3 10%, #60616f 100%);
   background-size: cover
 }
 

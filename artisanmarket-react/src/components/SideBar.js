@@ -3,6 +3,7 @@ import image from '../assets/images/logo.png';
 import ContentWrapper from './ContentWrapper';
 import UsersInDb from './UsersInDb';
 import ProductsInDb from './ProductsInDb';
+import RegionsInDb from './RegionsInDb';
 import ContentRowMovies from './ContentRowMovies';
 import FindProduct from './FindProduct';
 import LastProduct from "./LastProduct";
@@ -66,6 +67,9 @@ function SideBar(){
                 </Route>
                 <Route path="/ProductsInDb">
                     <ProductsInDb />
+                </Route>
+                <Route path="/RegionsInDb">
+                    <RegionsInDb />
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />
