@@ -1,6 +1,4 @@
 const { apiProductsModel } = require("../../model");
-require('dotenv').config();
-const port = process.env.PORT;
 
 const apiProductController = {
   getProducts: async (req, res) => {
@@ -66,7 +64,6 @@ const apiProductController = {
     try {
       const hostname = req.hostname;
       const protocol = req.protocol;
-      const get = req.get;
       let product = await apiProductsModel.lastProductInDb();
       newProduct = {
         nombre: product.name,

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import SmallCard from "./SmallCard";
-import ProductsInDb from "./ProductsInDb";
 
 /*  Cada set de datos es un objeto literal */
 
@@ -13,7 +12,7 @@ function ContentRowMovies() {
         }, []);
       
         const obtenerDatosP = async () => {
-          const data = await fetch("http://localhost:3500/api/products");
+          const data = await fetch("https://artisanmarket.herokuapp.com/api/products");
           const product = await data.json();
           setProducts(product);
         };
@@ -26,7 +25,7 @@ function ContentRowMovies() {
         }, []);
       
         const obtenerDatos = async () => {
-          const data = await fetch("http://localhost:3500/api/users");
+          const data = await fetch("https://artisanmarket.herokuapp.com/api/users");
           const user = await data.json();
           setUsers(user);
         };
