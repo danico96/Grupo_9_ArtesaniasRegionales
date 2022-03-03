@@ -16,6 +16,8 @@ header .top-bar {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 97%;
+  margin: auto;
 }
 
 header .top-bar .box-logo {
@@ -58,15 +60,16 @@ header .top-bar .search input {
 }
 
 header .top-bar .search button {
-  border-radius: 2px;
+  border-radius: 5px;
   font-weight: bold;
-  padding: 4px 0px;
+  padding: 5px;
   transition: all 0.5s;
+  border-style: none;
 }
 
 button:hover {
   cursor: pointer;
-  background: rgb(175, 230, 81);
+  background: rgb(230, 227, 227);
 }
 
 header .top-bar .main-navbar {
@@ -130,6 +133,7 @@ header .banner-img img {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    align-items: center;
   }
 
   header .top-bar .main-navbar ul li {
