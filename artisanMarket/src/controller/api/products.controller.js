@@ -60,12 +60,14 @@ const apiProductController = {
       console.log(error);
     }
   },
-  getLastInDb: async (req, res) => {
+
+  lastProduct: async (req, res) => {
     try {
       const hostname = req.hostname;
       const protocol = req.protocol;
-      let product = await apiProductsModel.lastProductInDb();
-      newProduct = {
+      let product = await apiProductsModel.getLastProduct();
+
+      return res.status(200).json({
         nombre: product.name,
         precio: product.price,
         descripcion: product.description,
@@ -74,12 +76,11 @@ const apiProductController = {
         array: "falta por cada relacion de uno a muchos",
         imagen:
           protocol + "://" + hostname + "/images/products/" + product.picture,
-      };
-      res.json(newProduct);
+      });
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
-  },
+  }
 };
 
 module.exports = apiProductController;

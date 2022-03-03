@@ -17,6 +17,21 @@ const apiModelUsers = {
     } catch (error) {
       console.log(error.message);
     }
+  },
+  getLastUser: async function () {
+    try {
+      let users = await db.users.findAll();
+
+      let ids = users.map(user => user.id);
+      
+      const maxId = Math.max(...ids);
+      
+      const lastUser = await db.users.findByPk(maxId);
+      return lastUser;
+
+    } catch (error) {
+      console.log(error.message);
+    }
   }
 };
 

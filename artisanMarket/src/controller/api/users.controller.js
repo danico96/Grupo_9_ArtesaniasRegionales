@@ -42,6 +42,23 @@ const apiuserscontroller = {
       console.log(error.message);
     }
   },
+  lastUser: async (req, res) => {
+    try {
+      const hostname = req.hostname;
+      const protocol = req.protocol;
+      let user = await apiUserModel.getLastUser();
+
+      return res.status(200).json({
+        id: user.id,
+        nombre: user.name,
+        apellido: user.lastname,
+        email: user.email,
+        imagen: protocol + "://" + hostname + "/images/users/" + user.image,
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 };
 
 module.exports = apiuserscontroller;
