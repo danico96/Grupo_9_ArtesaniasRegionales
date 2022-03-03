@@ -93,11 +93,20 @@ header .burger-menu i {
   padding: 5px;
 }
 
+header .banner-img {
+  width: 100vw;
+  height: 100px;
+  background-image: url("/images/hechoEnColombia.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
 header .banner-img img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  display: none;
+  height: 100%;
+  width: 100%;
   opacity: 0.9;
+  object-fit: cover;
 }
 
 @media (min-width: 481px) {
@@ -162,9 +171,9 @@ header .banner-img img {
 
   header .browse-navbar ul li a {
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 15px;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
   }
 
   header .burger-menu {
@@ -179,3 +188,8 @@ header .top-bar .main-navbar .ImgPerfil {
   border-radius: 50%;
 }
 
+@media (min-width: 768px) { 
+  header .top-bar .box-logo {
+    width: 20vw;
+  }
+}

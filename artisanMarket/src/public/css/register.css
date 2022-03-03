@@ -61,6 +61,10 @@
   color: red;
 }
 
+.formulario .form-register .errores-front ul li {
+  list-style: none;
+}
+
 .formulario .form-register .errores-back p {
   color: red;
   margin: 0 auto;
