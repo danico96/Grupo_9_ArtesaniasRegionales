@@ -9,7 +9,7 @@ function LastProduct() {
   }, []);
 
   const obtenerDatos = async () => {
-    const data = await fetch(`https://artisanmarket.herokuapp.com/api/products/11`);
+    const data = await fetch(`https://artisanmarket.herokuapp.com/api/products/last`);
     const product = await data.json();
     setProducts(product);
   };
