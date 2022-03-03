@@ -13,7 +13,7 @@ const errorsLogin = (req, res, next) => {
       if (errors.isEmpty()) {
         next();
       } else {
-        res.render("./users/login", { errors: errors.array(), old: req.body });
+        res.render("./users/login", { errores: errors.array(), old: req.body });
       }
 }
 

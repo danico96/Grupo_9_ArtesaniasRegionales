@@ -3,61 +3,61 @@
 <!-- Head -->
 <%- include ('../partials/head') %>
 
-    <head>
-        <link rel="stylesheet" href="/css/users.css">
-    </head>
+	<head>
+		<link rel="stylesheet" href="/css/users.css">
+	</head>
 
-    <body>
-        <!-- Header -->
-        <%- include ('../partials/header') %>
-            <!-- todos los usuarios -->
-            <% if(locals.userLogged[0].roles_id=="1" ){%>
-                <div class="allUsers">
-                    <div>
-                        <div>
-                            <h2>Lista de Usuarios</h2>
-                        </div><br><br>
-                        <div class="btn">
-                            <a href='./users/register'> Crear nuevo </a>
-                        </div><br><br>
-                        <% users.forEach(user=> { %>
-                            <div class="userContainer">
-                                <div class="infoUser">
-                                    <img src="/images/users/<%= user.image%>" alt="">
-                                    <div class="nameUser">
-                                        <p><strong>
-                                                <%= user.id + " |" %>
-                                                    <%= user.name %>
-                                                        <%= user.lastname %>
-                                            </strong></p>
-                                    </div>
-                                </div>
-                                <div class="btnsCRUD">
-                                    <div class="btn">
-                                        <a href="./users/userDetail/<%= user.id %>" class="info">Detalle</a>
-                                    </div>
-                                    <div class="btn">
-                                        <a href="./users/userEdit/<%= user.id %>" class="edit">Editar</a>
-                                    </div>
-                                    <div class="btn">
-                                        <form action="./users/<%= user.id %>?_method=DELETE" method="POST">
-                                            <div>
-                                                <button>Eliminar</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <% }) %>
-                    </div>
-                </div>
-                <% } else {%>
-                    <h3>Acceso denegado</h3>
-                    <% } %>
+	<body>
+		<!-- Header -->
+		<%- include ('../partials/header') %>
+			<!-- todos los usuarios -->
+			<% if(locals.userLogged[0].roles_id=="1" ){%>
+				<div class="allUsers">
+					<div>
+						<div>
+							<h2>Lista de Usuarios</h2>
+						</div><br><br>
+						<div class="btn">
+							<a href='./users/register'> Crear nuevo </a>
+						</div><br><br>
+						<% users.forEach(user=> { %>
+							<div class="userContainer">
+								<div class="infoUser">
+									<img src="/images/users/<%= user.image%>" alt="">
+									<div class="nameUser">
+										<p><strong>
+												<%= user.id + " |" %>
+													<%= user.name %>
+														<%= user.lastname %>
+											</strong></p>
+									</div>
+								</div>
+								<div class="btnsCRUD">
+									<div class="btn">
+										<a href="./users/userDetail/<%= user.id %>" class="info">Detalle</a>
+									</div>
+									<div class="btn">
+										<a href="./users/userEdit/<%= user.id %>" class="edit">Editar</a>
+									</div>
+									<div class="btn">
+										<form action="./users/<%= user.id %>?_method=DELETE" method="POST">
+											<div>
+												<button>Eliminar</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<% }) %>
+					</div>
+				</div>
+				<% } else {%>
+					<h3>Acceso denegado</h3>
+					<% } %>
 
-                        <!-- Footer -->
-                        <%- include('../partials/footer') %>
+						<!-- Footer -->
+						<%- include('../partials/footer') %>
 
-    </body>
+	</body>
 
 </html>

@@ -12,26 +12,29 @@
 		<!-- Header -->
 		<%- include ('../partials/header') %>
 
-			<main class="mainUser">
+			<main>
 				<div class="userDetail">
-					<div class="imgSide">
-						<img src="/images/users/<%= user.image %>" alt="user image" class="main-img">
-					</div>
+					<h2 class="title-user">
+						<%= user.name %>
+							<%= user.lastname %>
+					</h2>
 					<div class="infoSide">
-						<h1 class="title-product">
-							<%= user.name %>
-								<%= user.lastname %>
-						</h1>
-						<div class="grid-detail">
-							<h4> Email </h4>
-							<p>
-								<%= user.email %>
-							</p>
-							<h4> Tipo de Usuario </h4>
-							<p>
-								<%= user.role.roleName %>
-							</p>
+
+						<div class="img">
+							<img src="/images/users/<%= user.image %>" alt="user image" class="main-img">
 						</div>
+
+						<div class="info">
+							<div class="field-info">
+								<h4> Correo electrónico: </h4>
+								<p> <%= user.email %> </p>
+							</div>
+							<div class="field-info">
+								<h4> Tipo de Usuario: </h4>
+								<p> <%= user.role.roleName %> </p>
+							</div>
+						</div>
+
 					</div>
 			</main>
 

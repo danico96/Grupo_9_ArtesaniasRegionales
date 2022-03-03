@@ -1,82 +1,99 @@
-/*Main*/
-
-body {
-    overflow-x: hidden;
-}
-
 .formulario {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    align-items: center;
-    margin-top: 300px;
     display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
     text-align: center;
-    align-items: center;
-}
-
-.form {
-    background-color: rgba(218, 218, 218, .7);
-    width: 50%;
-    margin: 0 auto;
+  }
+  
+  .formulario .form-login {
+    background-color: rgba(218, 218, 218, 0.7);
+    width: 90%;
     border-radius: 6px;
-    height: 90%;
-    padding-top: 10px;
-}
-
-.form p {
-    color: black;
-}
-
-.form form {
-    display: block;
-}
-
-.form form input {
+    padding: 10px; 
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  
+  .formulario .form-login .title-form {
+    margin-bottom: 10px;
+  }
+  
+  .formulario .form-login .field-form {
+    margin: 10px auto;
+  }
+    
+  .formulario .form-login .field-form label {
+    font-size: 16px;
+  }
+  
+  .formulario .form-login .field-form input {
     margin: 13px 0;
     border-radius: 5px;
-}
+    width: 70%;
+    height: 30px;
+    font-size: 1em;
+  }
+  
+  .formulario .form-login .field-form input:focus {
+    outline: none;
+    border: 1px solid black;
+  }
 
-.form form input:focus {
-    outline: deepskyblue;
-    border: 2px solid deepskyblue;
-}
-
-.form a {
-    font-weight: 300;
-    text-decoration: none;
-    color: rgb(33, 142, 231);
-}
-
-.check-box {
-    width: 30px;
-}
-
-.text-btn {
+  .formulario .form-login .field-form .check-box {
+      font-size: 10px;
+      height: 15px;
+      margin: 0;
+      width: 20px;
+  }
+  
+  .formulario .form-login .btn-login button {
+    padding: 5px 30px;
     text-align: center;
-}
-
-.btn-login button {
     border: none;
     font-weight: bold;
     border-radius: 3px;
     background-color: rgba(150, 201, 61, 1);
-    padding: 3px;
-    ;
     cursor: pointer;
-}
+  }
+  
+  .formulario .form-login a {
+    font-weight: 300;
+    text-decoration: none;
+    color: rgb(33, 142, 231);
+    font-size: 16px;
+  }
+  
+  .formulario .form-login .errores-front {
+    color: red;
+  }
 
-
-/* viewport */
-
-@media (min-width: 481px) {
+  .formulario .form-login .errores-front ul li {
+    list-style: none;
+  }
+  
+  .formulario .form-login .errores-back p {
+    color: red;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 481px) {
     .formulario {
-        justify-content: center;
+      margin: 20px auto;
     }
-}
-
-@media (min-width: 768px) {
-    .formulario {
-        justify-content: center;
+  
+    .formulario .form-login {
+      width: 70%;
     }
-}
+    .formulario .form-login .field-form input {
+      width: 60%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .formulario .form-login {
+      width: 40%;
+    }
+    .formulario .form-login .field-form input {
+      width: 60%;
+    }
+  }
