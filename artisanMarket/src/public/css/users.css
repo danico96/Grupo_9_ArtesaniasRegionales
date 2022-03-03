@@ -67,10 +67,16 @@
   text-decoration: none;
   color: #fff;
   padding: 4px 14px;
-  background-color: var(--primaryColor);
+  background-color: #3483fa;
   border-radius: 15px;
   margin: 0 5px;
   font-size: 12px;
+  border-color: transparent;
+}
+
+.allUsers .userContainer .btnsCRUD .btn a:hover {
+background-color: #2968c8;
+    transition: background-color .2s ease-in;
 }
 
 .allUsers .userContainer .btnsCRUD .btn form div button {
@@ -79,10 +85,16 @@
   padding: 4px 14px;
   background-color: rgb(240, 87, 87);
   border-radius: 15px;
+  border-color: transparent;
   margin: 0 5px;
   border: none;
   color: black;
   font-size: 12px;
+}
+
+.allUsers .userContainer .btnsCRUD .btn form div button:hover {
+  background-color: rgb(248, 42, 42);
+    transition: background-color .2s ease-in;
 }
 
 @media (min-width: 481px) {

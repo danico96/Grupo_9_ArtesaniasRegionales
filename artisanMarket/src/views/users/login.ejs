@@ -26,6 +26,10 @@
 							<% }) } %>
 					</div>
 
+					<div class="errores-front">
+						<ul> </ul>
+					</div>
+
 					<div class="field-form">
 						<label for="email">Email</label><br>
 						<input type="text" id="email" name="email"><br>
@@ -44,17 +48,12 @@
 					<div class="field-form">
 						<input type="checkbox" class="check-box" name="recordar"><span>Recuerdame</span>
 					</div>		
-							
-							
-								<a href="/users/register"><strong>¿No tienes cuenta?</strong></a>
-			
-								<div class="errores-front">
-									<ul> </ul>
-								</div>
-
+																				
 							<p class="btn-login">
 								<button type="submit">Iniciar sesión</button>
 							</p>
+
+							<a href="/users/register"><strong>¿No tienes cuenta?</strong></a>
 
 							<% if (locals.errors && errors.auth) { %>
 								<p>

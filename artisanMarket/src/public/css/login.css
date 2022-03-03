@@ -52,8 +52,14 @@
     border: none;
     font-weight: bold;
     border-radius: 3px;
-    background-color: rgba(150, 201, 61, 1);
+    background-color: #3483fa;
+    color: #fff;
     cursor: pointer;
+  }
+
+  .formulario .form-login .btn-login button:hover {
+    background-color: #2968c8;
+      transition: background-color .2s ease-in;
   }
   
   .formulario .form-login a {
