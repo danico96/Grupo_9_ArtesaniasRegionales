@@ -2,20 +2,16 @@ import React from "react";
 
 function UserDetail(props) {
   return (
-    <div>
+    <div className="col-lg-6 mb-4">
       <br></br>
       <div className="card shadow mb-4">
-        <div className="card-header py-3">
-        </div>
         <div className="card-body">
-          <div className="row">
-            <div className="col-lg-6 mb-4">
-              <div>
-                <div className="card-body">
-                </div>
-                <div>
-                <p>
-                  <img className="img-fluid px-3 px-sm-4 mt-3 mb-4"style={{ width: 20 + "rem" }} src={props.picture} />
+          <div className="text-center">
+            <img
+              className="img-fluid px-3 px-sm-4 mt-3 mb-4"
+              style={{ width: 60 + "rem" }} src={props.picture} />
+          </div>
+          <p>
                     Nombre: {props.name} {props.lastname}<br></br>
                     Id: {props.id}<br></br>
                     Email: {props.email}
@@ -23,10 +19,6 @@ function UserDetail(props) {
                 </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
   );
 }
 

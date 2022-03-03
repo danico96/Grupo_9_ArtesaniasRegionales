@@ -9,20 +9,19 @@ function Product(props) {
           <div className="text-center">
             <img
               className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-              style={{ width: 40 + "rem" }}
+              style={{ width: 20 + "rem" }}
               src={props.picture}
             />
           </div>
           <p>
-            Nombre: {props.name}
+            <h5>{props.name}</h5>
             <br></br>
             <br></br>
-            <Link className='product__button' to={id}>
-                    Detalle
-                </Link>
+            <Link className="product__button" to={id}>
+              Detalle
+            </Link>
           </p>
         </div>
-
       </div>
     </div>
   );

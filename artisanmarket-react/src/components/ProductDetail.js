@@ -1,4 +1,3 @@
-
 function ProductDetail(props) {
   return (
     <div className="col-lg-6 mb-4">
@@ -13,9 +12,9 @@ function ProductDetail(props) {
             />
           </div>
           <p>
-            Nombre: {props.name}
+            <h4>{props.name}</h4>
             <br></br>
-            Descripción: {props.description}
+            {props.description}
             <br></br>
             Precio: {props.price}
             <br></br>
@@ -23,7 +22,6 @@ function ProductDetail(props) {
             <br></br>
           </p>
         </div>
-
       </div>
     </div>
   );
