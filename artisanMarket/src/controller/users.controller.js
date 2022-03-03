@@ -31,9 +31,8 @@ const controller = {
       if (
         !bcryptjs.compareSync(req.body.password, user[0].dataValues.password)
       ) {
-        console.log(user);
-        console.log(user[0].dataValues.password);
-        res.render("./users/login", {
+        console.log('esta es la ' + user[0].dataValues.password);
+        return res.render("./users/login", {
           errors: {
             password: { msg: "Contraseña Incorrecta" },
           },
