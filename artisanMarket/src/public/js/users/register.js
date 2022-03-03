@@ -56,7 +56,7 @@ window.addEventListener("load", function () {
 
     if (errors.length > 0) {
       e.preventDefault();
-      let ulErrores = document.querySelector(".errores ul");
+      let ulErrores = document.querySelector(".errores-front ul");
       errors.forEach(error => {
         ulErrores.innerHTML += `<li>${error}</li>`
       })

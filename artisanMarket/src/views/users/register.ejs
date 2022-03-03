@@ -2,6 +2,7 @@
 <html lang="es">
 
 <!-- Head -->
+
 <head>
 	<link rel="stylesheet" href="/css/register.css">
 </head>
@@ -12,51 +13,54 @@
 		<%- include ('../partials/header') %>
 
 			<main class="formulario">
-				<div class="errores">
-					<ul>
 
-					</ul>
-				</div>
-				<div class="form">
-					<% if (locals.errors) { errors.forEach(error=> { %>
-						<p>
-							<%= error.msg %>
-						</p>
-						<% }) } %>
+				<form class="form-register" action="/users/registerUser" method="POST" enctype="multipart/form-data">
+					<h2 class="title-form">¡Regístrate gratis!</h2>
 
-							<form class="form-register" action="/users/registerUser" method="POST" enctype="multipart/form-data">
-								<h2 class="title-form">¡Regístrate gratis!</h2>
-								<div class="fiel-form">
-									<label for="name">Nombres</label><br>
-									<input type="text" id="name" name="name" placeholder="Ej: Juan Pablo" required>
-								</div>
-								<div class="fiel-form">
-									<label for="lastname">Apellidos</label><br>
-									<input type="text" id="lastname" name="lastname" placeholder="Ej: Lopez Correa" required>
-								</div>
-								<div class="fiel-form">
-									<label for="email">Correo electrónico</label><br>
-									<input type="email" id="email" name="email" placeholder="Ej: juan@pablo.com" required>
-								</div>
-								<div class="fiel-form">
-									<label for="password">Contraseña</label><br>
-									<input type="password" id="password" name="password" required>
-								</div>
-								<div class="fiel-form">
-									<label for="passwordOk">Confirmar contraseña</label><br>
-									<input type="password" id="passwordOk" name="passwordOk" required>
-								</div>
-								<div class="fiel-form">
-									<label for="image">Foto de perfil</label><br>
-									<input type="file" id="image" name="image" accept=".jpg,.jpeg,.png,.gif" required>
-								</div>
-								
-								<p class="btn-login">
-									<button type="submit">Registrarse</button>
-								</p>
-								<a href="/users/login"><strong>¿Ya tienes una cuenta?</strong></a>
-							</form>
-				</div>
+					<div class="errores-back">
+						<% if (locals.errors) { errors.forEach(error=> { %>
+							<p>
+								* <%= error.msg %>
+							</p>
+							<% }) } %>
+					</div>
+
+					<div class="field-form">
+						<label for="name">Nombres</label><br>
+						<input type="text" id="name" name="name" placeholder="Ej: Juan Pablo" required value="<%= locals.old && old.name ? old.name : '' %>">
+					</div>
+					<div class="field-form">
+						<label for="lastname">Apellidos</label><br>
+						<input type="text" id="lastname" name="lastname" placeholder="Ej: Lopez Correa" required value="<%= locals.old && old.lastname ? old.lastname : '' %>">
+					</div>
+					<div class="field-form">
+						<label for="email">Correo electrónico</label><br>
+						<input type="email" id="email" name="email" placeholder="Ej: juan@pablo.com" required value="<%= locals.old && old.email ? old.email : '' %>">
+					</div>
+					<div class="field-form">
+						<label for="password">Contraseña</label><br>
+						<input type="password" id="password" name="password" required value="<%= locals.old && old.password ? old.password : '' %>">
+					</div>
+					<div class="field-form">
+						<label for="passwordOk">Confirmar contraseña</label><br>
+						<input type="password" id="passwordOk" name="passwordOk" required value="<%= locals.old && old.passwordOk ? old.passwordOk : '' %>">
+					</div>
+					<div class="field-form">
+						<label for="image">Foto de perfil</label><br>
+						<input type="file" id="image" name="image" accept=".jpg,.jpeg,.png,.gif" required>
+					</div>
+
+					<div class="errores-front">
+						<ul> </ul>
+					</div>
+
+					<p class="btn-login">
+						<button type="submit">Registrarse</button>
+					</p>
+
+					<a href="/users/login"><strong>¿Ya tienes una cuenta?</strong></a>
+
+				</form>
 			</main>
 
 			<!-- Footer -->

@@ -67,39 +67,6 @@ form p textarea {
 /* viewport */
 
 @media (min-width: 481px) {
-  /*index */
-  main .masvendido .products {
-    width: 45vw;
-    margin: 10px auto;
-  }
-
-  main .regions {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  main .masvendido h3,
-  main .regions h1 {
-    display: inline-block;
-    width: 100%;
-  }
-
-  main .regions h1 {
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
-    margin: 50px 0;
-  }
-
-  main .regions .andina,
-  main .regions .caribe,
-  main .regions .pacifica,
-  main .regions .orinoquia,
-  main .regions .amazonica,
-  main .regions .insular {
-    width: 50%;
-  }
-
   form p button {
     width: 40%;
   }
@@ -143,39 +110,6 @@ form p textarea {
 }
 
 @media (min-width: 768px) {
-  /* index */
-  main .masvendido .products {
-    width: 30%;
-  }
-
-  main .regions .andina,
-  main .regions .caribe,
-  main .regions .pacifica,
-  main .regions .orinoquia,
-  main .regions .amazonica,
-  main .regions .insular {
-    width: 33.33%;
-    height: 250px;
-  }
-
-  main .regions .andina h4,
-  main .regions .caribe h4,
-  main .regions .pacifica h4,
-  main .regions .orinoquia h4,
-  main .regions .amazonica h4,
-  main .regions .insular h4 {
-    font-size: 26px;
-  }
-
-  main .regions .andina .description-region,
-  main .regions .caribe .description-region,
-  main .regions .pacifica .description-region,
-  main .regions .orinoquia .description-region,
-  main .regions .amazonica .description-region,
-  main .regions .insular .description-region {
-    font-size: 16px;
-  }
-
   form p button {
     width: 30%;
   }

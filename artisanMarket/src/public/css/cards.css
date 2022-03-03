@@ -1,3 +1,4 @@
+/*Products*/
 main .contenido {
   width: 100vw;
 }
@@ -103,23 +104,25 @@ main .contenido .container .card .info .btn:hover {
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
-
+/*Regions*/
 main .regions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100vw;
 }
 
 main .regions .title h1 {
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0.5em 0;
 }
 
 main .regions .regionCard {
   background: var(--i);
-  width: 500px;
+  width: 90%;
   height: 250px;
-  margin: 20px 20px;
+  margin: 10px auto;
   background-size: cover;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.8);
   border-radius: 6px;
@@ -139,8 +142,44 @@ main .regions .regionCard .content {
   transition: all 0.5s;
 }
 
-
 main .regions .regionCard:hover .content {
   opacity: 1;
+}
+
+main .regions .regionCard .content h4 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+main .regions .regionCard .content p {
+  color: white;
+}
+
+
+@media (min-width: 481px) {
+main .contenido .container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+}
+
+main .contenido .container .card {
+  width: 22em;
+}
+
+main .regions .title {
+  width: 90%;
+}
+
+main .regions .regionCard {
+  width: 40em;
+}
+
+}
+@media (min-width: 768px) {
+  main .regions .regionCard {
+    width: 46%;
+  }
 }
 
